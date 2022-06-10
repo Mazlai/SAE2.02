@@ -43,13 +43,13 @@ endif::[]
 
 === De la solution...
 
-* LAST NAME : DOE
-* First name : John
+* LAST NAME : FERNANDEZ
+* First name : Mickael
 * TD group : 
 - [ ] 1
-- [x] 2
+- [ ] 2
 - [ ] 3
-- [ ] 4
+- [x] 4
 
 // == Objectives
 == Objectifs
