@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "solution.c"
+#include "solution1.c"
 #include "solution2.c"
 
 int main() {
