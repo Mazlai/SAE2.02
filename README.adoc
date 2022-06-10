@@ -141,6 +141,7 @@ Vous utiliserez le dépôt initial qui vous aura été attribué via classroom p
 | 1    | link:src/main/java/eraser/Eraser.java[ici]  | Java     | Simplicité
 | 2    | link:solution1.c[ici]                       | C        | Efficacité
 | 3    | link:solution2.c[ici]                       | C        | Sobriété numérique
+| 4    | link:solution.py[ici]                       | Python   | Efficacité
 |==========================================================================
 
 === Phase 2 (deadline : **vendredi 17 juin 2022** à minuit)
