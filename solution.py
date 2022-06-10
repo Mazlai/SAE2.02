@@ -5,11 +5,11 @@ def erase(cc):
     :param text : string to edit
     :return : edited string
     """
-    listedText = list(cc)    
-    for i, char in enumerate(listedText):
-        tailleText = len(listedText)
-        if (char == " " and tailleText == 1) or (char == " "
-          and listedText[max(i-1, int(tailleText > 1))] != " " 
-          and listedText[min(i+1, tailleText-int(tailleText > 1)*2)] != " "):
-            del listedText[i]
-    return "".join(char for char in listedText)
+    listwords = list(cc)    
+    for i, char in enumerate(listwords):
+        wordslength = len(listwords)
+        if (char == " " and wordslength == 1) or (char == " "
+          and listwords[max(i-1, int(wordslength > 1))] != " " 
+          and listwords[min(i+1, wordslength-int(wordslength > 1)*2)] != " "):
+            del listwords[i]
+    return "".join(char for char in listwords)
