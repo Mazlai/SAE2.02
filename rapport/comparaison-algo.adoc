@@ -3,6 +3,8 @@
 :toc-title: Table des matières
 :sectnums:
 
+image::/rapport/images/logo_transparent.png[]
+
 = SAE 2.02 - Comparaison d'approches algorithmiques
 
 _Réalisé par FERNANDEZ Mickael (4A)_
