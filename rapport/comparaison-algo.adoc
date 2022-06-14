@@ -11,8 +11,6 @@ _Réalisé par FERNANDEZ Mickael (4A)_
 
 toc::[]
 
-{empty} +
-
 == Objectif
 
 Parmi l'ensemble des solutions algorithmiques proposées, il est nécessaire de les explorer en ayant une approche s'intéressant à l'implémentation bas niveau (structures de données, etc.) ainsi qu'à haut niveau (précision des résultats, etc.)
