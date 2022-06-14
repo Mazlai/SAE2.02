@@ -13,11 +13,18 @@ toc::[]
 
 {empty} +
 
+== Objectif
+
+Parmi l'ensemble des solutions algorithmiques proposées, il est nécessaire de les explorer en ayant une approche s'intéressant à l'implémentation bas niveau (structures de données, etc.) ainsi qu'à haut niveau (précision des résultats, etc.)
+
 [NOTE]
 [.text-justify]
-Les fichiers ont été renommés afin d'enlever le caractère ``-`` qui posait problème lors de l'importation des fichiers dans certains codes d'analyse.
+Les solutions algorithmiques sont des fichiers de divers langages (C, Python, Java) dont le but était de seulement retirer les espaces individuels, qu'importe de l'emplacement de ceux-ci.
 
 *NOTATION*
+
+En voici la grille de notation :
+
 |===
 |*Cas*|*Points*
 |Ne compile/s'exécute pas|0
@@ -31,11 +38,436 @@ En cas d'ex-aequo, même note. (5/5/3/2 par exemple).
 
 {empty} +
 
+== Catégorie "Sobriété"
+
+=== Sobriété n°57 (langage C)
+
+==== Prérequis
+[.text-justify]
+
+[SOURCE, c]
+----
+----
+
+[.text-justify]
+
+[.text-justify]
+
+==== Reproductibilité
+[.text-justify]
+
+[.text-justify]
+
+==== Analyse
+[.text-justify]
+
+===== Lisibilité du code
+[.text-justify]
+
+===== Qualité du code
+[.text-justify]
+
+===== Sobriété numérique
+[.text-justify]
+
+===== Efficacité et temps d'exécution
+[.text-justify]
+
+=== Sobriété n°162 (langage Python)
+
+==== Prérequis
+[.text-justify]
+
+[SOURCE, python]
+----
+----
+
+[.text-justify]
+
+[.text-justify]
+
+==== Reproductibilité
+[.text-justify]
+
+[.text-justify]
+
+==== Analyse
+[.text-justify]
+
+===== Lisibilité du code
+[.text-justify]
+
+===== Qualité du code
+[.text-justify]
+
+===== Sobriété numérique
+[.text-justify]
+
+===== Efficacité et temps d'exécution
+[.text-justify]
+
+=== Sobriété n°166 (langage C)
+
+==== Prérequis
+[.text-justify]
+
+[SOURCE, c]
+----
+----
+
+[.text-justify]
+
+[.text-justify]
+
+==== Reproductibilité
+[.text-justify]
+
+[.text-justify]
+
+==== Analyse
+[.text-justify]
+
+===== Lisibilité du code
+[.text-justify]
+
+===== Qualité du code
+[.text-justify]
+
+===== Sobriété numérique
+[.text-justify]
+
+===== Efficacité et temps d'exécution
+[.text-justify]
+
+== Catégorie "Efficacité"
+
+=== Efficacité n°43 (langage Java)
+
+==== Prérequis
+[.text-justify]
+
+[SOURCE, java]
+----
+----
+
+[.text-justify]
+
+[.text-justify]
+
+==== Reproductibilité
+[.text-justify]
+
+[.text-justify]
+
+==== Analyse
+[.text-justify]
+
+===== Lisibilité du code
+[.text-justify]
+
+===== Qualité du code
+[.text-justify]
+
+===== Sobriété numérique
+[.text-justify]
+
+===== Efficacité et temps d'exécution
+[.text-justify]
+
+=== Efficacité n°90 (langage Java)
+
+==== Prérequis
+[.text-justify]
+
+[SOURCE, java]
+----
+----
+
+[.text-justify]
+
+[.text-justify]
+
+==== Reproductibilité
+[.text-justify]
+
+[.text-justify]
+
+==== Analyse
+[.text-justify]
+
+===== Lisibilité du code
+[.text-justify]
+
+===== Qualité du code
+[.text-justify]
+
+===== Sobriété numérique
+[.text-justify]
+
+===== Efficacité et temps d'exécution
+[.text-justify]
+
+== Catégorie "Simplicité"
+
+=== Simplicité n°11 (langage Java)
+
+==== Prérequis
+[.text-justify]
+
+[SOURCE, java]
+----
+----
+
+[.text-justify]
+
+[.text-justify]
+
+==== Reproductibilité
+[.text-justify]
+
+[.text-justify]
+
+==== Analyse
+[.text-justify]
+
+===== Lisibilité du code
+[.text-justify]
+
+===== Qualité du code
+[.text-justify]
+
+===== Sobriété numérique
+[.text-justify]
+
+===== Efficacité et temps d'exécution
+[.text-justify]
+
+=== Simplicité n°39 (langage Java)
+
+==== Prérequis
+[.text-justify]
+
+[SOURCE, java]
+----
+----
+
+[.text-justify]
+
+[.text-justify]
+
+==== Reproductibilité
+[.text-justify]
+
+[.text-justify]
+
+==== Analyse
+[.text-justify]
+
+===== Lisibilité du code
+[.text-justify]
+
+===== Qualité du code
+[.text-justify]
+
+===== Sobriété numérique
+[.text-justify]
+
+===== Efficacité et temps d'exécution
+[.text-justify]
+
+=== Simplicité n°56 (langage Java)
+
+==== Prérequis
+[.text-justify]
+
+[SOURCE, java]
+----
+----
+
+[.text-justify]
+
+[.text-justify]
+
+==== Reproductibilité
+[.text-justify]
+
+[.text-justify]
+
+==== Analyse
+[.text-justify]
+
+===== Lisibilité du code
+[.text-justify]
+
+===== Qualité du code
+[.text-justify]
+
+===== Sobriété numérique
+[.text-justify]
+
+===== Efficacité et temps d'exécution
+[.text-justify]
+
+=== Simplicité n°71 (langage Java)
+
+==== Prérequis
+[.text-justify]
+
+[SOURCE, java]
+----
+----
+
+[.text-justify]
+
+[.text-justify]
+
+==== Reproductibilité
+[.text-justify]
+
+[.text-justify]
+
+==== Analyse
+[.text-justify]
+
+===== Lisibilité du code
+[.text-justify]
+
+===== Qualité du code
+[.text-justify]
+
+===== Sobriété numérique
+[.text-justify]
+
+===== Efficacité et temps d'exécution
+[.text-justify]
+
+=== Efficacité n°106 (langage Python)
+
+==== Prérequis
+[.text-justify]
+
+[SOURCE, python]
+----
+----
+
+[.text-justify]
+
+[.text-justify]
+
+==== Reproductibilité
+[.text-justify]
+
+[.text-justify]
+
+==== Analyse
+[.text-justify]
+
+===== Lisibilité du code
+[.text-justify]
+
+===== Qualité du code
+[.text-justify]
+
+===== Sobriété numérique
+[.text-justify]
+
+===== Efficacité et temps d'exécution
+[.text-justify]
+
+=== Efficacité n°131 (langage Java)
+
+==== Prérequis
+[.text-justify]
+
+[SOURCE, java]
+----
+----
+
+[.text-justify]
+
+[.text-justify]
+
+==== Reproductibilité
+[.text-justify]
+
+[.text-justify]
+
+==== Analyse
+[.text-justify]
+
+===== Lisibilité du code
+[.text-justify]
+
+===== Qualité du code
+[.text-justify]
+
+===== Sobriété numérique
+[.text-justify]
+
+===== Efficacité et temps d'exécution
+[.text-justify]
+
+== Classement
+
+Voici donc le classement final selon les catégories :
+
+|===
+|Catégorie |Solution algorithmique |Position |Notation
+
+.4+<.>|Sobriété
+|1
+|
+|
+
+|2
+|
+|
+
+|3
+|
+|
+
+|4
+|
+|
 
 
-== Efficacité n°21 (python)
+.4+<.>|Efficacité
+|5
+|
+|
 
-=== Prérequis
+|6
+|
+|
+
+|7
+|
+|
+
+|8
+|
+|
+
+.3+<.>|Simplicité
+|9
+|
+|
+
+|10
+|
+|
+
+|11
+|
+|
+|===
+
+== Exemple de code
+
+=== Efficacité n°21 (python)
+
+==== Prérequis
 [.text-justify]
 Ajouter le code suivant tout en haut du fichier ``test.py`` : +
 
@@ -54,18 +486,26 @@ Il permet de vérifier que le programme traite bien tous les cas donnés. +
 Le fichier ``analyse.py`` du répertoire ``analyse`` permet d'obtenir les temps d'exécutions du programme en fonction de chaînes générées aléatoirement de tailles données.
 
 
-=== Reproductibilité
+==== Reproductibilité
 [.text-justify]
 Lancer le code de ``test.py``, le programme devrait s'exécuter même si une erreur de compilation est relevée dans la close donnée dans les prérequis. Vérifier que le programme traite de tous les cas donnés.
 
 [.text-justify]
 Lancer le code de ``analyse.py``, le programme devrait s'exécuter même si une erreur de compilation est relevée dans la close donnée dans les prérequis. Analyser les temps d'exécutions en fonction des différentes tailles de chaînes.
 
-
-=== Analyse
+==== Analyse
 [.text-justify]
 [red]#Ce code ne passe pas tous les tests !#
 
-==== Efficacité et temps d'exécution
+===== Lisibilité du code
+[.text-justify]
+
+===== Qualité du code
+[.text-justify]
+
+===== Sobriété numérique
+[.text-justify]
+
+===== Efficacité et temps d'exécution
 [.text-justify]
 Les temps d'exécutions analysés via le programme ``analyse.py`` semblent être inconstants. La complexité du programme ``efficacite21`` dépend du nombre d'espace dans la chaîne donnée. Cette dernière semble se rapprocher le plus de *O(2n)*.
