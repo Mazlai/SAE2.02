@@ -36,8 +36,6 @@ En voici la grille de notation :
 |===
 En cas d'ex-aequo, même note. (5/5/3/2 par exemple).
 
-{empty} +
-
 == Catégorie "Sobriété"
 
 === Sobriété n°57 (langage C)
