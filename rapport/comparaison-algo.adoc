@@ -199,6 +199,8 @@ Concrètement, la chaîne de caractère sera toujours la même lors de l'analyse
 Visiblement, aucune erreur n'est à constater sur cette solution algorithmique. +
 D'après *Codacy*, le fichier ``sobriete-166.c`` est noté "A".
 
+image::/rapport/images/sobriete-166.PNG[]
+
 ===== Sobriété numérique
 [.text-justify]
 
