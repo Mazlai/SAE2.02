@@ -221,7 +221,7 @@ En voici les résultats obtenus :
 ____
 ● _15.00ms_ ; +
 ● _30.00ms_ ; +
-● _15.00ms_ ; +
+● _30.00ms_ ; +
 ● _30.00ms_ ; +
 ● _30.00ms_. +
 ____
@@ -231,13 +231,14 @@ ____
 ____
 ● _1_ ; +
 ● _3_ ; +
-● _1_ ; +
+● _3_ ; +
 ● _3_ ; +
 ● _3_.
 ____
 
 [.text-justify]
 Ainsi, dès lors que la chaîne de caractère est dupliquée, le temps ainsi que le nombre d'itérations reste le même et pour cause : l'algorithme ne fonctionne pas lorsque l'on met un ou plusieurs espaces dans la chaîne de caractère. +
+Dès lors qu'une chaîne de caractère est située au début, l'algorithme ne semble visiblement pas traiter le cas, passant directement au premier morceau de cette chaîne.
 
 [.text-justify]
 Autrement dit, il prendra seulement en considération le début de la chaîne de caractère non séparée du reste de celle-ci par un espace. De ce fait, traitant alors constamment la même chaîne de caractère, la complexité du programme ``sobriete-166.c`` semble se rapprocher de *O(1)*, bien que celle-ci soit complètement faussée car le résultat attendu ne correspond pas à la demande souhaitée.
