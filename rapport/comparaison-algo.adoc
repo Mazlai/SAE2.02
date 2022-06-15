@@ -41,7 +41,7 @@ En cas d'ex-aequo, même note. (5/5/3/2 par exemple).
 ==== Prérequis
 [.text-justify]
 
-[SOURCE, c]
+[source, c]
 ----
 ----
 
@@ -74,7 +74,7 @@ En cas d'ex-aequo, même note. (5/5/3/2 par exemple).
 ==== Prérequis
 [.text-justify]
 
-[SOURCE, python]
+[source, python]
 ----
 ----
 
@@ -132,14 +132,14 @@ La procédure à suivre vous est proposée en bas de page sur l'article http://f
 Pour ainsi évaluer le temps d'exécution que votre algorithme puisse prendre afin d'en déterminer son efficacité, une librairie en langage C permet cette évaluation : la librairie *<time.h>*. +
 Pour son importation, veuillez à rajouter la ligne suivante en en-tête du code source :
 
-[SOURCE, c]
+[source, c]
 ----
 #include <time.h>
 ----
 
 Une fois l'importation de cette librairie, il vous faut l'utiliser. Le programme ici proposé étant réalisé dans un ``main``, nous nous contenterons de rajouter les informations nécessaires dans celui-ci. Pour ce faire, déclarez une variable de type flottant, au début de la fonction ``main`` puis, retournez simplement la valeur prise par votre programme en fin de votre fonction :
 
-[SOURCE, c]
+[source, c]
 ----
 //Déclarations de variables de test
   float time = 0;
@@ -159,7 +159,7 @@ Enfin, il en va également de même pour connaître le nombre d'itérations de v
 
 Pour ce faire, veuillez à déclarer une variable de type entier au début de votre ``main`` puis, incrémentez cette valeur *au moment où* l'analyse de votre chaîne de caractère avance également et enfin, veuillez retourner votre résultat pour connaître le nombre de fois où vos conditions ont été exécutée :
 
-[SOURCE, c]
+[source, c]
 ----
 //Déclarations de variables de test
   int nbIterations = 0;
@@ -250,7 +250,7 @@ Autrement dit, il prendra seulement en considération le début de la chaîne de
 ==== Prérequis
 [.text-justify]
 
-[SOURCE, java]
+[source, java]
 ----
 ----
 
@@ -283,7 +283,7 @@ Autrement dit, il prendra seulement en considération le début de la chaîne de
 ==== Prérequis
 [.text-justify]
 
-[SOURCE, java]
+[source, java]
 ----
 ----
 
@@ -351,7 +351,7 @@ Autrement dit, il prendra seulement en considération le début de la chaîne de
 ==== Prérequis
 [.text-justify]
 
-[SOURCE, java]
+[source, java]
 ----
 ----
 
@@ -384,7 +384,7 @@ Autrement dit, il prendra seulement en considération le début de la chaîne de
 ==== Prérequis
 [.text-justify]
 
-[SOURCE, java]
+[source, java]
 ----
 ----
 
@@ -417,7 +417,7 @@ Autrement dit, il prendra seulement en considération le début de la chaîne de
 ==== Prérequis
 [.text-justify]
 
-[SOURCE, java]
+[source, java]
 ----
 ----
 
@@ -450,7 +450,7 @@ Autrement dit, il prendra seulement en considération le début de la chaîne de
 ==== Prérequis
 [.text-justify]
 
-[SOURCE, python]
+[source, python]
 ----
 ----
 
@@ -483,7 +483,7 @@ Autrement dit, il prendra seulement en considération le début de la chaîne de
 ==== Prérequis
 [.text-justify]
 
-[SOURCE, java]
+[source, java]
 ----
 ----
 
@@ -575,7 +575,7 @@ Voici donc le classement final selon les catégories :
 [.text-justify]
 Ajouter le code suivant tout en haut du fichier ``test.py`` : +
 
-[SOURCE, python]
+[source, python]
 ----
 import sys
 sys.path.append('analyse/solutions/') # import python files from path 'analyse/solutions'
