@@ -106,16 +106,75 @@ En cas d'ex-aequo, même note. (5/5/3/2 par exemple).
 
 ==== Prérequis
 [.text-justify]
+Deux prérequis sont alors nécessaires à l'analyse du fichier ``sobriete-166.c`` :
+
+____
+● Un compilateur *GCC* en langage C sous Windows ; +
+● Une librairie prénommée *<time.h>* à implémenter dans le code source pour l'analyse du temps d'exécution de la solution algorithmique proposée.
+____
+
+==== Reproductibilité et références
+[.text-justify]
+*Compilateur GCC :*
+
+[.text-justify]
+Pour l'utilisation du compilateur *GCC* dans votre terminal, je vous invite à installer la plate-forme de distribution et de construction de logiciels pour Windows *MSYS2* en http://feaforall.com/install-c-language-gcc-compiler-windows/[__cliquant ici__]. L'ensemble des étapes d'installation seront indiquées. +
+
+[.text-justify]
+Bien qu'il soit aisé d'installer facilement l'ensemble des packages nécessaires, il est également intéressant de savoir comment utiliser le compilateur *GCC* directement depuis votre terminal Windows : il est alors nécessaire que vous ajoutiez vos exécutables à votre PATH Windows. +
+
+[.text-justify]
+La procédure à suivre vous est proposée en bas de page sur l'article http://feaforall.com/install-c-language-gcc-compiler-windows/[__suivant__].
+
+*Librairie <time.h> :*
+
+[.text-justify]
+Pour ainsi évaluer le temps d'exécution que votre algorithme puisse prendre afin d'en déterminer son efficacité, une librairie en langage C permet cette évaluation : la librairie *<time.h>*. +
+Pour son importation, veuillez à rajouter la ligne suivante en en-tête du code source :
 
 [SOURCE, c]
 ----
+#include <time.h>
 ----
 
-[.text-justify]
+Une fois l'importation de cette librairie, il vous faut l'utiliser. Le programme ici proposé étant réalisé dans un ``main``, nous nous contenterons de rajouter les informations nécessaires dans celui-ci. Pour ce faire, déclarez une variable de type flottant, au début de la fonction ``main`` puis, retournez simplement la valeur prise par votre programme en fin de votre fonction :
 
-[.text-justify]
+[SOURCE, c]
+----
+//Déclarations de variables de test
+  float time = 0;
+  
+  [...]
+  
+//Affichage des tests :
+  time = clock();
+  printf("\nTemps d'execution : %.2f ms", time);
+  
+  return 0; 
+----
 
-==== Reproductibilité
+*Autres :*
+
+Enfin, il en va également de même pour connaître le nombre d'itérations de votre programme, autrement dit, combien de fois est réalisée votre condition en fonction de la chaîne de caractère renseignée. +
+
+Pour ce faire, veuillez à déclarer une variable de type entier au début de votre ``main`` puis, incrémentez cette valeur *au moment où* l'analyse de votre chaîne de caractère avance également et enfin, veuillez retourner votre résultat pour connaître le nombre de fois où vos conditions ont été exécutée :
+
+[SOURCE, c]
+----
+//Déclarations de variables de test
+  int nbIterations = 0;
+  
+  [...]
+  
+//Dans les conditions :
+  nbIterations++;
+  
+  [...]
+  
+//Affichage des tests
+  printf("\nNombre d'itérations : %d", nbIterations);
+----
+
 [.text-justify]
 
 [.text-justify]
@@ -125,6 +184,15 @@ En cas d'ex-aequo, même note. (5/5/3/2 par exemple).
 
 ===== Lisibilité du code
 [.text-justify]
+Bien que cela figure comme un avis subjectif, cette solution algorithmique n'est pour autant pas très explicite à comprendre. En effet, aucune javadoc n'a été réalisée afin que l'utilisateur réutilisant cette même solution, puisse comprendre la manière employée pour résoudre le problème. +
+
+[.text-justify]
+De plus, les conditions de vérification sont également très longues, avec une syntaxe jusque-là peu commune de la part du développeur. +
+Celle-ci prend la forme suivante : ``[...] ? [...] : [...]``. +
+
+[.text-justify]
+Enfin, l'utilisation d'un tableau à double entrée n'est pas nécessairement très instructif, d'autant plus dans son utilisation ici-même. +
+Concrètement, la chaîne de caractère sera toujours la même lors de l'analyse, bien que celle-ci se réalise étape par étape sur les caractères constituant cette même chaîne de caractère. Il est alors inutile de renseigner constamment comme premier élément, la même chaîne de caractère.
 
 ===== Qualité du code
 [.text-justify]
@@ -134,6 +202,45 @@ En cas d'ex-aequo, même note. (5/5/3/2 par exemple).
 
 ===== Efficacité et temps d'exécution
 [.text-justify]
+Pour alors évaluer l'efficacité et le temps d'exécution de la solution algorithmique, un ensemble de tests est alors réalisé. +
+Pour ces tests, j'ai procédé à prendre une chaîne de caractère déjà précédemment utilisée (ici "Cou cou  J M  B") et de voir, en la dupliquant, si le temps d'exécution et le nombre d'itérations varient. +
+
+Ainsi, voici les différentes chaînes de caractère analysée : +
+
+____
+● __"C"__ ; +
+● __"Cou cou  J M  B"__ ; +
+● __" Cou cou  J M  B "__ ; +
+● __"Cou cou  J M  B"__ dupliquée respectivement, 5 fois et 10 fois ;
+____
+
+En voici les résultats obtenus :
+
+*Temps d'exécution :*
+
+____
+● _15.00ms_ ; +
+● _30.00ms_ ; +
+● _15.00ms_ ; +
+● _30.00ms_ ; +
+● _30.00ms_. +
+____
+
+*Nombre d'itérations :*
+
+____
+● _1_ ; +
+● _3_ ; +
+● _1_ ; +
+● _3_ ; +
+● _3_.
+____
+
+[.text-justify]
+Ainsi, dès lors que la chaîne de caractère est dupliquée, le temps ainsi que le nombre d'itérations reste le même et pour cause : l'algorithme ne fonctionne pas lorsque l'on met un ou plusieurs espaces dans la chaîne de caractère. +
+
+[.text-justify]
+Autrement dit, il prendra seulement en considération le début de la chaîne de caractère non séparée du reste de celle-ci par un espace. De ce fait, traitant alors constamment la même chaîne de caractère, la complexité du programme ``sobriete-166.c`` semble se rapprocher de *O(1)*, bien que celle-ci soit complètement faussée car le résultat attendu ne correspond pas à la demande souhaitée.
 
 == Catégorie "Efficacité"
 
