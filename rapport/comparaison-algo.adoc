@@ -42,8 +42,8 @@ En cas d'ex-aequo, même note. (5/5/3/2 par exemple).
 Deux prérequis sont alors nécessaires à l'analyse du fichier ``sobriete-57.c`` :
 
 ____
-● Un IDE (ici, repl.it était utilisé) ; +
-● Une librairie prénommée *<time.h>* à implémenter dans le code source pour l'analyse du temps d'exécution de la solution algorithmique proposée.
+● Un IDE collaboratif (ici, repl.it était utilisé pour la sobriété) ; +
+● Un IDE (ici, CodeBlocks était utilisé pour le temps d'exécution).
 ____
 
 ==== Reproductibilité et références
@@ -51,40 +51,27 @@ ____
 *Repl.it :*
 
 [.text-justify]
-Repl.it ne nécessite pas de configuration particulière pour pouvoir compiler et exécuter un programme, quel que soit le langage utilisé. Bien que le temps d'exécution sera plus long étant donné que Repl.it est un IDE collaboratif basé sur un navigateur, pour paramétrer votre fichier ``sobriete-57.c``, il suffit de :
+Repl.it ne nécessite pas de configuration particulière pour pouvoir compiler et exécuter un programme, quel que soit le langage utilisé. + 
+Pour paramétrer votre fichier ``sobriete-57.c``, il suffit de :
 
 ____
-● Créer un compte repl.it ou l'associer avec un compte Google, GitHub, etc.
-● Créer un "Repl" dont votre template sera en C, avec un titre au choix.
+● Créer un compte repl.it ou l'associer avec un compte Google, GitHub, etc. +
+● Créer un "Repl" dont votre template sera en C, avec un titre au choix. +
 ● Déposer votre code en C et exécutez-le.
 ____
 
-*Librairie <time.h> :*
+[.text-justify]
+*CodeBlocks :*
 
 [.text-justify]
-Pour ainsi évaluer le temps d'exécution que votre algorithme puisse prendre afin d'en déterminer son efficacité, une librairie en langage C permet cette évaluation : la librairie *<time.h>*. +
-Pour son importation, veuillez à rajouter la ligne suivante en en-tête du ``main`` :
+CodeBlocks ne nécessite pas de configuration particulière pour pouvoir compiler et exécuter un programme, ici en C. L'avantage de son utilisation est que le temps d'exécution est automatiquement calculé. Ainsi, pour paramétrer votre fichier ``sobriete-57.c``, il est d'abord nécessaire de l'installer. Pour toutes ces étapes, il suffit de :
 
-[source, c]
-----
-#include <time.h>
-----
-
-Une fois l'importation de cette librairie, il vous faut l'utiliser. Pour ce faire, déclarez une variable de type flottant, au début de la fonction ``main`` puis, retournez simplement la valeur prise par votre programme en fin de votre main :
-
-[source, c]
-----
-//Déclarations de variables de test
-  float time = 0;
-  
-  [...]
-  
-//Affichage des tests :
-  time = clock();
-  printf("\nTemps d'execution : %.2f ms", time);
-  
-  return 0; 
-----
+____
+● Se rendre sur le site de https://www.codeblocks.org/downloads/[__Code::Blocks__] et aller dans la section "Downloads" puis "Download the binary release" ; +
+● Paramétrez alors votre logiciel CodeBlocks selon vos préférences ; +
+● Une fois CodeBlocks d'ouvert, sélectionnez "File" > "Open..." et enfin, trouvez votre fichier ; +
+● Exécutez votre code.
+____
 
 *Autres :*
 
@@ -116,6 +103,16 @@ Pour ce faire, veuillez à déclarer une variable de type entier au début de vo
 
 ===== Qualité du code
 [.text-justify]
+De ce qui peut être constaté, quelques erreurs mineurs sont à constater sur cette solution algorithmique par *Codacy* : +
+
+____
+● Ne gère pas les chaînes qui ne sont pas terminées par \0 ; si on lui en donne un, il peut effectuer une surlecture (cela pourrait provoquer un plantage s'il n'est pas protégé) ; +
+● La condition 'chaine[i]==' '' est _visiblement_ toujours vraie ; +
+____
+
+D'après *Codacy*, le fichier ``sobriete-57.c`` est noté "B".
+
+image::/rapport/images/sobriete-57.PNG[]
 
 ===== Sobriété numérique
 [.text-justify]
