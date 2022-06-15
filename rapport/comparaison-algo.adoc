@@ -39,20 +39,74 @@ En cas d'ex-aequo, même note. (5/5/3/2 par exemple).
 === Sobriété n°57 (langage C)
 
 ==== Prérequis
+Deux prérequis sont alors nécessaires à l'analyse du fichier ``sobriete-57.c`` :
+
+____
+● Un IDE (ici, repl.it était utilisé) ; +
+● Une librairie prénommée *<time.h>* à implémenter dans le code source pour l'analyse du temps d'exécution de la solution algorithmique proposée.
+____
+
+==== Reproductibilité et références
 [.text-justify]
+*Repl.it :*
+
+[.text-justify]
+Repl.it ne nécessite pas de configuration particulière pour pouvoir compiler et exécuter un programme, quel que soit le langage utilisé. Bien que le temps d'exécution sera plus long étant donné que Repl.it est un IDE collaboratif basé sur un navigateur, pour paramétrer votre fichier ``sobriete-57.c``, il suffit de :
+
+____
+● Créer un compte repl.it ou l'associer avec un compte Google, GitHub, etc.
+● Créer un "Repl" dont votre template sera en C, avec un titre au choix.
+● Déposer votre code en C et exécutez-le.
+____
+
+*Librairie <time.h> :*
+
+[.text-justify]
+Pour ainsi évaluer le temps d'exécution que votre algorithme puisse prendre afin d'en déterminer son efficacité, une librairie en langage C permet cette évaluation : la librairie *<time.h>*. +
+Pour son importation, veuillez à rajouter la ligne suivante en en-tête du ``main`` :
 
 [source, c]
 ----
+#include <time.h>
 ----
 
-[.text-justify]
+Une fois l'importation de cette librairie, il vous faut l'utiliser. Pour ce faire, déclarez une variable de type flottant, au début de la fonction ``main`` puis, retournez simplement la valeur prise par votre programme en fin de votre main :
 
-[.text-justify]
+[source, c]
+----
+//Déclarations de variables de test
+  float time = 0;
+  
+  [...]
+  
+//Affichage des tests :
+  time = clock();
+  printf("\nTemps d'execution : %.2f ms", time);
+  
+  return 0; 
+----
 
-==== Reproductibilité
-[.text-justify]
+*Autres :*
 
-[.text-justify]
+Enfin, il en va également de même pour connaître le nombre d'itérations de votre programme, autrement dit, combien de fois est réalisée votre condition en fonction de la chaîne de caractère renseignée. +
+
+Pour ce faire, veuillez à déclarer une variable de type entier au début de votre fonction puis, incrémentez cette valeur *au moment où* l'analyse de votre chaîne de caractère avance également et enfin, veuillez retourner votre résultat pour connaître le nombre de fois où vos conditions ont été exécutée :
+
+[source, c]
+----
+//Déclarations de variables de test
+  int nbIterations = 0;
+  
+  [...]
+  
+//Dans les conditions :
+  nbIterations++;
+  
+  [...]
+  
+//Affichage des tests
+  printf("\nNombre d'itérations : %d", nbIterations);
+----
 
 ==== Analyse
 [.text-justify]
@@ -68,6 +122,39 @@ En cas d'ex-aequo, même note. (5/5/3/2 par exemple).
 
 ===== Efficacité et temps d'exécution
 [.text-justify]
+Pour alors évaluer l'efficacité et le temps d'exécution de la solution algorithmique, un ensemble de tests est alors réalisé. +
+Pour ces tests, j'ai procédé à prendre une chaîne de caractère déjà précédemment utilisée (ici "Cou cou  J M  B") et de voir, en la dupliquant, si le temps d'exécution et le nombre d'itérations varient. +
+
+Ainsi, voici les différentes chaînes de caractère analysée : +
+
+____
+● __"C"__ ; +
+● __"Cou cou  J M  B"__ ; +
+● __" Cou cou  J M  B "__ ; +
+● __"Cou cou  J M  B"__ dupliquée respectivement, 5 fois et 10 fois ;
+____
+
+En voici les résultats obtenus :
+
+*Temps d'exécution :*
+
+____
+● __ ; +
+● __ ; +
+● __ ; +
+● __ ; +
+● __. +
+____
+
+*Nombre d'itérations :*
+
+____
+● _2_ ; +
+● _28_ ; +
+● _30_ ; +
+● _140_ ; +
+● _280_.
+____
 
 === Sobriété n°162 (langage Python)
 
