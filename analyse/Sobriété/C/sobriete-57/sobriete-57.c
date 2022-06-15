@@ -1,6 +1,7 @@
 #include "solution.h"
  
 char* erase(char* chaine) {
+ //Ajout du nombre d'itérations
     int nbIterations = 0;
     
     int i = 0, j = 0;
@@ -29,6 +30,7 @@ char* erase(char* chaine) {
  
     }
 
+  //Affichage du nombre d'itérations
     printf("\n%d\n", nbIterations);
     newChaine[j] = '\0';
  
