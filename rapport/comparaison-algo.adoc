@@ -122,36 +122,19 @@ image::/rapport/images/sobriete-57.PNG[]
 Pour alors évaluer l'efficacité et le temps d'exécution de la solution algorithmique, un ensemble de tests est alors réalisé. +
 Pour ces tests, j'ai procédé à prendre une chaîne de caractère déjà précédemment utilisée (ici "Cou cou  J M  B") et de voir, en la dupliquant, si le temps d'exécution et le nombre d'itérations varient. +
 
-Ainsi, voici les différentes chaînes de caractère analysée : +
+En voici le tableau adéquat :
 
-____
-● __"C"__ ; +
-● __"Cou cou  J M  B"__ ; +
-● __" Cou cou  J M  B "__ ; +
-● __"Cou cou  J M  B"__ dupliquée respectivement, 5 fois et 10 fois ;
-____
+|===
+| *Chaînes de caractères analysées* | *Résultat de l'algorithme* | *Résultats attendus* | *Temps d'exécution* | *Nombre d'itérations*
+| ``'C'`` | Test passé ✓ | ``'C'`` | ✘ | 2
+| ``'Cou_cou\__J_M__B'`` | Test passé ✓ | ``'Coucou\__JM__B'`` | ✘ | 28
+| ``'_Cou_cou\__J_M__B_'`` | Test passé ✓| ``'Coucou\__JM__B'`` | ✘ | 30
+| ``'Cou_cou\__J_M__B'`` (dupliquée 5x) | Test passé ✓ | ``'Coucou\__JM__B'`` (dupliquée 5x) | ✘ | 140
+| ``'Cou_cou\__J_M__B'`` (dupliquée 10x) | Test passé ✓ | ``Coucou\__JM__B`` (dupliquée 10x) | ✘ | 280
+|===
 
-En voici les résultats obtenus :
+Nous pouvons ainsi remarquer que le temps d'exécution augmente au fur et à mesure que la chaîne de caractère devient également importante.
 
-*Temps d'exécution :*
-
-____
-● __ ; +
-● __ ; +
-● __ ; +
-● __ ; +
-● __. +
-____
-
-*Nombre d'itérations :*
-
-____
-● _2_ ; +
-● _28_ ; +
-● _30_ ; +
-● _140_ ; +
-● _280_.
-____
 
 === Sobriété n°162 (langage Python)
 
@@ -293,36 +276,16 @@ image::/rapport/images/sobriete-166.PNG[]
 Pour alors évaluer l'efficacité et le temps d'exécution de la solution algorithmique, un ensemble de tests est alors réalisé. +
 Pour ces tests, j'ai procédé à prendre une chaîne de caractère déjà précédemment utilisée (ici "Cou cou  J M  B") et de voir, en la dupliquant, si le temps d'exécution et le nombre d'itérations varient. +
 
-Ainsi, voici les différentes chaînes de caractère analysée : +
+En voici le tableau adéquat :
 
-____
-● __"C"__ ; +
-● __"Cou cou  J M  B"__ ; +
-● __" Cou cou  J M  B "__ ; +
-● __"Cou cou  J M  B"__ dupliquée respectivement, 5 fois et 10 fois ;
-____
-
-En voici les résultats obtenus :
-
-*Temps d'exécution :*
-
-____
-● _15.00ms_ ; +
-● _30.00ms_ ; +
-● _30.00ms_ ; +
-● _30.00ms_ ; +
-● _30.00ms_. +
-____
-
-*Nombre d'itérations :*
-
-____
-● _1_ ; +
-● _3_ ; +
-● _3_ ; +
-● _3_ ; +
-● _3_.
-____
+|===
+| *Chaînes de caractères analysées* | *Résultat de l'algorithme* | *Résultats attendus* | *Temps d'exécution* | *Nombre d'itérations*
+| ``'C'`` | Test passé ✓ | ``'C'`` | 15.00ms | 1
+| ``'Cou_cou\__J_M__B'`` | Test invalide ✘ | ``'Coucou\__JM__B'`` | 30.00ms | 3
+| ``'_Cou_cou\__J_M__B_'`` | Test invalide ✘ | ``'Coucou\__JM__B'`` | 30.00ms | 3
+| ``'Cou_cou\__J_M__B'`` (dupliquée 5x) | Test invalide ✘ | ``'Coucou\__JM__B'`` (dupliquée 5x) | 30.00ms | 3
+| ``'Cou_cou\__J_M__B'`` (dupliquée 10x) | Test invalide ✘ | ``Coucou\__JM__B`` (dupliquée 10x) | 30.00ms | 3
+|===
 
 [.text-justify]
 Ainsi, dès lors que la chaîne de caractère est dupliquée, le temps ainsi que le nombre d'itérations reste le même et pour cause : l'algorithme ne fonctionne pas lorsque l'on met un ou plusieurs espaces dans la chaîne de caractère. +
