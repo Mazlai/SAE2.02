@@ -162,6 +162,10 @@ Nous pouvons ainsi remarquer que le temps d'exécution augmente au fur et à mes
 
 ===== Qualité du code
 [.text-justify]
+Visiblement, aucune erreur n'est à constater sur cette solution algorithmique. +
+D'après *Codacy*, le fichier ``sobriete-162.py`` est noté "A".
+
+image::/rapport/images/sobriete-162.PNG[]
 
 ===== Sobriété numérique
 [.text-justify]
@@ -323,6 +327,8 @@ Autrement dit, il prendra seulement en considération le début de la chaîne de
 ===== Qualité du code
 [.text-justify]
 
+image::/rapport/images/efficacite-43.PNG[]
+
 ===== Sobriété numérique
 [.text-justify]
 
@@ -355,6 +361,78 @@ Autrement dit, il prendra seulement en considération le début de la chaîne de
 
 ===== Qualité du code
 [.text-justify]
+
+image::/rapport/images/efficacite-90.PNG[]
+
+===== Sobriété numérique
+[.text-justify]
+
+===== Efficacité et temps d'exécution
+[.text-justify]
+
+=== Efficacité n°106 (langage Python)
+
+==== Prérequis
+[.text-justify]
+
+[source, python]
+----
+----
+
+[.text-justify]
+
+[.text-justify]
+
+==== Reproductibilité
+[.text-justify]
+
+[.text-justify]
+
+==== Analyse
+[.text-justify]
+
+===== Lisibilité du code
+[.text-justify]
+
+===== Qualité du code
+[.text-justify]
+
+image::/rapport/images/efficacite-106.PNG[]
+
+===== Sobriété numérique
+[.text-justify]
+
+===== Efficacité et temps d'exécution
+[.text-justify]
+
+=== Efficacité n°131 (langage Java)
+
+==== Prérequis
+[.text-justify]
+
+[source, java]
+----
+----
+
+[.text-justify]
+
+[.text-justify]
+
+==== Reproductibilité
+[.text-justify]
+
+[.text-justify]
+
+==== Analyse
+[.text-justify]
+
+===== Lisibilité du code
+[.text-justify]
+
+===== Qualité du code
+[.text-justify]
+
+image::/rapport/images/efficacite-131.PNG[]
 
 ===== Sobriété numérique
 [.text-justify]
@@ -390,6 +468,22 @@ Autrement dit, il prendra seulement en considération le début de la chaîne de
 
 ===== Qualité du code
 [.text-justify]
+De ce qui peut être constaté, quelques erreurs mineurs ainsi qu'une erreur moyenne sont à constater sur cette solution algorithmique par *Codacy* : +
+
+*Erreurs mineures :*
+____
+● Le nom de la classe utilitaire 'Erase1' ne correspond pas à '[AZ][a-zA-Z0-9] ; +
+● Toutes les classes, interfaces, énumérations et annotations doivent appartenir à un package nommé ; +
+____
+
+*Erreur moyenne :*
+____
+● La méthode 'erase1(String)' a une complexité NPath (nombre de chemins acycliques) de 384, le seuil actuel est de 200 ;
+____
+
+D'après *Codacy*, le fichier ``simplicite-11.java`` est noté "B".
+
+image::/rapport/images/simplicite-11.PNG[]
 
 ===== Sobriété numérique
 [.text-justify]
@@ -423,6 +517,10 @@ Autrement dit, il prendra seulement en considération le début de la chaîne de
 
 ===== Qualité du code
 [.text-justify]
+Visiblement, aucune erreur n'est à constater sur cette solution algorithmique. +
+D'après *Codacy*, le fichier ``simplicite-39.java`` est noté "A".
+
+image::/rapport/images/simplicite-39.PNG[]
 
 ===== Sobriété numérique
 [.text-justify]
@@ -457,6 +555,8 @@ Autrement dit, il prendra seulement en considération le début de la chaîne de
 ===== Qualité du code
 [.text-justify]
 
+image::/rapport/images/simplicite-56.PNG[]
+
 ===== Sobriété numérique
 [.text-justify]
 
@@ -490,71 +590,7 @@ Autrement dit, il prendra seulement en considération le début de la chaîne de
 ===== Qualité du code
 [.text-justify]
 
-===== Sobriété numérique
-[.text-justify]
-
-===== Efficacité et temps d'exécution
-[.text-justify]
-
-=== Efficacité n°106 (langage Python)
-
-==== Prérequis
-[.text-justify]
-
-[source, python]
-----
-----
-
-[.text-justify]
-
-[.text-justify]
-
-==== Reproductibilité
-[.text-justify]
-
-[.text-justify]
-
-==== Analyse
-[.text-justify]
-
-===== Lisibilité du code
-[.text-justify]
-
-===== Qualité du code
-[.text-justify]
-
-===== Sobriété numérique
-[.text-justify]
-
-===== Efficacité et temps d'exécution
-[.text-justify]
-
-=== Efficacité n°131 (langage Java)
-
-==== Prérequis
-[.text-justify]
-
-[source, java]
-----
-----
-
-[.text-justify]
-
-[.text-justify]
-
-==== Reproductibilité
-[.text-justify]
-
-[.text-justify]
-
-==== Analyse
-[.text-justify]
-
-===== Lisibilité du code
-[.text-justify]
-
-===== Qualité du code
-[.text-justify]
+image::/rapport/images/simplicite-71.PNG[]
 
 ===== Sobriété numérique
 [.text-justify]
