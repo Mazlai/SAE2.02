@@ -126,11 +126,11 @@ En voici le tableau adéquat :
 
 |===
 | *Chaînes de caractères analysées* | *Résultat de l'algorithme* | *Résultats attendus* | *Temps d'exécution* | *Nombre d'itérations*
-| ``'C'`` | Test passé ✓ | ``'C'`` | ✘ | 2
-| ``'Cou_cou\__J_M__B'`` | Test passé ✓ | ``'Coucou\__JM__B'`` | ✘ | 28
-| ``'_Cou_cou\__J_M__B_'`` | Test passé ✓| ``'Coucou\__JM__B'`` | ✘ | 30
-| ``'Cou_cou\__J_M__B'`` (dupliquée 5x) | Test passé ✓ | ``'Coucou\__JM__B'`` (dupliquée 5x) | ✘ | 140
-| ``'Cou_cou\__J_M__B'`` (dupliquée 10x) | Test passé ✓ | ``Coucou\__JM__B`` (dupliquée 10x) | ✘ | 280
+| ``'C'`` | Test passé ✓ | ``'C'`` | 0.134s | 2
+| ``'Cou_cou\__J_M__B'`` | Test passé ✓ | ``'Coucou\__JM__B'`` | 1.030s | 28
+| ``'_Cou_cou\__J_M__B_'`` | Test passé ✓| ``'Coucou\__JM__B'`` | 1.299s | 30
+| ``'Cou_cou\__J_M__B'`` (dupliquée 5x) | Test passé ✓ | ``'Coucou\__JM__B'`` (dupliquée 5x) | 1.356s | 140
+| ``'Cou_cou\__J_M__B'`` (dupliquée 10x) | Test passé ✓ | ``Coucou\__JM__B`` (dupliquée 10x) | 1.423s | 280
 |===
 
 Nous pouvons ainsi remarquer que le temps d'exécution augmente au fur et à mesure que la chaîne de caractère devient également importante.
