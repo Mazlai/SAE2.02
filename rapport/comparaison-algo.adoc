@@ -13,6 +13,7 @@ toc::[]
 
 == Objectif
 
+[.text-justify]
 Parmi l'ensemble des solutions algorithmiques proposées, il est nécessaire de les explorer en ayant une approche s'intéressant à l'implémentation bas niveau (structures de données, etc.) ainsi qu'à haut niveau (précision des résultats, etc.)
 
 [NOTE]
@@ -40,7 +41,6 @@ En cas d'ex-aequo, même note. (5/5/3/2 par exemple).
 
 ==== Prérequis
 Deux prérequis sont alors nécessaires à l'analyse du fichier ``sobriete-57.c`` :
-
 ____
 ● Un IDE collaboratif (ici, repl.it était utilisé pour la sobriété) ; +
 ● Un IDE (ici, CodeBlocks était utilisé pour le temps d'exécution).
@@ -53,7 +53,6 @@ ____
 [.text-justify]
 Repl.it ne nécessite pas de configuration particulière pour pouvoir compiler et exécuter un programme, quel que soit le langage utilisé. + 
 Pour paramétrer votre fichier ``sobriete-57.c``, il suffit de :
-
 ____
 ● Créer un compte repl.it ou l'associer avec un compte Google, GitHub, etc. +
 ● Créer un "Repl" dont votre template sera en C, avec un titre au choix. +
@@ -65,7 +64,6 @@ ____
 
 [.text-justify]
 CodeBlocks ne nécessite pas de configuration particulière pour pouvoir compiler et exécuter un programme, ici en C. L'avantage de son utilisation est que le temps d'exécution est automatiquement calculé. Ainsi, pour paramétrer votre fichier ``sobriete-57.c``, il est d'abord nécessaire de l'installer. Pour toutes ces étapes, il suffit de :
-
 ____
 ● Se rendre sur le site de https://www.codeblocks.org/downloads/[__Code::Blocks__] et aller dans la section "Downloads" puis "Download the binary release" ; +
 ● Paramétrez alors votre logiciel CodeBlocks selon vos préférences ; +
@@ -75,8 +73,10 @@ ____
 
 *Autres :*
 
+[.text-justify]
 Enfin, il en va également de même pour connaître le nombre d'itérations de votre programme, autrement dit, combien de fois est réalisée votre condition en fonction de la chaîne de caractère renseignée. +
 
+[.text-justify]
 Pour ce faire, veuillez à déclarer une variable de type entier au début de votre fonction puis, incrémentez cette valeur *au moment où* l'analyse de votre chaîne de caractère avance également et enfin, veuillez retourner votre résultat pour connaître le nombre de fois où vos conditions ont été exécutée :
 
 [source, c]
@@ -104,9 +104,8 @@ Pour ce faire, veuillez à déclarer une variable de type entier au début de vo
 ===== Qualité du code
 [.text-justify]
 De ce qui peut être constaté, quelques erreurs mineurs sont à constater sur cette solution algorithmique par *Codacy* : +
-
 ____
-● Ne gère pas les chaînes qui ne sont pas terminées par \0 ; si on lui en donne un, il peut effectuer une surlecture (cela pourrait provoquer un plantage s'il n'est pas protégé) ; +
+● Une ingérence des chaînes qui ne sont pas terminées par \0 ; si on lui en donne un, il peut effectuer une surlecture (cela pourrait provoquer un plantage s'il n'est pas protégé) ; +
 ● La condition 'chaine[i]==' '' est _visiblement_ toujours vraie ; +
 ____
 
@@ -178,7 +177,6 @@ image::/rapport/images/sobriete-162.PNG[]
 ==== Prérequis
 [.text-justify]
 Deux prérequis sont alors nécessaires à l'analyse du fichier ``sobriete-166.c`` :
-
 ____
 ● Un compilateur *GCC* en langage C sous Windows ; +
 ● Une librairie prénommée *<time.h>* à implémenter dans le code source pour l'analyse du temps d'exécution de la solution algorithmique proposée.
@@ -208,6 +206,7 @@ Pour son importation, veuillez à rajouter la ligne suivante en en-tête du code
 #include <time.h>
 ----
 
+[.text-justify]
 Une fois l'importation de cette librairie, il vous faut l'utiliser. Le programme ici proposé étant réalisé dans un ``main``, nous nous contenterons de rajouter les informations nécessaires dans celui-ci. Pour ce faire, déclarez une variable de type flottant, au début de la fonction ``main`` puis, retournez simplement la valeur prise par votre programme en fin de votre fonction :
 
 [source, c]
@@ -226,8 +225,10 @@ Une fois l'importation de cette librairie, il vous faut l'utiliser. Le programme
 
 *Autres :*
 
+[.text-justify]
 Enfin, il en va également de même pour connaître le nombre d'itérations de votre programme, autrement dit, combien de fois est réalisée votre condition en fonction de la chaîne de caractère renseignée. +
 
+[.text-justify]
 Pour ce faire, veuillez à déclarer une variable de type entier au début de votre ``main`` puis, incrémentez cette valeur *au moment où* l'analyse de votre chaîne de caractère avance également et enfin, veuillez retourner votre résultat pour connaître le nombre de fois où vos conditions ont été exécutée :
 
 [source, c]
@@ -326,6 +327,14 @@ Autrement dit, il prendra seulement en considération le début de la chaîne de
 
 ===== Qualité du code
 [.text-justify]
+De ce qui peut être constaté, seul une erreur mineure est à déclarer d'après *Codacy* :
+____
+● Le nom de la classe utilitaire 'Eraser2' ne correspond pas à '[AZ][a-zA-Z0-9]'. +
+Autrement dit, cette règle signale les déclarations de type qui ne correspondent pas à la regex qui s'applique à leur genre spécifique.
+____
+
+[.text-justify]
+De ce fait, bien que cela soit une erreur mineure, le fichier ``efficacite-43.java`` est noté "B" d'après *Codacy*.
 
 image::/rapport/images/efficacite-43.PNG[]
 
@@ -361,6 +370,15 @@ image::/rapport/images/efficacite-43.PNG[]
 
 ===== Qualité du code
 [.text-justify]
+A comparer du fichier précédemment analysé (``efficacite-43.java``), celui-ci possède également la même erreur mineure de code à savoir :
+____
+● Le nom de la classe utilitaire 'Eraser' ne correspond pas à '[AZ][a-zA-Z0-9]'. +
+Autrement dit, cette règle signale les déclarations de type qui ne correspondent pas à la regex qui s'applique à leur genre spécifique.
+____
+
+[.text-justify]
+En réalité, bien que le fichier ``efficacite-90.java`` diffère du fait de sa notation par *Codacy* à savoir la notation de "C", cela est en grande partie dû à la complexité mais celle-ci n'est pas une complexité similaire de celle que l'on pourrait calculer comme la complexité temporelle : il s'agit d'une complexité cyclomatique. +
+Concrètement, moins il y a de chemins à travers un morceau de code et moins ces chemins sont complexes, plus la complexité cyclomatique est faible. Ces chemins peuvent concerner des déclarations de variables, des sous-conditions, etc. Ici, sa complexité est 2x plus élevée, d'où sa notation plus mauvaise. 
 
 image::/rapport/images/efficacite-90.PNG[]
 
@@ -396,6 +414,14 @@ image::/rapport/images/efficacite-90.PNG[]
 
 ===== Qualité du code
 [.text-justify]
+*Codacy* remarque ici-même la présence de quelques erreurs mineures. Les voici :
+____
+● Espace blanc de fin (ligne vide) ; +
+● Préférence à l'utilisation de '== / !=' pour comparer des littéraux constants (str, bytes, int, float, tuple).
+____
+
+[.text-justify]
+En réalité, il est véridique de dire qu'il soit nécesasire d'ajuster certains points de ce code, pouvant le rendre plus qualitatif et respectueux des différentes règles interposées par *Codacy*. Pour autant, le fichier ``efficacite-106.py`` est noté "C".
 
 image::/rapport/images/efficacite-106.PNG[]
 
@@ -431,6 +457,21 @@ image::/rapport/images/efficacite-106.PNG[]
 
 ===== Qualité du code
 [.text-justify]
+Le fichier ``efficacite-131.java`` est *le* fichier le plus mauvais en terme de qualité d'après *Codacy*. Bien qu'une erreur mineure soit alors à constater (et déjà présente dans certains des fichiers précédemment analysés), deux erreurs moyennes sont tout de même à déplorer. Les voici :
+
+*Erreur mineure :*
+____
+● Le nom de la classe utilitaire 'Eraser' ne correspond pas à '[AZ][a-zA-Z0-9]'. +
+Autrement dit, cette règle signale les déclarations de type qui ne correspondent pas à la regex qui s'applique à leur genre spécifique.
+____
+
+*Erreurs moyennes :*
+____
+● Préférence d'éviter les variables locales inutilisées telles que 'i' ; +
+● Le fait d'éviter de réaffecter des paramètres tels que 'str'.
+____
+
+Sans contestation possible, le fichier ``efficacite-131.java`` est non-seulement le pire en terme de qualité, mais il est également noté "F" par *Codacy*, chose plutôt compréhensible.
 
 image::/rapport/images/efficacite-131.PNG[]
 
@@ -472,16 +513,19 @@ De ce qui peut être constaté, quelques erreurs mineurs ainsi qu'une erreur moy
 
 *Erreurs mineures :*
 ____
-● Le nom de la classe utilitaire 'Erase1' ne correspond pas à '[AZ][a-zA-Z0-9] ; +
-● Toutes les classes, interfaces, énumérations et annotations doivent appartenir à un package nommé ; +
+● Le nom de la classe utilitaire 'Erase1' ne correspond pas à '[AZ][a-zA-Z0-9]'. +
+Concrètement, comme déjà mentionné auparavant, il s'agit d'un non-respect de convention de dénomination configurables pour les déclarations de type. Elle signale les déclarations de type qui ne correspondent pas à la regex qui s'applique à leur genre spécifique ; +
+● Toutes les classes, interfaces, énumérations et annotations doivent appartenir à un package nommé, chose ici non-présente. +
 ____
 
 *Erreur moyenne :*
 ____
-● La méthode 'erase1(String)' a une complexité NPath (nombre de chemins acycliques) de 384, le seuil actuel est de 200 ;
+● La méthode 'erase1(String)' a une complexité NPath (nombre de chemins acycliques) de 384, le seuil actuel est de 200. +
+Cette complexité NPath correspond au nombre de chemins d'exécution acycliques à travers cette méthode, étant alors des chemins complets du début à la fin du bloc de la méthode. Ainsi, cette métrique croît de manière exponentielle, car elle multiplie la complexité des instructions dans le même bloc. +
+Le seuil recommandé par Codacy est de 200 car il est considéré comme étant le point où des mesures doivent être prises pour réduire la complexité et augmenter la lisibilité.
 ____
 
-D'après *Codacy*, le fichier ``simplicite-11.java`` est noté "B".
+Ainsi, bien que le code reste pour autant assez qualitatif, *Codacy* note le fichier ``simplicite-11.java`` "B".
 
 image::/rapport/images/simplicite-11.PNG[]
 
@@ -517,7 +561,7 @@ image::/rapport/images/simplicite-11.PNG[]
 
 ===== Qualité du code
 [.text-justify]
-Visiblement, aucune erreur n'est à constater sur cette solution algorithmique. +
+Il semblerait qu'aucune erreur ne soit à constater sur cette solution algorithmique. Il paraît alors être le plus qualitatif des autres. +
 D'après *Codacy*, le fichier ``simplicite-39.java`` est noté "A".
 
 image::/rapport/images/simplicite-39.PNG[]
@@ -554,6 +598,22 @@ image::/rapport/images/simplicite-39.PNG[]
 
 ===== Qualité du code
 [.text-justify]
+A en suivre l'analyse réalisée par *Codacy*, il semblerait que quelques erreurs soient à constater, aussi bien mineures que moyennes. Les voici :
+
+*Erreur mineure :*
+____
+● Le nom de la classe utilitaire 'Eraser' ne correspond pas à '[AZ][a-zA-Z0-9]'. +
+Cette erreur paraît commune à beaucoup de code à analyser. Il s'agit, comme déjà mentionné, d'un non-respect de convention de dénomination configurables pour les déclarations de type. Elle signale les déclarations de type qui ne correspondent pas à la regex qui s'applique à leur genre spécifique ; +
+____
+
+*Erreur moyenne :*
+____
+● Des instructions if sont imbriquées et pourraient être combinées.
+____
+
+Il semble alors que le code présente de la redondance dans certaines conditions, que l'on pourrait condenser et donc, simplifier. De ce fait, l'algorithme serait plus qualitatif et ne présenterait aucune condition de trop, ou supplémentaire que l'on peut alors ajuster.
+
+Néanmoins, d'après *Codacy*, le fichier ``simplicite-56.java`` est noté "B".
 
 image::/rapport/images/simplicite-56.PNG[]
 
@@ -589,6 +649,13 @@ image::/rapport/images/simplicite-56.PNG[]
 
 ===== Qualité du code
 [.text-justify]
+Enfin, pour ce dernier fichier à analyser, *Codacy* montre une nouvelle fois, la même erreur mineure que déjà constatée auparavant :
+____
+● Le nom de la classe utilitaire 'Eraser' ne correspond pas à '[AZ][a-zA-Z0-9]'. +
+Il s'agit d'un non-respect de convention de dénomination configurables pour les déclarations de type. Elle signale les déclarations de type qui ne correspondent pas à la regex qui s'applique à leur genre spécifique. +
+____
+
+Bien que ce soit la seule soi-disante "erreur" à constater, *Codacy* a attribué la note de "B" au fichier ``simplicite-71.java``.
 
 image::/rapport/images/simplicite-71.PNG[]
 
@@ -605,51 +672,51 @@ Voici donc le classement final selon les catégories :
 |===
 |Catégorie |Solution algorithmique |Position |Notation
 
-.4+<.>|Sobriété
-|1
+.4+<.>|Simplicité
+|``simplicite-11.java``
 |
 |
 
-|2
+|``simplicite-39.java``
 |
 |
 
-|3
+|``simplicite-56.java``
 |
 |
 
-|4
+|``simplicite-71.java``
 |
 |
 
 
 .4+<.>|Efficacité
-|5
+|``efficacite-43.java``
 |
 |
 
-|6
+|``efficacite-90.java``
 |
 |
 
-|7
+|``efficacite-106.py``
 |
 |
 
-|8
+|``efficacite-131.java``
 |
 |
 
-.3+<.>|Simplicité
-|9
+.3+<.>|Sobriété
+|``sobriete-57.c``
 |
 |
 
-|10
+|``sobriete-162.py``
 |
 |
 
-|11
+|``sobriete-166.c``
 |
 |
 |===
