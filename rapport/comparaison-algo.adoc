@@ -40,7 +40,7 @@ Plusieurs prérequis ont alors été nécessaire à la réalisation de l'ensembl
 ____
 *En C :* +
 ● Un compilateur *GCC* en langage C sous Windows ; +
-● Un IDE (ici, CodeBlocks était utilisé pour le temps d'exécution sur le fichier ``sobriete-57.c``) ; +
+● Un IDE (ici, CodeBlocks était utilisé pour le temps d'exécution sur le fichier ``sobriete-57.c``). +
 
 *En Java :* +
 ● Un IDE (ici Eclipse, bien que vous puissiez en choisir un autre). +
