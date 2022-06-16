@@ -35,18 +35,20 @@ En voici la grille de notation :
 |===
 En cas d'ex-aequo, même note. (5/5/3/2 par exemple).
 
-== Catégorie "Sobriété"
-
-=== Sobriété n°57 (langage C)
-
-==== Prérequis
-Un seul prérequis était alors nécessaire à l'analyse du fichier ``sobriete-57.c`` :
+== Prérequis
+Plusieurs prérequis ont alors été nécessaire à la réalisation de l'ensemble des analyses des fichiers :
 ____
+*En C :* +
 ● Un compilateur *GCC* en langage C sous Windows ; +
-● Un IDE (ici, CodeBlocks était utilisé pour le temps d'exécution).
+● Un IDE (ici, CodeBlocks était utilisé pour le temps d'exécution sur le fichier ``sobriete-57.c``) ; +
+
+*En Java :* +
+● Un IDE (ici Eclipse, bien que vous puissiez en choisir un autre). +
+
+*En Python :*
 ____
 
-==== Reproductibilité et références
+== Reproductibilité et références
 [.text-justify]
 *Compilateur GCC :*
 
@@ -69,6 +71,42 @@ ____
 ● Une fois CodeBlocks d'ouvert, sélectionnez "File" > "Open..." et enfin, trouvez votre fichier ; +
 ● Exécutez votre code.
 ____
+
+*Eclipse :*
+
+Eclipse est un IDE qui ne nécessite pas de configuration particulière pour l'exécuter. Tout de même, pour exécuter en revanche un fichier Java, il est nécessaire de définir son environnement de travail et de paramétrer certaines fonctionnalités.
+
+Tout d'abord, rendez-vous sur le site d'https://www.eclipse.org/downloads/[__Eclipse__] et télécharger la version recommandée. Vous définirez alors votre chemin pour savoir d'où vous pourrez exécuter Eclipse et vous paramétrez cet IDE comme bon vous semble.
+
+Pour l'analyse de cette solution algorithmique, il est d'abord nécessaire d'avoir un environnement de travail (workspace). Vous pouvez tout simplement en créer un.
+De là, vous n'avez qu'à vous rendre sur la https://github.com/IUT-Blagnac/sae2-02-Mazlai[__page principale__] de cette SAÉ sur GitHub, et de cliquer sur "Code" > "Download ZIP". De là, vous n'avez qu'à extraire celui-ci. 
+
+Vous créez alors un nouveau projet du nom que vous souhaitez, et dans le dossier "src", vous n'avez qu'à glisser les packages déjà présents dans le zip à savoir : +
+
+____
+● main.java.eraser ; +
+● test.java
+____
+
+WARNING: Il se peut que vous ayez une erreur de buildpath ou que vous n'ayez pas de JUnit paramétré.
+
+● _Si vous avez une erreur de buildpath :_
+
+→ Faites un clic droit sur le projet que vous avez précédemment créé et allez dans "Properties" > "Java Build Path" > "Librairies". +
+→ De ce fait, cliquez sur "Modulepath" > "Add Library" > "JRE System Library" > "Workspace default JRE". Et enfin, terminez. Vous cliquerez pour terminer sur "Apply and close". +
+→ Vous cliquerez alors sur "Order and Export" et sélectionnerez le nouveau JRE que vous avez ajouté. 
+
+● _Si vous avez une erreur de JUnit :_
+
+→ Faites un clic droit sur le projet que vous avez précédemment créé et allez dans "Properties" > "Java Build Path" > "Librairies". +
+→ De ce fait, cliquez sur "Classpath" > "Add External JARs..." et vous naviguerez pour trouver votre JUnit. En règle générale, il se situera dans "Java" > "Eclipse" > "Plugins" > "org.junit_[votre version]". Enfin, vous cliquerez sur "Apply and close". +
+→ Vous cliquerez alors sur "Order and Export" et sélectionnerez le nouveau JAR que vous avez ajouté.
+
+== Catégorie "Sobriété"
+
+=== Sobriété n°57 (langage C)
+
+==== Sous-reproductibilité et références
 
 *Autres :*
 
@@ -96,6 +134,7 @@ Pour ce faire, veuillez à déclarer une variable de type entier au début de vo
 
 ==== Analyse
 [.text-justify]
+Parmi l'ensemble des tests réalisés, le code les passe avec succès sans qu'aucune erreur ne soit à déplorer à la fois sur le résultat attendu mais également sur le code en lui-même.
 
 ===== Lisibilité du code
 [.text-justify]
@@ -205,21 +244,7 @@ Comme le calcul du nombre d'itérations se fait également selon la longueur de 
 
 === Sobriété n°162 (langage Python)
 
-==== Prérequis
-[.text-justify]
-
-[source, python]
-----
-----
-
-[.text-justify]
-
-[.text-justify]
-
-==== Reproductibilité
-[.text-justify]
-
-[.text-justify]
+==== Sous-reproductibilité et références
 
 ==== Analyse
 [.text-justify]
@@ -242,26 +267,7 @@ image::/rapport/images/sobriete-162.PNG[]
 
 === Sobriété n°166 (langage C)
 
-==== Prérequis
-[.text-justify]
-Deux prérequis sont alors nécessaires à l'analyse du fichier ``sobriete-166.c`` :
-____
-● Un compilateur *GCC* en langage C sous Windows ; +
-● Une librairie prénommée *<time.h>* à implémenter dans le code source pour l'analyse du temps d'exécution de la solution algorithmique proposée.
-____
-
-==== Reproductibilité et références
-[.text-justify]
-*Compilateur GCC :*
-
-[.text-justify]
-Pour l'utilisation du compilateur *GCC* dans votre terminal, je vous invite à installer la plate-forme de distribution et de construction de logiciels pour Windows *MSYS2* en http://feaforall.com/install-c-language-gcc-compiler-windows/[__cliquant ici__]. L'ensemble des étapes d'installation seront indiquées. +
-
-[.text-justify]
-Bien qu'il soit aisé d'installer facilement l'ensemble des packages nécessaires, il est également intéressant de savoir comment utiliser le compilateur *GCC* directement depuis votre terminal Windows : il est alors nécessaire que vous ajoutiez vos exécutables à votre PATH Windows. +
-
-[.text-justify]
-La procédure à suivre vous est proposée en bas de page sur l'article http://feaforall.com/install-c-language-gcc-compiler-windows/[__suivant__].
+==== Sous-reproductibilité et références
 
 *Librairie <time.h> :*
 
@@ -321,6 +327,7 @@ Pour ce faire, veuillez à déclarer une variable de type entier au début de vo
 
 ==== Analyse
 [.text-justify]
+Parmi l'ensemble des tests réalisés, le code les passe avec succès sans qu'aucune erreur ne soit à déplorer sur le code en lui-même. Pour autant, sur le résultat attendu, celui-ci ne respecte pas les attentes souhaitées car il semblerait la chaîne de caractère affichée ne soit uniquement que celle précédée d'un espace.
 
 ===== Lisibilité du code
 [.text-justify]
@@ -428,21 +435,7 @@ Autrement dit, il prendra seulement en considération le début de la chaîne de
 
 === Efficacité n°43 (langage Java)
 
-==== Prérequis
-[.text-justify]
-
-[source, java]
-----
-----
-
-[.text-justify]
-
-[.text-justify]
-
-==== Reproductibilité
-[.text-justify]
-
-[.text-justify]
+==== Sous-reproductibilité et références
 
 ==== Analyse
 [.text-justify]
@@ -471,21 +464,7 @@ image::/rapport/images/efficacite-43.PNG[]
 
 === Efficacité n°90 (langage Java)
 
-==== Prérequis
-[.text-justify]
-
-[source, java]
-----
-----
-
-[.text-justify]
-
-[.text-justify]
-
-==== Reproductibilité
-[.text-justify]
-
-[.text-justify]
+==== Sous-reproductibilité et références
 
 ==== Analyse
 [.text-justify]
@@ -515,24 +494,7 @@ image::/rapport/images/efficacite-90.PNG[]
 
 === Efficacité n°106 (langage Python)
 
-==== Prérequis
-[.text-justify]
-
-[source, python]
-----
-----
-
-[.text-justify]
-
-[.text-justify]
-
-==== Reproductibilité
-[.text-justify]
-
-[.text-justify]
-
-==== Analyse
-[.text-justify]
+==== Sous-reproductibilité et références
 
 ===== Lisibilité du code
 [.text-justify]
@@ -558,21 +520,7 @@ image::/rapport/images/efficacite-106.PNG[]
 
 === Efficacité n°131 (langage Java)
 
-==== Prérequis
-[.text-justify]
-
-[source, java]
-----
-----
-
-[.text-justify]
-
-[.text-justify]
-
-==== Reproductibilité
-[.text-justify]
-
-[.text-justify]
+==== Sous-reproductibilité et références
 
 ==== Analyse
 [.text-justify]
@@ -610,21 +558,7 @@ image::/rapport/images/efficacite-131.PNG[]
 
 === Simplicité n°11 (langage Java)
 
-==== Prérequis
-[.text-justify]
-
-[SOURCE, java]
-----
-----
-
-[.text-justify]
-
-[.text-justify]
-
-==== Reproductibilité
-[.text-justify]
-
-[.text-justify]
+==== Sous-reproductibilité et références
 
 ==== Analyse
 [.text-justify]
@@ -662,21 +596,7 @@ image::/rapport/images/simplicite-11.PNG[]
 
 === Simplicité n°39 (langage Java)
 
-==== Prérequis
-[.text-justify]
-
-[source, java]
-----
-----
-
-[.text-justify]
-
-[.text-justify]
-
-==== Reproductibilité
-[.text-justify]
-
-[.text-justify]
+==== Sous-reproductibilité et références
 
 ==== Analyse
 [.text-justify]
@@ -699,21 +619,7 @@ image::/rapport/images/simplicite-39.PNG[]
 
 === Simplicité n°56 (langage Java)
 
-==== Prérequis
-[.text-justify]
-
-[source, java]
-----
-----
-
-[.text-justify]
-
-[.text-justify]
-
-==== Reproductibilité
-[.text-justify]
-
-[.text-justify]
+==== Sous-reproductibilité et références
 
 ==== Analyse
 [.text-justify]
@@ -742,32 +648,7 @@ Néanmoins, d'après *Codacy*, le fichier ``simplicite-56.java`` est noté "B".
 
 image::/rapport/images/simplicite-56.PNG[]
 
-===== Sobriété numérique
-[.text-justify]
-
-===== Efficacité et temps d'exécution
-[.text-justify]
-
-=== Simplicité n°71 (langage Java)
-
-==== Prérequis
-[.text-justify]
-
-[source, java]
-----
-----
-
-[.text-justify]
-
-[.text-justify]
-
-==== Reproductibilité
-[.text-justify]
-
-[.text-justify]
-
-==== Analyse
-[.text-justify]
+==== Sous-reproductibilité et références
 
 ===== Lisibilité du code
 [.text-justify]
