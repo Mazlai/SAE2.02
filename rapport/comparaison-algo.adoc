@@ -648,6 +648,14 @@ Néanmoins, d'après *Codacy*, le fichier ``simplicite-56.java`` est noté "B".
 
 image::/rapport/images/simplicite-56.PNG[]
 
+===== Sobriété numérique
+[.text-justify]
+
+===== Efficacité et temps d'exécution
+[.text-justify]
+
+=== Simplicité n°71 (langage Java)
+
 ==== Sous-reproductibilité et références
 
 ===== Lisibilité du code
