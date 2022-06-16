@@ -115,6 +115,35 @@ image::/rapport/images/sobriete-57.PNG[]
 
 ===== Sobriété numérique
 [.text-justify]
+La mémoire d'un programme C possède une disposition bien particulière puisqu'elle comprend différente sections. 
+Pour comprendre davantage la disposition d'une mémoire typique d'un processus en cours d'exécution, veuillez https://www.geeksforgeeks.org/memory-layout-of-c-program/[__cliquer ici__].
+
+Ainsi, pour le calcul de la sobriété numérique, il est nécessaire de voir la consommation utilisée par le fichier compilé (.exe). Ici, elle sera calculée depuis le terminal, en exécutant la commande ``size [file]``. +
+
+Ainsi, la taille du fichier totale (ici en octets) comprend les segments *data*, *text* et *bss*, constituant la mémoire d'un programme C. +
+On établira alors une moyenne selon les différentes chaînes de caractères renseignées.
+
+En voici le tableau de cette sobriété numérique :
+
+|===
+| *Chaînes de caractères analysées* | *Mémoire consommée* | *Mémoire moyenne consommée*
+
+|``'C'`` 
+| 5753 octets
+.5+<.>| Environ 5805 octets (selon les chaînes de caractères renseignées)
+
+|``'Cou_cou\__J_M__B'`` 
+| 5769 octets
+
+|``'\_Cou_cou\__J_M__B_'`` 
+| 5771 octets
+
+|``'Cou_cou\__J_M__B'`` (dupliquée 5x) 
+| 5833 octets
+
+|``'Cou_cou\__J_M__B'`` (dupliquée 10x) 
+| 5897 octets
+|===
 
 ===== Efficacité et temps d'exécution
 [.text-justify]
@@ -125,15 +154,51 @@ En voici le tableau adéquat :
 
 |===
 | *Chaînes de caractères analysées* | *Résultat de l'algorithme* | *Résultats attendus* | *Temps d'exécution* | *Nombre d'itérations*
-| ``'C'`` | Test passé ✓ | ``'C'`` | 0.134s | 2
-| ``'Cou_cou\__J_M__B'`` | Test passé ✓ | ``'Coucou\__JM__B'`` | 1.030s | 28
-| ``'\_Cou_cou\__J_M__B_'`` | Test passé ✓| ``'Coucou\__JM__B'`` | 1.299s | 30
-| ``'Cou_cou\__J_M__B'`` (dupliquée 5x) | Test passé ✓ | ``'Coucou\__JM__B'`` (dupliquée 5x) | 1.356s | 140
-| ``'Cou_cou\__J_M__B'`` (dupliquée 10x) | Test passé ✓ | ``Coucou\__JM__B`` (dupliquée 10x) | 1.423s | 280
+
+|``'C'`` 
+|Test passé ✓ 
+|``'C'`` 
+|0.134s 
+|2
+
+|``'Cou_cou\__J_M__B'`` 
+|Test passé ✓ 
+|``'Coucou\__JM__B'`` 
+|1.030s 
+|28
+
+|``'\_Cou_cou\__J_M__B_'`` 
+|Test passé ✓
+|``'Coucou\__JM__B'`` 
+|1.299s 
+|30
+
+|``'Cou_cou\__J_M__B'`` (dupliquée 5x) 
+|Test passé ✓ 
+|``'Coucou\__JM__B'`` (dupliquée 5x) 
+|1.356s 
+|140
+
+|``'Cou_cou\__J_M__B'`` (dupliquée 10x) 
+|Test passé ✓ 
+|``Coucou\__JM__B`` (dupliquée 10x) 
+|1.423s 
+|280
 |===
 
-Nous pouvons ainsi remarquer que le temps d'exécution augmente au fur et à mesure que la chaîne de caractère devient également importante.
+[.text-justify]
+Nous pouvons ainsi remarquer que le temps d'exécution augmente au fur et à mesure que la chaîne de caractère devient également importante. Pour autant, ce temps d'exécution semble relativement variable et peu corrélé en fonction de la longueur de la chaîne de caractère car, celle-ci l'était également dès lors que l'on exécutait le programme : ce temps d'exécution est évalué par une moyenne, réalisée 5 fois pour car chaîne de caractère analysée.
 
+[.text-justify]
+Pour autant, il semblerait que la complexité soit plus facile à calculer en fonction du nombre d'itérations, car le rapprochement semble plus compréhensible et visible. En effet, il est facile de déduire la valeur (ou nombre d'itérations) des caractères utilisés par ce programme : 
+____
+● 1 pour l'espace simple ; +
+● 2 pour un caractère autre que l'espace simple (une lettre par exemple) ; +
+● 3 pour un espace s'il est situé entre deux autres espaces. 
+____
+
+[.text-justify]
+Comme le calcul du nombre d'itérations se fait également selon la longueur de la chaîne de caractère, il semblerait que la complexité du programme ``sobriete-57.c`` soit de l'ordre de O(n + x + y + z) avec n, la longueur de la chaîne de caractère, x un espace simple, y un caractère autre qu'un simple espace, z un espace situé entre deux autres (ou suivi d'un autre).
 
 === Sobriété n°162 (langage Python)
 
@@ -275,6 +340,38 @@ image::/rapport/images/sobriete-166.PNG[]
 
 ===== Sobriété numérique
 [.text-justify]
+La mémoire d'un programme C possède une disposition bien particulière puisqu'elle comprend différente sections. 
+Pour comprendre davantage la disposition d'une mémoire typique d'un processus en cours d'exécution, veuillez https://www.geeksforgeeks.org/memory-layout-of-c-program/[__cliquer ici__].
+
+Ainsi, pour le calcul de la sobriété numérique, il est nécessaire de voir la consommation utilisée par le fichier compilé (.exe). Ici, elle sera calculée depuis le terminal, en exécutant la commande ``size [file]``. +
+
+Ainsi, la taille du fichier totale (ici en octets) comprend les segments *data*, *text* et *bss*, constituant la mémoire d'un programme C. +
+On établira alors une moyenne selon les différentes chaînes de caractères renseignées.
+
+En voici le tableau de cette sobriété numérique :
+
+|===
+| *Chaînes de caractères analysées* | *Mémoire consommée* | *Mémoire moyenne consommée*
+
+|``'C'`` 
+| 5897 octets
+.5+<.>| 5897 octets
+
+|``'Cou_cou\__J_M__B'`` 
+| 5897 octets
+
+|``'\_Cou_cou\__J_M__B_'`` 
+| 5897 octets
+
+|``'Cou_cou\__J_M__B'`` (dupliquée 5x) 
+| 5897 octets
+
+|``'Cou_cou\__J_M__B'`` (dupliquée 10x) 
+| 5897 octets
+|===
+
+[.text-justify]
+Le programme étant regroupé dans un main, il est difficile d'évaluer la mémoire d'un processus en cours d'exécution, d'autant plus quand le test de la chaîne de caractère ne peut que se faire depuis le terminal (après compilation du programme C en un fichier compilé .exe, puis exécution de celui-ci en renseignant la chaîne de caractère souhaitée). 
 
 ===== Efficacité et temps d'exécution
 [.text-justify]
@@ -285,11 +382,36 @@ En voici le tableau adéquat :
 
 |===
 | *Chaînes de caractères analysées* | *Résultat de l'algorithme* | *Résultats attendus* | *Temps d'exécution* | *Nombre d'itérations*
-| ``'C'`` | Test passé ✓ | ``'C'`` | 15.00ms | 1
-| ``'Cou_cou\__J_M__B'`` | Test invalide ✘ | ``'Coucou\__JM__B'`` | 30.00ms | 3
-| ``'\_Cou_cou\__J_M__B_'`` | Test invalide ✘ | ``'Coucou\__JM__B'`` | 30.00ms | 3
-| ``'Cou_cou\__J_M__B'`` (dupliquée 5x) | Test invalide ✘ | ``'Coucou\__JM__B'`` (dupliquée 5x) | 30.00ms | 3
-| ``'Cou_cou\__J_M__B'`` (dupliquée 10x) | Test invalide ✘ | ``Coucou\__JM__B`` (dupliquée 10x) | 30.00ms | 3
+
+|``'C'`` 
+|Test passé ✓ 
+|``'C'`` 
+|15.00ms 
+|1
+
+|``'Cou_cou\__J_M__B'`` 
+|Test invalide ✘ 
+|``'Coucou\__JM__B'`` 
+|30.00ms 
+|3
+
+|``'\_Cou_cou\__J_M__B_'`` 
+|Test invalide ✘ 
+|``'Coucou\__JM__B'`` 
+|30.00ms 
+|3
+
+|``'Cou_cou\__J_M__B'`` (dupliquée 5x) 
+|Test invalide ✘ 
+|``'Coucou\__JM__B'`` (dupliquée 5x) 
+|30.00ms 
+|3
+
+|``'Cou_cou\__J_M__B'`` (dupliquée 10x) 
+|Test invalide ✘ 
+|``Coucou\__JM__B`` (dupliquée 10x) 
+|30.00ms 
+|3
 |===
 
 [.text-justify]
