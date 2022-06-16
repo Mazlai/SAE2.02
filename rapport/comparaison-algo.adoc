@@ -106,7 +106,7 @@ Pour ce faire, veuillez à déclarer une variable de type entier au début de vo
 De ce qui peut être constaté, quelques erreurs mineurs sont à constater sur cette solution algorithmique par *Codacy* : +
 ____
 ● Une ingérence des chaînes qui ne sont pas terminées par \0 ; si on lui en donne un, il peut effectuer une surlecture (cela pourrait provoquer un plantage s'il n'est pas protégé) ; +
-● La condition 'chaine[i]==' '' est _visiblement_ toujours vraie ; +
+● La condition 'chaine[i]==' '' est _visiblement_ toujours vraie. +
 ____
 
 D'après *Codacy*, le fichier ``sobriete-57.c`` est noté "B".
@@ -513,7 +513,7 @@ De ce qui peut être constaté, quelques erreurs mineurs ainsi qu'une erreur moy
 
 *Erreurs mineures :*
 ____
-● Le nom de la classe utilitaire 'Erase1' ne correspond pas à '[AZ][a-zA-Z0-9]'. +
+● Le nom de la classe utilitaire 'Erase1' ne correspond pas à '[AZ][a-zA-Z0-9]' ; +
 Concrètement, comme déjà mentionné auparavant, il s'agit d'un non-respect de convention de dénomination configurables pour les déclarations de type. Elle signale les déclarations de type qui ne correspondent pas à la regex qui s'applique à leur genre spécifique ; +
 ● Toutes les classes, interfaces, énumérations et annotations doivent appartenir à un package nommé, chose ici non-présente. +
 ____
