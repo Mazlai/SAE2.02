@@ -100,6 +100,10 @@ Pour ce faire, veuillez à déclarer une variable de type entier au début de vo
 
 ===== Lisibilité du code
 [.text-justify]
+En terme de lisibilité de code, bien qu'une javadoc soit absente afin de détailler le fonctionnement de la fonction ``erase``, celui-ci paraît très compréhensible car une distinction nette entre les déclarations de variables, les conditions ainsi que les résultats est présente. +
+
+[.text-justify]
+Par ailleurs, les conditions de vérification sont également très claires. Le code est bien décortiqué et compréhensible notamment dans le fait que le développeur ait utilisé une nouvelle chaîne de caractère dépendante de la chaîne de caractère initiale en prenant les modifications à apporter mais également dans l'analyse de la chaîne de caractère en question. Il est clair de voir que les différents *if*, traitent différents cas possibles de la chaîne, tout en veillant à ne pas dépasser la fin de celle-ci, chose gérée dans la bouche *while*.
 
 ===== Qualité du code
 [.text-justify]
