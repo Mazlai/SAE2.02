@@ -40,26 +40,25 @@ En cas d'ex-aequo, même note. (5/5/3/2 par exemple).
 === Sobriété n°57 (langage C)
 
 ==== Prérequis
-Deux prérequis sont alors nécessaires à l'analyse du fichier ``sobriete-57.c`` :
+Un seul prérequis était alors nécessaire à l'analyse du fichier ``sobriete-57.c`` :
 ____
-● Un IDE collaboratif (ici, repl.it était utilisé pour la sobriété) ; +
+● Un compilateur *GCC* en langage C sous Windows ; +
 ● Un IDE (ici, CodeBlocks était utilisé pour le temps d'exécution).
 ____
 
 ==== Reproductibilité et références
 [.text-justify]
-*Repl.it :*
+*Compilateur GCC :*
 
 [.text-justify]
-Repl.it ne nécessite pas de configuration particulière pour pouvoir compiler et exécuter un programme, quel que soit le langage utilisé. + 
-Pour paramétrer votre fichier ``sobriete-57.c``, il suffit de :
-____
-● Créer un compte repl.it ou l'associer avec un compte Google, GitHub, etc. +
-● Créer un "Repl" dont votre template sera en C, avec un titre au choix. +
-● Déposer votre code en C et exécutez-le.
-____
+Pour l'utilisation du compilateur *GCC* dans votre terminal, je vous invite à installer la plate-forme de distribution et de construction de logiciels pour Windows *MSYS2* en http://feaforall.com/install-c-language-gcc-compiler-windows/[__cliquant ici__]. L'ensemble des étapes d'installation seront indiquées. +
 
 [.text-justify]
+Bien qu'il soit aisé d'installer facilement l'ensemble des packages nécessaires, il est également intéressant de savoir comment utiliser le compilateur *GCC* directement depuis votre terminal Windows : il est alors nécessaire que vous ajoutiez vos exécutables à votre PATH Windows. +
+
+[.text-justify]
+La procédure à suivre vous est proposée en bas de page sur l'article http://feaforall.com/install-c-language-gcc-compiler-windows/[__suivant__].
+
 *CodeBlocks :*
 
 [.text-justify]
