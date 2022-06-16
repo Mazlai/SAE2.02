@@ -136,14 +136,14 @@ Pour ce faire, veuillez à déclarer une variable de type entier au début de vo
 [.text-justify]
 Parmi l'ensemble des tests réalisés, le code les passe avec succès sans qu'aucune erreur ne soit à déplorer à la fois sur le résultat attendu mais également sur le code en lui-même.
 
-===== Lisibilité du code
+===== Lisibilité du code - Optionnel
 [.text-justify]
 En terme de lisibilité de code, bien qu'une javadoc soit absente afin de détailler le fonctionnement de la fonction ``erase``, celui-ci paraît très compréhensible car une distinction nette entre les déclarations de variables, les conditions ainsi que les résultats est présente. +
 
 [.text-justify]
 Par ailleurs, les conditions de vérification sont également très claires. Le code est bien décortiqué et compréhensible notamment dans le fait que le développeur ait utilisé une nouvelle chaîne de caractère dépendante de la chaîne de caractère initiale en prenant les modifications à apporter mais également dans l'analyse de la chaîne de caractère en question. Il est clair de voir que les différents *if*, traitent différents cas possibles de la chaîne, tout en veillant à ne pas dépasser la fin de celle-ci, chose gérée dans la bouche *while*.
 
-===== Qualité du code
+===== Qualité du code - Optionnel
 [.text-justify]
 De ce qui peut être constaté, quelques erreurs mineurs sont à constater sur cette solution algorithmique par *Codacy* : +
 ____
@@ -187,7 +187,7 @@ En voici le tableau de cette sobriété numérique :
 | 5897 octets
 |===
 
-===== Efficacité et temps d'exécution
+===== Efficacité et temps d'exécution - Optionnel
 [.text-justify]
 Pour alors évaluer l'efficacité et le temps d'exécution de la solution algorithmique, un ensemble de tests est alors réalisé. +
 Pour ces tests, j'ai procédé à prendre une chaîne de caractère déjà précédemment utilisée (ici "Cou cou  J M  B") et de voir, en la dupliquant, si le temps d'exécution et le nombre d'itérations varient. +
@@ -249,10 +249,10 @@ Comme le calcul du nombre d'itérations se fait également selon la longueur de 
 ==== Analyse
 [.text-justify]
 
-===== Lisibilité du code
+===== Lisibilité du code - Optionnel
 [.text-justify]
 
-===== Qualité du code
+===== Qualité du code - Optionnel
 [.text-justify]
 Visiblement, aucune erreur n'est à constater sur cette solution algorithmique. +
 D'après *Codacy*, le fichier ``sobriete-162.py`` est noté "A".
@@ -262,7 +262,7 @@ image::/rapport/images/sobriete-162.PNG[]
 ===== Sobriété numérique
 [.text-justify]
 
-===== Efficacité et temps d'exécution
+===== Efficacité et temps d'exécution - Optionnel
 [.text-justify]
 
 === Sobriété n°166 (langage C)
@@ -329,7 +329,7 @@ Pour ce faire, veuillez à déclarer une variable de type entier au début de vo
 [.text-justify]
 Parmi l'ensemble des tests réalisés, le code les passe avec succès sans qu'aucune erreur ne soit à déplorer sur le code en lui-même. Pour autant, sur le résultat attendu, celui-ci ne respecte pas les attentes souhaitées car il semblerait la chaîne de caractère affichée ne soit uniquement que celle précédée d'un espace.
 
-===== Lisibilité du code
+===== Lisibilité du code - Optionnel
 [.text-justify]
 Bien que cela figure comme un avis subjectif, cette solution algorithmique n'est pour autant pas très explicite à comprendre. En effet, aucune javadoc n'a été réalisée afin que l'utilisateur réutilisant cette même solution, puisse comprendre la manière employée pour résoudre le problème. +
 
@@ -341,7 +341,7 @@ Celle-ci prend la forme suivante : ``[...] ? [...] : [...]``. +
 Enfin, l'utilisation d'un tableau à double entrée n'est pas nécessairement très instructif, d'autant plus dans son utilisation ici-même. +
 Concrètement, la chaîne de caractère sera toujours la même lors de l'analyse, bien que celle-ci se réalise étape par étape sur les caractères constituant cette même chaîne de caractère. Il est alors inutile de renseigner constamment comme premier élément, la même chaîne de caractère.
 
-===== Qualité du code
+===== Qualité du code - Optionnel
 [.text-justify]
 Visiblement, aucune erreur n'est à constater sur cette solution algorithmique. +
 D'après *Codacy*, le fichier ``sobriete-166.c`` est noté "A".
@@ -383,7 +383,7 @@ En voici le tableau de cette sobriété numérique :
 [.text-justify]
 Le programme étant regroupé dans un main, il est difficile d'évaluer la mémoire d'un processus en cours d'exécution, d'autant plus quand le test de la chaîne de caractère ne peut que se faire depuis le terminal (après compilation du programme C en un fichier compilé .exe, puis exécution de celui-ci en renseignant la chaîne de caractère souhaitée). 
 
-===== Efficacité et temps d'exécution
+===== Efficacité et temps d'exécution - Optionnel
 [.text-justify]
 Pour alors évaluer l'efficacité et le temps d'exécution de la solution algorithmique, un ensemble de tests est alors réalisé. +
 Pour ces tests, j'ai procédé à prendre une chaîne de caractère déjà précédemment utilisée (ici "Cou cou  J M  B") et de voir, en la dupliquant, si le temps d'exécution et le nombre d'itérations varient. +
@@ -440,10 +440,10 @@ Autrement dit, il prendra seulement en considération le début de la chaîne de
 ==== Analyse
 [.text-justify]
 
-===== Lisibilité du code
+===== Lisibilité du code - Optionnel
 [.text-justify]
 
-===== Qualité du code
+===== Qualité du code - Optionnel
 [.text-justify]
 De ce qui peut être constaté, seul une erreur mineure est à déclarer d'après *Codacy* :
 ____
@@ -456,7 +456,7 @@ De ce fait, bien que cela soit une erreur mineure, le fichier ``efficacite-43.ja
 
 image::/rapport/images/efficacite-43.PNG[]
 
-===== Sobriété numérique
+===== Sobriété numérique - Optionnel
 [.text-justify]
 
 ===== Efficacité et temps d'exécution
@@ -469,10 +469,10 @@ image::/rapport/images/efficacite-43.PNG[]
 ==== Analyse
 [.text-justify]
 
-===== Lisibilité du code
+===== Lisibilité du code - Optionnel
 [.text-justify]
 
-===== Qualité du code
+===== Qualité du code - Optionnel
 [.text-justify]
 A comparer du fichier précédemment analysé (``efficacite-43.java``), celui-ci possède également la même erreur mineure de code à savoir :
 ____
@@ -486,7 +486,7 @@ Concrètement, moins il y a de chemins à travers un morceau de code et moins ce
 
 image::/rapport/images/efficacite-90.PNG[]
 
-===== Sobriété numérique
+===== Sobriété numérique - Optionnel
 [.text-justify]
 
 ===== Efficacité et temps d'exécution
@@ -496,10 +496,10 @@ image::/rapport/images/efficacite-90.PNG[]
 
 ==== Sous-reproductibilité et références
 
-===== Lisibilité du code
+===== Lisibilité du code - Optionnel
 [.text-justify]
 
-===== Qualité du code
+===== Qualité du code - Optionnel
 [.text-justify]
 *Codacy* remarque ici-même la présence de quelques erreurs mineures. Les voici :
 ____
@@ -512,7 +512,7 @@ En réalité, il est véridique de dire qu'il soit nécesasire d'ajuster certain
 
 image::/rapport/images/efficacite-106.PNG[]
 
-===== Sobriété numérique
+===== Sobriété numérique - Optionnel
 [.text-justify]
 
 ===== Efficacité et temps d'exécution
@@ -525,10 +525,10 @@ image::/rapport/images/efficacite-106.PNG[]
 ==== Analyse
 [.text-justify]
 
-===== Lisibilité du code
+===== Lisibilité du code - Optionnel
 [.text-justify]
 
-===== Qualité du code
+===== Qualité du code - Optionnel
 [.text-justify]
 Le fichier ``efficacite-131.java`` est *le* fichier le plus mauvais en terme de qualité d'après *Codacy*. Bien qu'une erreur mineure soit alors à constater (et déjà présente dans certains des fichiers précédemment analysés), deux erreurs moyennes sont tout de même à déplorer. Les voici :
 
@@ -548,7 +548,7 @@ Sans contestation possible, le fichier ``efficacite-131.java`` est non-seulement
 
 image::/rapport/images/efficacite-131.PNG[]
 
-===== Sobriété numérique
+===== Sobriété numérique - Optionnel
 [.text-justify]
 
 ===== Efficacité et temps d'exécution
@@ -611,10 +611,10 @@ D'après *Codacy*, le fichier ``simplicite-39.java`` est noté "A".
 
 image::/rapport/images/simplicite-39.PNG[]
 
-===== Sobriété numérique
+===== Sobriété numérique - Optionnel
 [.text-justify]
 
-===== Efficacité et temps d'exécution
+===== Efficacité et temps d'exécution - Optionnel
 [.text-justify]
 
 === Simplicité n°56 (langage Java)
@@ -648,18 +648,50 @@ Néanmoins, d'après *Codacy*, le fichier ``simplicite-56.java`` est noté "B".
 
 image::/rapport/images/simplicite-56.PNG[]
 
-===== Sobriété numérique
+===== Sobriété numérique - Optionnel
 [.text-justify]
 
-===== Efficacité et temps d'exécution
+===== Efficacité et temps d'exécution - Optionnel
 [.text-justify]
 
 === Simplicité n°71 (langage Java)
 
 ==== Sous-reproductibilité et références
 
+*Autres :*
+
+[.text-justify]
+Il est intéressant de connaître le nombre d'itérations de votre programme, autrement dit, combien de fois est réalisée votre condition en fonction de la chaîne de caractère renseignée. +
+
+[.text-justify]
+Pour ce faire, veuillez à déclarer une variable de type entier au début de votre fonction puis, incrémentez cette valeur *au moment où* l'analyse de votre chaîne de caractère avance également et enfin, veuillez retourner votre résultat pour connaître le nombre de fois où vos conditions ont été exécutée :
+
+[source, c]
+----
+//Déclarations de variables de test
+  int nbIterations = 0;
+  
+  [...]
+  
+//Dans les conditions :
+  nbIterations++;
+  
+  [...]
+  
+//Affichage des tests
+  System.out.println("Nombre d'itérations : " + nbIterations);
+----
+
+==== Analyse
+[.text-justify]
+Parmi l'ensemble des tests réalisés, le code les passe avec succès ou presque. En effet, le résultat attendu est, pour la majorité des chaînes de caractères renseignées, correct mais pour des chaînes commençant ou terminant par un espace, le programme retourne une erreur car la limitation de la taille de la chaîne de caractère ou simplement le premier caractère, chose qui n'a pas été traité.
+
 ===== Lisibilité du code
 [.text-justify]
+Sur cette solution algorithmique, prénommée par le fichier ``simplicite-71.java``, sa lisibilité de code est très correcte. Peu de lignes de codes ont également été réalisée avec des conditions de vérification très concises et simples à comprendre. +
+Il n'est également pas compact, ce qui reste agréable à regarder. Ici, l'utilisateur a choisi de créer une nouvelle chaîne de caractère dans laquelle l'ensemble des traitements effectués depuis la chaîne renseignée seront réalisés dans cette nouvelle chaîne déclarée dans cette fonction. 
+
+Pour autant, l'absence de javadoc est constatée, ce qui aurait pu permettre d'avoir une meilleure compréhension et une meilleure approche sur la fonctionnalité implémentée par le développeur.
 
 ===== Qualité du code
 [.text-justify]
@@ -673,11 +705,54 @@ Bien que ce soit la seule soi-disante "erreur" à constater, *Codacy* a attribu�
 
 image::/rapport/images/simplicite-71.PNG[]
 
-===== Sobriété numérique
-[.text-justify]
+===== Sobriété numérique - Optionnel
+✘
 
-===== Efficacité et temps d'exécution
+===== Efficacité et temps d'exécution - Optionnel
 [.text-justify]
+Pour alors évaluer l'efficacité et le temps d'exécution de la solution algorithmique, un ensemble de tests est alors réalisé. +
+Pour ces tests, j'ai procédé à prendre une chaîne de caractère déjà précédemment utilisée (ici "Cou cou  J M  B") et de voir, en la dupliquant, si le temps d'exécution et le nombre d'itérations varient. +
+
+En voici le tableau adéquat :
+
+|===
+| *Chaînes de caractères analysées* | *Résultat de l'algorithme* | *Résultats attendus* | *Temps d'exécution* | *Nombre d'itérations*
+
+|``'Cou_cou\__J_M__B'`` 
+|Test passé ✓ 
+|``'Coucou\__JM__B'`` 
+| - d'une nanoseconde
+|13
+
+|``'\_Cou_cou\__J_M__B_'`` 
+|Test invalide ✘ 
+|``'Coucou\__JM__B'`` 
+|String index out of range: -1 
+|String index out of range: -1
+
+|``'Cou_cou\__J_M__B'`` (dupliquée 100x) 
+|Test passé ✓ 
+|``'Coucou\__JM__B'`` (dupliquée 100x) 
+|Environ une nanoseconde, soit 0.000006ms
+|13000
+
+|``'Cou_cou\__J_M__B'`` (dupliquée 10000x) 
+|Test passé ✓ 
+|``Coucou\__JM__B`` (dupliquée 10000x) 
+|Environ 25 nanosecondes, soit 0.0000108ms
+|130000
+
+|``'Cou_cou\__J_M__B'`` (dupliquée 100000x) 
+|Test passé ✓ 
+|``'Coucou\__JM__B'`` (dupliquée 100000x) 
+|Environ 131 nanosecondes, soit 0.000639ms
+|1300000
+|===
+
+Comme déjà mentionné précédemment, tous les tests à effectuer ne passent pas. Ici, la gestion des conditions posent plusieurs problèmes car en voulant vérifier le caractère précédent ou suivant, celui-ci risque très fortement sortir de la limite de taille de la chaîne de caractère ce qui deviendra problématique.
+
+Pour autant, en fonction de la longueur de la chaîne de caractère, son temps d'exécution augmente également bien qu'il semble peu corrélé en fonction de la longueur de la chaîne de caractère. +
+En ce qui concerne l’efficacité, le nombre de tours effectué dépend de la taille du texte analysé. Pour une complexité se basant sur un nombre d'itérations ici, il s'agit d'une complexité algorithmique de O(n).
 
 == Classement
 
