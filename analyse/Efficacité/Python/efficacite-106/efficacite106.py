@@ -46,4 +46,4 @@ def erase(s):
     print(nbIterations)
     return res + " " * spaces if spaces > 1 else res
 
-print(bonmot2(" Cou cou  J M  B "))
+print(erase(" Cou cou  J M  B "))
