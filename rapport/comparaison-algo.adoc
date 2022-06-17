@@ -723,14 +723,14 @@ Pour ces tests, j'ai procédé à prendre une chaîne de caractères déjà pré
 |===
 
 [.text-justify]
-Comme le calcul du nombre d'itérations se fait selon la longueur de la chaîne de caractères mais également des caractères constituant cette même chaîne, il semblerait que la complexité du programme ``efficacite-43.java`` soit de l'ordre de 1 + n(a(b+c)+d) avec :
+Comme le calcul du nombre d'itérations se fait selon la longueur de la chaîne de caractères mais également des caractères constituant cette même chaîne, il semblerait que la complexité du programme ``efficacite-43.java`` soit de l'ordre de 1 + n(w(x+y)+z) avec :
 
 ____
 ● *n*, le nombre de caractères total ; +
-● *a*, le nombre d'espaces ; +
-● *b*, le nombre d'espaces *après* un espace ; +
-● *c*, le nombre d'espaces *avant* un espace ; +
-● Et *d*, le nombre de caractères différents de l'espace.
+● *w*, le nombre d'espaces ; +
+● *x*, le nombre d'espaces *après* un espace ; +
+● *y*, le nombre d'espaces *avant* un espace ; +
+● Et *z*, le nombre de caractères différents de l'espace.
 ____
 
 De ce qui concerne la complexité temporelle du programme, une corrélation assez visible s'établit entre la taille de la chaîne de caractères ainsi que le temps d'exécution. Dès lors que cette taille est multipliée par 10 ou par 100 (selon le jeu d'essais précédemment réalisé), le temps d'exécution évolue plus ou moins de la même manière, bien que celui-ci ne soit jamais précis (dû au temps instable du CPU à exécuter le programme, etc). 
