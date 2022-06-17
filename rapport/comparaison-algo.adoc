@@ -41,11 +41,14 @@ ____
 *En C :* +
 ● Un compilateur *GCC* en langage C sous Windows ; +
 ● Un IDE (ici, CodeBlocks était utilisé pour le temps d'exécution sur le fichier ``sobriete-57.c``). +
+● Un IDE collaboratif (ici, repl.it était utilisé pour la sobriété). +
 
 *En Java :* +
 ● Un IDE (ici Eclipse, bien que vous puissiez en choisir un autre). +
 
 *En Python :*
+● Un IDE collaboratif (ici, repl.it était utilisé pour la sobriété). +
+● Un IDE (ici EduPython), bien que vous puissiez en choisir un autre).
 ____
 
 == Reproductibilité et références
@@ -72,6 +75,16 @@ ____
 ● Exécutez votre code.
 ____
 
+*Repl.it :*
+
+Repl.it ne nécessite pas de configuration particulière pour pouvoir compiler et exécuter un programme, quel que soit le langage utilisé. + 
+Pour paramétrer votre fichier, il suffit de :
+____
+● Créer un compte repl.it ou l'associer avec un compte Google, GitHub, etc. +
+● Créer un "Repl" dont votre template sera en C, avec un titre au choix. +
+● Déposer votre code en C et exécutez-le.
+____
+
 *Eclipse :*
 
 Eclipse est un IDE qui ne nécessite pas de configuration particulière pour l'exécuter. Tout de même, pour exécuter en revanche un fichier Java, il est nécessaire de définir son environnement de travail et de paramétrer certaines fonctionnalités.
@@ -85,7 +98,7 @@ Vous créez alors un nouveau projet du nom que vous souhaitez, et dans le dossie
 
 ____
 ● main.java.eraser ; +
-● test.java
+● test.java.
 ____
 
 WARNING: Il se peut que vous ayez une erreur de buildpath ou que vous n'ayez pas de JUnit paramétré.
@@ -157,6 +170,10 @@ image::/rapport/images/sobriete-57.PNG[]
 
 ===== Sobriété numérique
 [.text-justify]
+L'utilisation de repl.it a été avantageuse dans le fait d'évaluer la sobriété numérique d'un programme. En effet, sur celu-ci, on peut retrouver des caractéristiques en corrélation avec l'utilisation des ressources, et notamment de l'utilisation du CPU, de la RAM ou encore du stockage. Bien que la différence puisse être minime dans l'utilisation de la RAM car, bien qu'un fichier soit vide, cela ne fait pas pour autant varier la RAM, cela nous permet malgré tout de pouvoir en effectuer une analyse intéressante. En voici sa consommation :
+
+image::/rapport/images/sob2.PNG[]
+
 La mémoire d'un programme C possède une disposition bien particulière puisqu'elle comprend différente sections. 
 Pour comprendre davantage la disposition d'une mémoire typique d'un processus en cours d'exécution, veuillez https://www.geeksforgeeks.org/memory-layout-of-c-program/[__cliquer ici__].
 
@@ -248,9 +265,13 @@ Comme le calcul du nombre d'itérations se fait également selon la longueur de 
 
 ==== Analyse
 [.text-justify]
+Parmi l'ensemble des tests passés pour ce fichier, la fonctionnalité du code les passe avec succès sans qu'une erreur ne soit signalé en terme de qualitatif., c'est-à-dire à la fois sur le résultat attendu mais également sur le code en lui-même.
 
 ===== Lisibilité du code - Optionnel
 [.text-justify]
+Une nouvelle fois constaté, le développeur a oublié de réaliser un javadoc car au premier abord, le code ne semble pas évident à comprendre. Ainsi, dans l'aspect du code, je trouve que l'ensemble des informations sont très condensées car son code n'est pas aéré mais également, certaines conditions méritent également d'être rassemblée. +
+
+Enfin, pour les conditions de vérifications, le code n'est pas exceptionnement compliqué à comprendre, d'où le fait que n'importe qui serait capable de comprendre ce qu'il se passe.
 
 ===== Qualité du code - Optionnel
 [.text-justify]
@@ -261,9 +282,61 @@ image::/rapport/images/sobriete-162.PNG[]
 
 ===== Sobriété numérique
 [.text-justify]
+L'utilisation de repl.it a été avantageuse dans le fait d'évaluer la sobriété numérique d'un programme. En effet, sur celu-ci, on peut retrouver des caractéristiques en corrélation avec l'utilisation des ressources, et notamment de l'utilisation du CPU, de la RAM ou encore du stockage. Bien que la différence puisse être minime dans l'utilisation de la RAM car, bien qu'un fichier soit vide, cela ne fait pas pour autant varier la RAM, cela nous permet malgré tout de pouvoir en effectuer une analyse intéressante. En voici sa consommation :
+
+image::/rapport/images/sob3.PNG[]
+
+Il est ainsi logique de constater que les programmes Python soient bien plus lents et utilisant plus de mémoire.
+Ces raisons étant que Python est un langage interprété, tandis que le C est compilé mais également que Python n'ait pas de primitives ainsi que de builtin types (int, float, etc.) étant déjà des objets.
 
 ===== Efficacité et temps d'exécution - Optionnel
 [.text-justify]
+Pour alors évaluer l'efficacité et le temps d'exécution de la solution algorithmique, un ensemble de tests est alors réalisé. +
+Pour ces tests, j'ai procédé à prendre une chaîne de caractère déjà précédemment utilisée (ici "Cou cou  J M  B") et de voir, en la dupliquant, si le temps d'exécution et le nombre d'itérations varient. +
+
+Ainsi, à l'origine, l'exécution de la fonction Python ``bonmot2(mot)`` 
+
+En voici le tableau adéquat :
+
+|===
+| *Chaînes de caractères analysées* | *Résultat de l'algorithme* | *Résultats attendus* | *Temps d'exécution* | *Nombre d'itérations*
+
+|``'Cou_cou\__J_M__B'`` 
+|Test passé ✓ 
+|``'Coucou\__JM__B'`` 
+|Environ 0.0000006s soit 0.0006ms
+|34
+
+|``'\_Cou_cou\__J_M__B_'`` 
+|Test invalide ✘ 
+|``'Coucou\__JM__B'`` 
+|Environ 0.0000008s soit 0.0008s
+|3600
+
+|``'Cou_cou\__J_M__B'`` (dupliquée 100x) 
+|Test passé ✓ 
+|``'Coucou\__JM__B'`` (dupliquée 100x) 
+|Environ 0.0000122s soit 0.0122ms
+|13000
+
+|``'Cou_cou\__J_M__B'`` (dupliquée 10000x) 
+|Test passé ✓ 
+|``Coucou\__JM__B`` (dupliquée 10000x) 
+|Environ 0.001257s, soit 1.257ms
+|36000
+
+|``'Cou_cou\__J_M__B'`` (dupliquée 100000x) 
+|Test passé ✓ 
+|``'Coucou\__JM__B'`` (dupliquée 100000x) 
+|Environ 0.0116124s, soit 11.6124ms
+|360000
+|===
+
+[.text-justify]
+Lorsque la chaîne de caractère est dupliquée, l'ensemble des tests à réaliser passent également.
+
+[.text-justify]
+Il prendra seulement en considération l'ensemble des caractères présents dans cette même liste. 
 
 === Sobriété n°166 (langage C)
 
@@ -349,6 +422,11 @@ D'après *Codacy*, le fichier ``sobriete-166.c`` est noté "A".
 image::/rapport/images/sobriete-166.PNG[]
 
 ===== Sobriété numérique
+[.text-justify]
+L'utilisation de repl.it a été avantageuse dans le fait d'évaluer la sobriété numérique d'un programme. En effet, sur celu-ci, on peut retrouver des caractéristiques en corrélation avec l'utilisation des ressources, et notamment de l'utilisation du CPU, de la RAM ou encore du stockage. Bien que la différence puisse être minime dans l'utilisation de la RAM car, bien qu'un fichier soit vide, cela ne fait pas pour autant varier la RAM, cela nous permet malgré tout de pouvoir en effectuer une analyse intéressante. En voici sa consommation :
+
+image::/rapport/images/sob.PNG[]
+
 [.text-justify]
 La mémoire d'un programme C possède une disposition bien particulière puisqu'elle comprend différente sections. 
 Pour comprendre davantage la disposition d'une mémoire typique d'un processus en cours d'exécution, veuillez https://www.geeksforgeeks.org/memory-layout-of-c-program/[__cliquer ici__].
@@ -798,16 +876,16 @@ Voici donc le classement final selon les catégories :
 
 .3+<.>|Sobriété
 |``sobriete-57.c``
-|
-|
+|1
+|5
 
 |``sobriete-162.py``
-|
-|
+|2
+|4
 
 |``sobriete-166.c``
-|
-|
+|3
+|1
 |===
 
 == Exemple de code
@@ -831,7 +909,6 @@ Il permet de vérifier que le programme traite bien tous les cas donnés. +
 
 [.text-justify]
 Le fichier ``analyse.py`` du répertoire ``analyse`` permet d'obtenir les temps d'exécutions du programme en fonction de chaînes générées aléatoirement de tailles données.
-
 
 ==== Reproductibilité
 [.text-justify]
