@@ -818,6 +818,12 @@ image::/rapport/images/simplicite-39.PNG[]
 
 ===== Lisibilité du code
 [.text-justify]
+Sans doute l'un des codes les plus agréables à regarder, la solution algorithmique ``simplicite-56.java`` possède une lisibilité très agréable. +
+En effet, le développeur a fait un effort de séparer les parties *déclarations de variables* et *création de la chaîne de caractères* en détaillant les procédures réalisées (pourquoi telle variable, que fait telle condition, etc.)
+
+Ainsi, bien que l'on regarde en détails les conditions réalisées par le développeur, tout est déjà détaillé, ce qui permet une bien meilleure compréhension du code. On comprend alors rapidement qu'il effectue les vérifications dans une nouvelle chaîne de caractères, en utilisant également également une variable *'espace'*, indispensable pour calculer le nombre d'espaces et donc,  d'effectuer les changements selon ce nombre en question. +
+
+Un léger problème est à déclarer : l'oubli de la javadoc pour la descritpion de la fonction. En regardant les commentaires, on se rend assez rapidement compte de ce qu'il est effectué mais nous devons l'observer dans l'en-tête de celle-ci, sans rentrer dans les détails.
 
 ===== Qualité du code
 [.text-justify]
