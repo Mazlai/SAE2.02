@@ -179,7 +179,7 @@ image::/rapport/images/sobriete-57.PNG[]
 
 ===== Sobriété numérique
 [.text-justify]
-L'utilisation de repl.it a été avantageuse dans le fait d'évaluer la sobriété numérique d'un programme. En effet, sur celu-ci, on peut retrouver des caractéristiques en corrélation avec l'utilisation des ressources, et notamment de l'utilisation du CPU, de la RAM ou encore du stockage. Bien que la différence puisse être minime dans l'utilisation de la RAM car, bien qu'un fichier soit vide, cela ne fait pas pour autant varier la RAM, cela nous permet malgré tout de pouvoir en effectuer une analyse intéressante. En voici sa consommation :
+L'utilisation de repl.it a été avantageuse dans le fait d'évaluer la sobriété numérique d'un programme. En effet, sur celui-ci, on peut retrouver des caractéristiques en corrélation avec l'utilisation des ressources, et notamment de l'utilisation du CPU, de la RAM ou encore du stockage. Bien que la différence puisse être minime dans l'utilisation de la RAM car, bien qu'un fichier soit vide, cela ne fait pas pour autant varier la RAM, cela nous permet malgré tout de pouvoir en effectuer une analyse intéressante. En voici sa consommation :
 
 image::/rapport/images/sob2.PNG[]
 
@@ -382,7 +382,7 @@ image::/rapport/images/sobriete-162.PNG[]
 
 ===== Sobriété numérique
 [.text-justify]
-L'utilisation de repl.it a été avantageuse dans le fait d'évaluer la sobriété numérique d'un programme. En effet, sur celu-ci, on peut retrouver des caractéristiques en corrélation avec l'utilisation des ressources, et notamment de l'utilisation du CPU, de la RAM ou encore du stockage. Bien que la différence puisse être minime dans l'utilisation de la RAM car, bien qu'un fichier soit vide, cela ne fait pas pour autant varier la RAM, cela nous permet malgré tout de pouvoir en effectuer une analyse intéressante. En voici sa consommation :
+L'utilisation de repl.it a été avantageuse dans le fait d'évaluer la sobriété numérique d'un programme. En effet, sur celui-ci, on peut retrouver des caractéristiques en corrélation avec l'utilisation des ressources, et notamment de l'utilisation du CPU, de la RAM ou encore du stockage. Bien que la différence puisse être minime dans l'utilisation de la RAM car, bien qu'un fichier soit vide, cela ne fait pas pour autant varier la RAM, cela nous permet malgré tout de pouvoir en effectuer une analyse intéressante. En voici sa consommation :
 
 image::/rapport/images/sob3.PNG[]
 
@@ -514,7 +514,7 @@ image::/rapport/images/sobriete-166.PNG[]
 
 ===== Sobriété numérique
 [.text-justify]
-L'utilisation de repl.it a été avantageuse dans le fait d'évaluer la sobriété numérique d'un programme. En effet, sur celu-ci, on peut retrouver des caractéristiques en corrélation avec l'utilisation des ressources, et notamment de l'utilisation du CPU, de la RAM ou encore du stockage. Bien que la différence puisse être minime dans l'utilisation de la RAM car, bien qu'un fichier soit vide, cela ne fait pas pour autant varier la RAM, cela nous permet malgré tout de pouvoir en effectuer une analyse intéressante. En voici sa consommation :
+L'utilisation de repl.it a été avantageuse dans le fait d'évaluer la sobriété numérique d'un programme. En effet, sur celui-ci, on peut retrouver des caractéristiques en corrélation avec l'utilisation des ressources, et notamment de l'utilisation du CPU, de la RAM ou encore du stockage. Bien que la différence puisse être minime dans l'utilisation de la RAM car, bien qu'un fichier soit vide, cela ne fait pas pour autant varier la RAM, cela nous permet malgré tout de pouvoir en effectuer une analyse intéressante. En voici sa consommation :
 
 image::/rapport/images/sob.PNG[]
 
@@ -677,7 +677,12 @@ De ce fait, bien que cela soit une erreur mineure, le fichier ``efficacite-43.ja
 image::/rapport/images/efficacite-43.PNG[]
 
 ===== Sobriété numérique - Optionnel
-✘
+[.text-justify]
+L’utilisation de repl.it a été bénéfique dans le fait d’évaluer la sobriété numérique d’un programme. On peut retrouver des caractéristiques en corrélation avec l’utilisation des ressources, et notamment de l’utilisation du CPU, de la RAM ou encore du stockage. En voici sa consommation :
+
+image::/rapport/images/eff43.PNG[]
+
+Il est ainsi logique de constater une plus forte consommation provenant d'un fichier Java, celui-ci étant un fichier *interprété* (à comparer d'un fichier C).
 
 ===== Efficacité et temps d'exécution
 [.text-justify]
@@ -787,7 +792,13 @@ Concrètement, moins il y a de chemins à travers un morceau de code et moins ce
 image::/rapport/images/efficacite-90.PNG[]
 
 ===== Sobriété numérique - Optionnel
-✘
+[.text-justify]
+L’utilisation de repl.it a été avantageuse dans le fait d’évaluer la sobriété numérique d’un programme, que ce soit concernant l’utilisation des ressources, et notamment de l’utilisation du CPU, de la RAM ou encore du stockage.
+En voici les résultats :
+
+image::/rapport/images/eff90.PNG[]
+
+Il est ainsi logique de constater une plus forte consommation provenant d'un fichier Java, celui-ci étant un fichier *interprété* (à comparer d'un fichier C).
 
 ===== Efficacité et temps d'exécution
 [.text-justify]
@@ -940,7 +951,13 @@ En réalité, il est véridique de dire qu'il soit nécesasire d'ajuster certain
 image::/rapport/images/efficacite-106.PNG[]
 
 ===== Sobriété numérique - Optionnel
-✘
+[.text-justify]
+L’utilisation de repl.it a été avantageuse dans le fait d’évaluer la sobriété numérique d’un programme, que ce soit concernant l’utilisation des ressources, et notamment de l’utilisation du CPU, de la RAM ou encore du stockage.
+En voici les résultats :
+
+image::/rapport/images/eff106.PNG[]
+
+Il est ainsi logique de constater une plus forte consommation provenant d'un fichier Python, celui-ci étant un fichier *interprété* (à comparer d'un fichier C).
 
 ===== Efficacité et temps d'exécution
 [.text-justify]
@@ -1062,7 +1079,8 @@ Sans contestation possible, le fichier ``efficacite-131.java`` est non-seulement
 image::/rapport/images/efficacite-131.PNG[]
 
 ===== Sobriété numérique - Optionnel
-✘
+[.text-justify]
+Bien que la solution algorithmique ne peut compiler, il en devient difficile d'estimer une potentielle consommation de celui-ci en termes de RAM, de CPU ou encore de stockage.
 
 ===== Efficacité et temps d'exécution
 [.text-justify]
@@ -1154,7 +1172,13 @@ Ainsi, bien que le code reste pour autant assez qualitatif, *Codacy* note le fic
 image::/rapport/images/simplicite-11.PNG[]
 
 ===== Sobriété numérique - Optionnel
-✘ 
+[.text-justify]
+L’utilisation de repl.it a été avantageuse dans le fait d’évaluer la sobriété numérique d’un programme. Bien que ses mesures soient inexactes, elle permet ainsi d'évaluer l’utilisation des ressources, et notamment de l’utilisation du CPU, de la RAM ou encore du stockage.
+En voici les résultats :
+
+image::/rapport/images/simp11.PNG[]
+
+Il est ainsi logique de constater une plus forte consommation provenant d'un fichier Java, celui-ci étant un fichier *interprété* (à comparer d'un fichier C). 
 
 ===== Efficacité et temps d'exécution - Optionnel
 [.text-justify]
@@ -1269,7 +1293,13 @@ D'après *Codacy*, le fichier ``simplicite-39.java`` est noté "A".
 image::/rapport/images/simplicite-39.PNG[]
 
 ===== Sobriété numérique - Optionnel
-✘
+[.text-justify]
+L’utilisation de repl.it a été avantageuse dans le fait d’évaluer la sobriété numérique d’un programme. Bien que ses mesures soient partielles, elle permet ainsi d'évaluer l’utilisation des ressources, et notamment de l’utilisation du CPU, de la RAM ou encore du stockage.
+En voici les résultats :
+
+image::/rapport/images/simp39.PNG[]
+
+Il est ainsi logique de constater une plus forte consommation provenant d'un fichier Java, celui-ci étant un fichier *interprété* (à comparer d'un fichier C). 
 
 ===== Efficacité et temps d'exécution - Optionnel
 [.text-justify]
@@ -1391,7 +1421,13 @@ Néanmoins, d'après *Codacy*, le fichier ``simplicite-56.java`` est noté "B".
 image::/rapport/images/simplicite-56.PNG[]
 
 ===== Sobriété numérique - Optionnel
-✘
+[.text-justify]
+Repl.it permet d'évaluer l’utilisation des ressources, et notamment de l’utilisation du CPU, de la RAM ou encore du stockage. +
+En voici les résultats :
+
+image::/rapport/images/simp56.PNG[]
+
+Il est ainsi logique de constater une plus forte consommation provenant d'un fichier Java, celui-ci étant un fichier *interprété* (à comparer d'un fichier C). 
 
 ===== Efficacité et temps d'exécution - Optionnel
 [.text-justify]
@@ -1511,7 +1547,13 @@ Bien que ce soit la seule soi-disante "erreur" à constater, *Codacy* a attribu�
 image::/rapport/images/simplicite-71.PNG[]
 
 ===== Sobriété numérique - Optionnel
-✘
+[.text-justify]
+Repl.it est un outil permettant d'évaluer l’utilisation des ressources, et notamment de l’utilisation du CPU, de la RAM ou encore du stockage. +
+En voici les résultats :
+
+image::/rapport/images/simp71.PNG[]
+
+Il est ainsi logique de constater une plus forte consommation provenant d'un fichier Java, celui-ci étant un fichier *interprété* (à comparer d'un fichier C). 
 
 ===== Efficacité et temps d'exécution - Optionnel
 [.text-justify]
