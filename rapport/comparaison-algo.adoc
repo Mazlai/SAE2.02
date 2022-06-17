@@ -757,35 +757,18 @@ long fin = System.nanoTime();
 System.out.println((fin-debut)/1000000);
 ----
 
-*Autres :*
-
-[.text-justify]
-Il est intéressant de connaître le nombre d'itérations de votre programme, autrement dit, combien de fois est réalisée votre condition en fonction de la chaîne de caractères renseignée. +
-
-[.text-justify]
-Pour ce faire, veuillez à déclarer une variable de type entier au début de votre fonction puis, incrémentez cette valeur *au moment où* l'analyse de votre chaîne de caractères avance également et enfin, veuillez retourner votre résultat pour connaître le nombre de fois où vos conditions ont été exécutée :
-
-[source, java]
-----
-//Déclarations de variables de test
-  int nbIterations = 0;
-  
-  [...]
-  
-//Dans les conditions :
-  nbIterations++;
-  
-  [...]
-  
-//Affichage des tests
-  System.out.println("Nombre d'itérations : " + nbIterations);
-----
-
 ==== Analyse
 [.text-justify]
+Parmi l'ensemble des tests réalisés, le code les passe avec succès sans qu'aucune erreur ne soit à déplorer à la fois sur le résultat attendu mais également sur le code en lui-même.
 
 ===== Lisibilité du code - Optionnel
 [.text-justify]
+Sans doute, l'un des codes les plus synthétiques, le développeur n'a pas décidé d'utiliser des conditions permettant de faire des traitements spécifiques sur la chaîne de caractères renseignées (par le biais de *for*, *while*, *if*, etc.)
+
+Ici, il décide d'utiliser un regex : c'est une expression régulière qui décrit, selon une syntaxe précise, un ensemble de chaînes de caractères possibles.
+Il n'est pas aisé de savoir utiliser les regex, bien qu'une connaissance particulière soit nécessaire. +
+
+Mais on comprend le fonctionnement utilisé par l'utilisateur, d'autant plus qu'il est expliqué le traitement que réalise l'expression régulière sur la chaîne de caractères passée en paramètres. C'est également le seul programme analysé qui contient une javadoc certes, partielle, mais une javadoc de la fonction, assez indispensable pour reconnaître rapidement le fonctionnement d'une fonction ou procédure. 
 
 ===== Qualité du code - Optionnel
 [.text-justify]
@@ -808,6 +791,46 @@ image::/rapport/images/efficacite-90.PNG[]
 
 ===== Efficacité et temps d'exécution
 [.text-justify]
+Le but visé d’un calcul de complexité algorithmique temporelle est de permettre la comparaison d'une efficacité d’algorithmes résolvant le même problème. Dans une situation donnée, cela permet donc d’établir lequel des algorithmes disponibles est le plus optimal. +
+Pour ces tests, j'ai procédé à prendre une chaîne de caractères déjà précédemment utilisée (ici "Cou cou  J M  B") et de voir, en la dupliquant, si le temps d'exécution et le nombre d'itérations varient entre-eux (bien que le jeu d'essais soit réalisé sur un très faible échantillon). +
+
+En voici le tableau adéquat :
+
+|===
+| *Chaînes de caractères analysées* | *Résultat de l'algorithme* | *Résultats attendus* | *Temps d'exécution*
+
+|``'Cou_cou\__J_M__B'`` 
+|Test passé ✓ 
+|``'Coucou\__JM__B'`` 
+|Environ 19 nanosecondes soit 0.000019ms
+
+|``'\_Cou_cou\__J_M__B_'`` 
+|Test passé ✓
+|``'Coucou\__JM__B'`` 
+|Environ 29 nanosecondes, soit 0.000029ms
+
+|``'Cou_cou\__J_M__B'`` (dupliquée 100x) 
+|Test passé ✓ 
+|``'Coucou\__JM__B'`` (dupliquée 100x) 
+|Environ 31 nanosecondes soit 0.000031ms
+
+|``'Cou_cou\__J_M__B'`` (dupliquée 10000x) 
+|Test passé ✓ 
+|``Coucou\__JM__B`` (dupliquée 10000x) 
+|Environ 146 nanosecondes, soit 0.000146ms
+
+|``'Cou_cou\__J_M__B'`` (dupliquée 100000x) 
+|Test passé ✓ 
+|``'Coucou\__JM__B'`` (dupliquée 100000x) 
+|Environ 401 nanosecondes, soit 0.000401ms
+|===
+
+[.text-justify]
+Une expression régulière classique peut être compilée en une machine à états finis (acceptant ou rejetant une chaîne donnée de symboles) qui correspond à une chaîne de longueur *n* pour un ordre de grandeur de *O(n).*
+
+[NOTE]
+[.text-justify]
+Il est également possible de créer une expression régulière qui ne se termine jamais sur une chaîne d'entrée vide. Celle-ci aura alors pour ordre de grandeur *O(1)*.
 
 === Efficacité n°106 (langage Python)
 
