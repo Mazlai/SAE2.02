@@ -325,7 +325,7 @@ print("Temps d'exécution du programme : ",
 *Réalisation de tests :*
 
 [.text-justify]
-Pour faire que les tests que vous avez posé puissent être réalisés, veuillez ajouter le code suivant tout en haut du fichier ``test.py`` (situé au chemin renseigné ci-dessous) : +
+Pour faire que les tests que vous avez posé puissent être réalisés, veuillez ajouter le code suivant tout en haut du fichier ``test.py`` (situé au chemin renseigné ci-dessous et en considérant que le workspace utilisé est celui du *GitHub*) : +
 
 [source, python]
 ----
