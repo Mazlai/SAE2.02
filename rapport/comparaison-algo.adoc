@@ -266,7 +266,7 @@ ____
 ____
 
 [.text-justify]
-Comme le calcul du nombre d'itérations se fait également selon la longueur de la chaîne de caractères, il semblerait que la complexité du programme ``sobriete-57.c`` soit de l'ordre de O(n + x + y + z) avec n, la longueur de la chaîne de caractères, x un espace simple, y un caractère autre qu'un simple espace, z un espace situé entre deux autres (ou suivi d'un autre).
+Comme le calcul du nombre d'itérations se fait également selon la longueur de la chaîne de caractères, il semblerait que la complexité du programme ``sobriete-57.c`` soit d'une complexité de n + x + y + z) avec n, la longueur de la chaîne de caractères, x un espace simple, y un caractère autre qu'un simple espace, z un espace situé entre deux autres (ou suivi d'un autre). L'ordre de grandeur serait alors de *O(n)*.
 
 === Sobriété n°162 (langage Python)
 
@@ -602,7 +602,7 @@ Ainsi, dès lors que la chaîne de caractères est dupliquée, le temps ainsi qu
 Dès lors qu'une chaîne de caractères est située au début, l'algorithme ne semble visiblement pas traiter le cas, passant directement au premier morceau de cette chaîne.
 
 [.text-justify]
-Autrement dit, il prendra seulement en considération le début de la chaîne de caractères non séparée du reste de celle-ci par un espace. De ce fait, traitant alors constamment la même chaîne de caractères, la complexité du programme ``sobriete-166.c`` semble se rapprocher de *O(1)*, bien que celle-ci soit complètement faussée car le résultat attendu ne correspond pas à la demande souhaitée.
+Autrement dit, il prendra seulement en considération le début de la chaîne de caractères non séparée du reste de celle-ci par un espace. De ce fait, traitant alors constamment la même chaîne de caractères, l'ordre de grandeur du programme ``sobriete-166.c`` semble se rapprocher de *O(1)*, bien que celle-ci soit complètement faussée car le résultat attendu ne correspond pas à la demande souhaitée.
 
 == Catégorie "Efficacité"
 
@@ -656,9 +656,14 @@ Pour ce faire, veuillez à déclarer une variable de type entier au début de vo
 
 ==== Analyse
 [.text-justify]
+Parmi l'ensemble des tests réalisés, le code les passe avec succès sans qu'aucune erreur ne soit à déplorer à la fois sur le résultat attendu mais également sur le code en lui-même.
 
 ===== Lisibilité du code - Optionnel
 [.text-justify]
+Dans son ensemble, le développeur a indiqué certaines caractéristiques précises de son programme, et notamment dans la correspondance entre le caractère espace, et sa valeur en ASCII. +
+
+[.text-justify]
+Le code est plutôt épuré, séparant alors les différentes parties (déclarations, conditions, résultats) bien que celui-ci ne soit pas facile à comprendre rapidement, d'où l'absence de javadoc. Mais on comprend rapidement la procédure réalisée par le développeur, à savoir appliquer les traitements de la chaîne de caractère analysée dans une nouvelle chaîne de caractère, qui sera le résultat de la fonction.
 
 ===== Qualité du code - Optionnel
 [.text-justify]
@@ -676,10 +681,61 @@ De ce fait, bien que cela soit une erreur mineure, le fichier ``efficacite-43.ja
 image::/rapport/images/efficacite-43.PNG[]
 
 ===== Sobriété numérique - Optionnel
-[.text-justify]
+✘
 
 ===== Efficacité et temps d'exécution
 [.text-justify]
+L’objectif d’un calcul de complexité algorithmique temporelle est de pouvoir comparer l’efficacité d’algorithmes résolvant le même problème. Dans une situation donnée, cela permet donc d’établir lequel des algorithmes disponibles est le plus optimal. +
+Pour ces tests, j'ai procédé à prendre une chaîne de caractères déjà précédemment utilisée (ici "Cou cou  J M  B") et de voir, en la dupliquant, si le temps d'exécution et le nombre d'itérations varient entre-eux (bien que le jeu d'essais soit réalisé sur un très faible échantillon). +
+
+|===
+| *Chaînes de caractères analysées* | *Résultat de l'algorithme* | *Résultats attendus* | *Temps d'exécution* | *Nombre d'itérations*
+
+|``'Cou_cou\__J_M__B'`` 
+|Test passé ✓ 
+|``'Coucou\__JM__B'`` 
+|Environ 1 nanoseconde, soit environ 0.000001ms 
+|13
+
+|``'\_Cou_cou\__J_M__B_'`` 
+|Test passé ✓ 
+|``'Coucou\__JM__B'`` 
+|Environ 1 nanoseconde, soit environ 0.000001ms 
+|13
+
+|``'Cou_cou\__J_M__B'`` (dupliquée 100x) 
+|Test passé ✓ 
+|``'Coucou\__JM__B'`` (dupliquée 100x) 
+|Environ 5 nanosecondes, soit environ 0.000005ms
+|1300
+
+|``'Cou_cou\__J_M__B'`` (dupliquée 10000x) 
+|Test passé ✓ 
+|``Coucou\__JM__B`` (dupliquée 10000x) 
+|Environ 162 nanosecondes, soit environ 0.000162ms
+|130000
+
+|``'Cou_cou\__J_M__B'`` (dupliquée 100000x) 
+|Test passé ✓ 
+|``'Coucou\__JM__B'`` (dupliquée 100000x) 
+|Environ 752 nanosecondes, soit environ 0.000752ms
+|1500000
+|===
+
+[.text-justify]
+Comme le calcul du nombre d'itérations se fait selon la longueur de la chaîne de caractères mais également des caractères constituant cette même chaîne, il semblerait que la complexité du programme ``efficacite-43.java`` soit de l'ordre de 1 + n(a(b+c)+d) avec :
+
+____
+● *n*, le nombre de caractères total ; +
+● *a*, le nombre d'espaces ; +
+● *b*, le nombre d'espaces *après* un espace ; +
+● *c*, le nombre d'espaces *avant* un espace ; +
+● Et *d*, le nombre de caractères différents de l'espace.
+____
+
+De ce qui concerne la complexité temporelle du programme, une corrélation assez visible s'établit entre la taille de la chaîne de caractères ainsi que le temps d'exécution. Dès lors que cette taille est multipliée par 10 ou par 100 (selon le jeu d'essais précédemment réalisé), le temps d'exécution évolue plus ou moins de la même manière, bien que celui-ci ne soit jamais précis (dû au temps instable du CPU à exécuter le programme, etc). 
+
+Ces deux calculs semblent finalement se ramener à un même point : l'ordre de grandeur de la solution algorithmique ``efficacite-43.java`` est de *O(n)*.
 
 === Efficacité n°90 (langage Java)
 
@@ -752,7 +808,7 @@ Concrètement, moins il y a de chemins à travers un morceau de code et moins ce
 image::/rapport/images/efficacite-90.PNG[]
 
 ===== Sobriété numérique - Optionnel
-[.text-justify]
+✘
 
 ===== Efficacité et temps d'exécution
 [.text-justify]
@@ -816,7 +872,7 @@ Sans contestation possible, le fichier ``efficacite-131.java`` est non-seulement
 image::/rapport/images/efficacite-131.PNG[]
 
 ===== Sobriété numérique - Optionnel
-[.text-justify]
+✘
 
 ===== Efficacité et temps d'exécution
 [.text-justify]
@@ -949,7 +1005,7 @@ Pour ces tests, j'ai procédé à prendre une chaîne de caractères déjà pré
 |===
 
 [.text-justify]
-en ce qui concerne l’efficacité, le temps d'exécution dépend de l'évolutivité de la taille de la chaîne de caractères. Ainsi, dès lors que la taille est augmentée (ici par 10x), le temps d'exécution suit d'une manière approximative, cette même opération bien que cela ne soit jamais bien précis. Pour une complexité temporelle ici, il s'agit d'une complexité algorithmique de *O(n)*.
+En ce qui concerne l’efficacité, le temps d'exécution dépend de l'évolutivité de la taille de la chaîne de caractères. Ainsi, dès lors que la taille est augmentée (ici par 10x), le temps d'exécution suit d'une manière approximative, cette même opération bien que cela ne soit jamais bien précis. Pour une complexité temporelle ici, il s'agit d'un ordre de grandeur de *O(n)*.
 
 === Simplicité n°39 (langage Java)
 
@@ -1059,7 +1115,7 @@ Pour ces tests, j'ai procédé à prendre une chaîne de caractères déjà pré
 |===
 
 [.text-justify]
-Le temps d'exécution dépend de l'évolutivité de la taille de la chaîne de caractères. Cet algorithme est très intéressant à analyser car dès lors que la taille de la chaîne de caractères augmente (ici 10x), le temps d'exécution semble être moins important, en réalité étant lui-même multiplié aux alentours de 5x. Ainsi, le temps n'étant pas corrélé de la même manière que la taille de la chaîne de caractères, il semblerait que la courbe réalisée semble davantage suivre la tendance pour une complexité logarithmique *O(log(n))*.
+Le temps d'exécution dépend de l'évolutivité de la taille de la chaîne de caractères. Cet algorithme est très intéressant à analyser car dès lors que la taille de la chaîne de caractères augmente (ici 10x), le temps d'exécution semble être moins important, en réalité étant lui-même multiplié aux alentours de 5x. Ainsi, le temps n'étant pas corrélé de la même manière que la taille de la chaîne de caractères, il semblerait que la courbe réalisée semble davantage suivre la tendance pour un ordre de grandeur de *O(log(n))*, bien qu'incertain de ce qui puisse être constaté.
 
 === Simplicité n°56 (langage Java)
 
@@ -1188,7 +1244,7 @@ En voici le tableau adéquat :
 |===
 
 [.text-justify]
-Comme la plupart des algorithmes présentés, en ce qui concerne l’efficacité, le temps d'exécution dépend de l'évolutivité de la taille de la chaîne de caractères. Ainsi, dès lors que la taille est augmentée (ici par 10x), le temps d'exécution suit d'une manière approximative, cette même opération bien que cela ne soit jamais bien précis. Pour une complexité temporelle ici, il s'agit d'une complexité algorithmique de *O(n)*.
+Comme la plupart des algorithmes présentés, en ce qui concerne l’efficacité, le temps d'exécution dépend de l'évolutivité de la taille de la chaîne de caractères. Ainsi, dès lors que la taille est augmentée (ici par 10x), le temps d'exécution suit d'une manière approximative, cette même opération bien que cela ne soit jamais bien précis. Pour une complexité temporelle ici, il s'agit d'un ordre de grandeur de *O(n)*.
 
 === Simplicité n°71 (langage Java)
 
@@ -1310,7 +1366,7 @@ En voici le tableau adéquat :
 Comme déjà mentionné précédemment, tous les tests à effectuer ne passent pas. Ici, la gestion des conditions posent plusieurs problèmes car en voulant vérifier le caractère précédent ou suivant, celui-ci risque très fortement sortir de la limite de taille de la chaîne de caractères ce qui deviendra problématique.
 
 Pour autant, en fonction de la longueur de la chaîne de caractères, son temps d'exécution augmente également bien qu'il semble peu corrélé en fonction de la longueur de la chaîne de caractères. +
-En ce qui concerne l’efficacité, le nombre de tours effectué dépend de la taille du texte analysé. Pour une complexité se basant sur un nombre d'itérations ici, il s'agit d'une complexité algorithmique de O(n).
+En ce qui concerne l’efficacité, le nombre de tours effectué dépend de la taille du texte analysé. Pour une complexité se basant sur un nombre d'itérations ici, il s'agit d'un ordre de grandeur de O(n).
 
 == Classement
 
@@ -1327,7 +1383,7 @@ Voici donc le classement final selon les catégories :
 |✘
 |✘
 |3ème
-|3
+|3/5
 
 |``simplicite-39.java``
 |D
@@ -1336,7 +1392,7 @@ Voici donc le classement final selon les catégories :
 |✘
 |✘
 |1er
-|5
+|5/5
 
 |``simplicite-56.java``
 |A
@@ -1345,7 +1401,7 @@ Voici donc le classement final selon les catégories :
 |✘
 |✘
 |1er
-|5
+|5/5
 
 |``simplicite-71.java``
 |B
@@ -1354,7 +1410,7 @@ Voici donc le classement final selon les catégories :
 |✘
 |✘
 |4ème
-|1
+|1/5
 
 .4+<.>|Efficacité
 |``efficacite-43.java``
@@ -1401,7 +1457,7 @@ Voici donc le classement final selon les catégories :
 |✘
 |A
 |1er
-|5
+|5/5
 
 |``sobriete-162.py``
 |✘
@@ -1410,7 +1466,7 @@ Voici donc le classement final selon les catégories :
 |✘
 |D
 |2nd
-|4
+|4/5
 
 |``sobriete-166.c``
 |✘
@@ -1419,7 +1475,7 @@ Voici donc le classement final selon les catégories :
 |✘
 |B
 |3ème
-|1
+|1/5
 |===
 
 == Exemple de code
