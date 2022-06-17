@@ -308,7 +308,7 @@ En voici le tableau adéquat :
 |34
 
 |``'\_Cou_cou\__J_M__B_'`` 
-|Test invalide ✘ 
+|Test passé ✓
 |``'Coucou\__JM__B'`` 
 |Environ 0.0000008s soit 0.0008s
 |3600
