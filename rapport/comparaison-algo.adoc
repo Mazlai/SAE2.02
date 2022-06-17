@@ -742,6 +742,12 @@ image::/rapport/images/efficacite-131.PNG[]
 
 ===== Lisibilité du code
 [.text-justify]
+Bien que beaucoup de conditions soient réalisées au sein de la solution algorithmique ``simplicite-11.java``, celui-ci reste pour autant assez compréhensible. Le développeur a décidé de mettre dans un tableau, chaque caractère séparé de la chaîne de caractère analysée. + 
+De ce tableau parcouru, il crée une nouvelle chaîne de caractère qui prendra en considération les modifications et les conditions à respecter.  
+
+Il vérifie ainsi la taille de la chaîne de caractère ainsi que des caractères présents au sein de la chaîne de caractère renseignée dans différentes conditions, pour bien comprendre comment l'analyse se fait, étape par étape. +
+
+Pour autant, comme de nombreux codes, celui-ci ne possède pas de javadocs et n'est donc pas instructif au premier abord. Mais on peut le comprendre assez rapidement, quelle que soit la personne.
 
 ===== Qualité du code
 [.text-justify]
