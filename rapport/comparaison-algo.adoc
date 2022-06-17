@@ -817,8 +817,93 @@ image::/rapport/images/efficacite-90.PNG[]
 
 ==== Sous-reproductibilité et références
 
+*Module timeit :*
+
+[.text-justify]
+timeit est un module permettant de fournir de façon simple le temps d'exécution de fragments de code Python tout en évitant un certain nombre de problèmes classiques liés à la mesure des temps d'exécution.
+
+Pour son importation, veuillez importer ce module en en-tête du code source :
+
+[source, python]
+----
+import timeit
+----
+[.text-justify]
+Désormais, il vous suffit de l'utiliser. Tout d'abord, veuillez à mettre en commentaire votre fonction et à la stocker dans une variable dont son choix de nom est complètement libre. De là, vous renseignerez directement dans les paramètres de la fonction, la chaîne de caractères que vous souhaiterez analyser. +
+Enfin, il vous suffit qu'à reconnaître cette variable et à effectuer des tours de boucle selon votre envie pour en calculer votre temps d'exécution.
+
+Pour l'analyse de cette solution algorithmique, veuillez à reproduire le code suivant :
+
+[source, python]
+----
+moncode = '''
+def erase(s="Cou cou  J M  B"):
+    res = ""
+    spaces = 0
+    
+    for c in s:
+        if(c is " "): spaces += 1
+        else:
+            res += " " * spaces + c if spaces > 1 else c
+            spaces = 0
+
+    return res + " " * spaces if spaces > 1 else res
+'''
+
+print("Temps d'exécution du programme : ",
+       timeit.timeit(stmt = moncode,
+                     number = 100000
+                     ))
+----
+
+*Réalisation de tests :*
+
+[.text-justify]
+Pour faire que les tests que vous avez posé puissent être réalisés, veuillez ajouter le code suivant tout en haut du fichier ``test.py`` (situé au chemin renseigné ci-dessous et en considérant que le workspace utilisé est celui du *GitHub*) : +
+
+[source, python]
+----
+import sys
+sys.path.append('analyse/Efficacité/Python/efficacite-106')
+from efficacite106 import erase
+----
+
+[.text-justify]
+Il permet de vérifier que le programme traite bien tous les cas donnés. +
+
+*Autres :*
+
+[.text-justify]
+Il est intéressant de connaître le nombre d'itérations de votre programme, autrement dit, combien de fois est réalisée votre condition en fonction de la chaîne de caractères renseignée. +
+
+[.text-justify]
+Pour ce faire, veuillez à déclarer une variable au début de votre fonction puis, incrémentez cette valeur *au moment où* l'analyse de votre chaîne de caractères avance également et enfin, veuillez retourner votre résultat pour connaître le nombre de fois où vos conditions ont été exécutée :
+
+[source, python]
+----
+//Déclarations de variables de test
+  nbIterations = 0;
+  
+  [...]
+  
+//Dans les conditions :
+  nbIterations = nbIterations + 1;
+  
+  [...]
+  
+//Affichage des tests
+  print("Nombre d'itérations ", nbIterations);
+----
+
+==== Analyse
+[.text-justify]
+Parmi l'ensemble des tests réalisés, le code les passe avec succès sans qu'aucune erreur ne soit à déplorer à la fois sur le résultat attendu mais également sur le code en lui-même.
+
 ===== Lisibilité du code - Optionnel
 [.text-justify]
+En réalité, le code n'est pas très intuitif à comprendre. En effet, le réel problème de compréhension à constater dans ce programme, est le fait que certaines conditions (*if* / *else*, etc.) sont affichées à la même ligne d'un résultat affiché. C'est assez perturbant de voir que ces deux éléments soient réalisés sur une même ligne. 
+
+Pour autant, le code est bien réalisé, car on arrive malgré tout à le comprendre bien qu'une absence de commentaire ou de javadoc soit à constater. Il aurait été ainsi préférable, dans un code comme celui-ci, de réellement indiquer les principales ambiguïtés de compréhension qu'un utilisateur lambda pourrait rencontrer.
 
 ===== Qualité du code - Optionnel
 [.text-justify]
@@ -836,10 +921,46 @@ En réalité, il est véridique de dire qu'il soit nécesasire d'ajuster certain
 image::/rapport/images/efficacite-106.PNG[]
 
 ===== Sobriété numérique - Optionnel
-[.text-justify]
+✘
 
 ===== Efficacité et temps d'exécution
 [.text-justify]
+Le but visé d’un calcul de complexité algorithmique temporelle est de permettre la comparaison d'une efficacité d’algorithmes résolvant le même problème. Dans une situation donnée, cela permet donc d’établir lequel des algorithmes disponibles est le plus optimal. +
+Pour ces tests, j'ai procédé à prendre une chaîne de caractères déjà précédemment utilisée (ici "Cou cou  J M  B") et de voir, en la dupliquant, si le temps d'exécution et le nombre d'itérations varient entre-eux (bien que le jeu d'essais soit réalisé sur un très faible échantillon). +
+
+En voici le tableau adéquat :
+
+|===
+| *Chaînes de caractères analysées* | *Résultat de l'algorithme* | *Résultats attendus* | *Temps d'exécution*
+
+|``'Cou_cou\__J_M__B'`` 
+|Test passé ✓ 
+|``'Coucou\__JM__B'`` 
+|Environ 6*10^-7 soit 0.0000006s ou 0.0006ms
+
+|``'\_Cou_cou\__J_M__B_'`` 
+|Test passé ✓
+|``'Coucou\__JM__B'`` 
+|Environ 6*10^-7 soit 0.0000006s ou 0.0006ms
+
+|``'Cou_cou\__J_M__B'`` (dupliquée 100x) 
+|Test passé ✓ 
+|``'Coucou\__JM__B'`` (dupliquée 100x) 
+|Environ 1.21*10^-5 soit 0.0000121s ou 0.0121ms
+
+|``'Cou_cou\__J_M__B'`` (dupliquée 10000x) 
+|Test passé ✓ 
+|``Coucou\__JM__B`` (dupliquée 10000x) 
+|Environ 0.0011096s, soit 1.1096ms
+
+|``'Cou_cou\__J_M__B'`` (dupliquée 100000x) 
+|Test passé ✓ 
+|``'Coucou\__JM__B'`` (dupliquée 100000x) 
+|Environ 0.0114697s, soit 11.4697ms
+|===
+
+[.text-justify]
+En ce qui concerne l’efficacité, si on traite une chaîne de caractères 10 fois ou 100 fois plus grande, le temps de calcul sera approximativement multiplié de la même manière. De ce fait, pour une complexité temporelle ici, il s'agit d'un ordre de grandeur de *O(n)*.
 
 === Efficacité n°131 (langage Java)
 
@@ -890,6 +1011,7 @@ Pour ce faire, veuillez à déclarer une variable de type entier au début de vo
 ----
 
 ==== Analyse
+[.text-justify]
 Dès lors de l'import de la solution algorithmique ``efficacite-131.java``, une erreur de compilation est à constater. En effet, quel que soit le test réalisé depuis la classe ``EraserTest.java``, impossible d'exécuter le programme. +
 Cette erreur de compilation est ici, due à une duplication (sans doute) involontaire de la variable *i*. Bien que l'erreur soit minime, il est malheureux de constater que le programme ne marche pas.
 
