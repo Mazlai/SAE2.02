@@ -967,80 +967,114 @@ En ce qui concerne l’efficacité, le nombre de tours effectué dépend de la t
 Voici donc le classement final selon les catégories :
 
 |===
-|Catégorie |Solution algorithmique |Position |Notation
+|Catégorie |Solution algorithmique |Lisibilité |Qualité |Temps d'exécution |Efficacité |Sobriété |Position |Notation
 
 .4+<.>|Simplicité
 |``simplicite-11.java``
+|C
+|D
+|✘
+|✘
+|✘
 |
 |
 
 |``simplicite-39.java``
+|D
+|A
+|✘
+|✘
+|✘
 |
 |
 
 |``simplicite-56.java``
+|A
+|C
+|✘
+|✘
+|✘
 |
 |
 
 |``simplicite-71.java``
+|B
+|B
+|✘
+|✘
+|✘
 |
 |
-
 
 .4+<.>|Efficacité
 |``efficacite-43.java``
+|✘
+|✘
+|
+|
+|✘
 |
 |
 
 |``efficacite-90.java``
+|✘
+|✘
+|
+|
+|✘
 |
 |
 
 |``efficacite-106.py``
+|✘
+|✘
+|
+|
+|✘
 |
 |
 
 |``efficacite-131.java``
+|✘
+|✘
+|
+|
+|✘
 |
 |
 
 .3+<.>|Sobriété
 |``sobriete-57.c``
-|1
+|✘
+|✘
+|C
+|✘
+|A
+|1er
 |5
 
 |``sobriete-162.py``
-|2
+|✘
+|✘
+|A
+|✘
+|D
+|2nd
 |4
 
 |``sobriete-166.c``
-|3
+|✘
+|✘
+|B
+|✘
+|B
+|3ème
 |1
 |===
 
 == Exemple de code
 
 === Efficacité n°21 (python)
-
-==== Reproductibilité
-[.text-justify]
-Lancer le code de ``test.py``, le programme devrait s'exécuter même si une erreur de compilation est relevée dans la close donnée dans les prérequis. Vérifier que le programme traite de tous les cas donnés.
-
-[.text-justify]
-Lancer le code de ``analyse.py``, le programme devrait s'exécuter même si une erreur de compilation est relevée dans la close donnée dans les prérequis. Analyser les temps d'exécutions en fonction des différentes tailles de chaînes.
-
-==== Analyse
-[.text-justify]
-[red]#Ce code ne passe pas tous les tests !#
-
-===== Lisibilité du code
-[.text-justify]
-
-===== Qualité du code
-[.text-justify]
-
-===== Sobriété numérique
-[.text-justify]
 
 ===== Efficacité et temps d'exécution
 [.text-justify]
