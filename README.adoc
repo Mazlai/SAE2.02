@@ -51,6 +51,8 @@ endif::[]
 - [ ] 3
 - [x] 4
 
+*Lien vers le rapport :* https://github.com/IUT-Blagnac/sae2-02-Mazlai/blob/main/rapport/comparaison-algo.adoc[__Cliquer ici__]
+
 // == Objectives
 == Objectifs
 
