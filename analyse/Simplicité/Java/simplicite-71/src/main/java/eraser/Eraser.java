@@ -1,7 +1,7 @@
 package main.java.eraser;
 
 public class Eraser {
-	// EFFICACITE - 131
+	// SIMPLICITE  -  71
 	
 	 public static String erase(String str) {
 		//throw new UnsupportedOperationException("Unimplemented");
