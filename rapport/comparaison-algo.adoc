@@ -1607,38 +1607,38 @@ Voici donc le classement final selon les catégories :
 |``efficacite-43.java``
 |✘
 |✘
-|
-|
+|B
+|A
 |✘
-|
-|
+|2ème
+|4/5
 
 |``efficacite-90.java``
 |✘
 |✘
-|
-|
+|A
+|A
 |✘
-|
-|
+|1er
+|5/5
 
 |``efficacite-106.py``
 |✘
 |✘
-|
-|
+|C
+|A
 |✘
-|
-|
+|3ème
+|3/5
 
 |``efficacite-131.java``
 |✘
 |✘
-|
-|
+|D
+|B
 |✘
-|
-|
+|4ème
+|0/5
 
 .3+<.>|Sobriété
 |``sobriete-57.c``
