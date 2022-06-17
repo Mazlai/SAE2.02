@@ -131,10 +131,10 @@ De là, paramétrez votre IDE et ouvrez-le. Vous n'aurez simplement qu'à récup
 *Autres :*
 
 [.text-justify]
-Il est intéressant de connaître le nombre d'itérations de votre programme, autrement dit, combien de fois est réalisée votre condition en fonction de la chaîne de caractère renseignée. +
+Il est intéressant de connaître le nombre d'itérations de votre programme, autrement dit, combien de fois est réalisée votre condition en fonction de la chaîne de caractères renseignée. +
 
 [.text-justify]
-Pour ce faire, veuillez à déclarer une variable au début de votre fonction puis, incrémentez cette valeur *au moment où* l'analyse de votre chaîne de caractère avance également et enfin, veuillez retourner votre résultat pour connaître le nombre de fois où vos conditions ont été exécutée :
+Pour ce faire, veuillez à déclarer une variable au début de votre fonction puis, incrémentez cette valeur *au moment où* l'analyse de votre chaîne de caractères avance également et enfin, veuillez retourner votre résultat pour connaître le nombre de fois où vos conditions ont été exécutée :
 
 [source, c]
 ----
@@ -161,7 +161,7 @@ Parmi l'ensemble des tests réalisés, le code les passe avec succès sans qu'au
 En terme de lisibilité de code, bien qu'une javadoc soit absente afin de détailler le fonctionnement de la fonction ``erase``, celui-ci paraît très compréhensible car une distinction nette entre les déclarations de variables, les conditions ainsi que les résultats est présente. +
 
 [.text-justify]
-Par ailleurs, les conditions de vérification sont également très claires. Le code est bien décortiqué et compréhensible notamment dans le fait que le développeur ait utilisé une nouvelle chaîne de caractère dépendante de la chaîne de caractère initiale en prenant les modifications à apporter mais également dans l'analyse de la chaîne de caractère en question. Il est clair de voir que les différents *if*, traitent différents cas possibles de la chaîne, tout en veillant à ne pas dépasser la fin de celle-ci, chose gérée dans la bouche *while*.
+Par ailleurs, les conditions de vérification sont également très claires. Le code est bien décortiqué et compréhensible notamment dans le fait que le développeur ait utilisé une nouvelle chaîne de caractères dépendante de la chaîne de caractères initiale en prenant les modifications à apporter mais également dans l'analyse de la chaîne de caractères en question. Il est clair de voir que les différents *if*, traitent différents cas possibles de la chaîne, tout en veillant à ne pas dépasser la fin de celle-ci, chose gérée dans la bouche *while*.
 
 ===== Qualité du code - Optionnel
 [.text-justify]
@@ -216,7 +216,7 @@ En voici le tableau de cette sobriété numérique :
 ===== Efficacité et temps d'exécution - Optionnel
 [.text-justify]
 Pour alors évaluer l'efficacité et le temps d'exécution de la solution algorithmique, un ensemble de tests est alors réalisé. +
-Pour ces tests, j'ai procédé à prendre une chaîne de caractère déjà précédemment utilisée (ici "Cou cou  J M  B") et de voir, en la dupliquant, si le temps d'exécution et le nombre d'itérations varient. +
+Pour ces tests, j'ai procédé à prendre une chaîne de caractères déjà précédemment utilisée (ici "Cou cou  J M  B") et de voir, en la dupliquant, si le temps d'exécution et le nombre d'itérations varient. +
 
 En voici le tableau adéquat :
 
@@ -255,7 +255,7 @@ En voici le tableau adéquat :
 |===
 
 [.text-justify]
-Nous pouvons ainsi remarquer que le temps d'exécution augmente au fur et à mesure que la chaîne de caractère devient également importante. Pour autant, ce temps d'exécution semble relativement variable et peu corrélé en fonction de la longueur de la chaîne de caractère car, celle-ci l'était également dès lors que l'on exécutait le programme : ce temps d'exécution est évalué par une moyenne, réalisée 5 fois pour car chaîne de caractère analysée.
+Nous pouvons ainsi remarquer que le temps d'exécution augmente au fur et à mesure que la chaîne de caractères devient également importante. Pour autant, ce temps d'exécution semble relativement variable et peu corrélé en fonction de la longueur de la chaîne de caractères car, celle-ci l'était également dès lors que l'on exécutait le programme : ce temps d'exécution est évalué par une moyenne, réalisée 5 fois pour car chaîne de caractères analysée.
 
 [.text-justify]
 Pour autant, il semblerait que la complexité soit plus facile à calculer en fonction du nombre d'itérations, car le rapprochement semble plus compréhensible et visible. En effet, il est facile de déduire la valeur (ou nombre d'itérations) des caractères utilisés par ce programme : 
@@ -266,7 +266,7 @@ ____
 ____
 
 [.text-justify]
-Comme le calcul du nombre d'itérations se fait également selon la longueur de la chaîne de caractère, il semblerait que la complexité du programme ``sobriete-57.c`` soit de l'ordre de O(n + x + y + z) avec n, la longueur de la chaîne de caractère, x un espace simple, y un caractère autre qu'un simple espace, z un espace situé entre deux autres (ou suivi d'un autre).
+Comme le calcul du nombre d'itérations se fait également selon la longueur de la chaîne de caractères, il semblerait que la complexité du programme ``sobriete-57.c`` soit de l'ordre de O(n + x + y + z) avec n, la longueur de la chaîne de caractères, x un espace simple, y un caractère autre qu'un simple espace, z un espace situé entre deux autres (ou suivi d'un autre).
 
 === Sobriété n°162 (langage Python)
 
@@ -284,7 +284,7 @@ Pour son importation, veuillez importer ce module en en-tête du code source :
 import timeit
 ----
 [.text-justify]
-Désormais, il vous suffit de l'utiliser. Tout d'abord, veuillez à mettre en commentaire votre fonction et à la stocker dans une variable dont son choix de nom est complètement libre. De là, vous renseignerez directement dans les paramètres de la fonction, la chaîne de caractère que vous souhaiterez analyser. +
+Désormais, il vous suffit de l'utiliser. Tout d'abord, veuillez à mettre en commentaire votre fonction et à la stocker dans une variable dont son choix de nom est complètement libre. De là, vous renseignerez directement dans les paramètres de la fonction, la chaîne de caractères que vous souhaiterez analyser. +
 Enfin, il vous suffit qu'à reconnaître cette variable et à effectuer des tours de boucle selon votre envie pour en calculer votre temps d'exécution.
 
 Pour l'analyse de cette solution algorithmique, veuillez à reproduire le code suivant :
@@ -342,10 +342,10 @@ Il permet de vérifier que le programme traite bien tous les cas donnés. +
 *Autres :*
 
 [.text-justify]
-Il est intéressant de connaître le nombre d'itérations de votre programme, autrement dit, combien de fois est réalisée votre condition en fonction de la chaîne de caractère renseignée. +
+Il est intéressant de connaître le nombre d'itérations de votre programme, autrement dit, combien de fois est réalisée votre condition en fonction de la chaîne de caractères renseignée. +
 
 [.text-justify]
-Pour ce faire, veuillez à déclarer une variable au début de votre fonction puis, incrémentez cette valeur *au moment où* l'analyse de votre chaîne de caractère avance également et enfin, veuillez retourner votre résultat pour connaître le nombre de fois où vos conditions ont été exécutée :
+Pour ce faire, veuillez à déclarer une variable au début de votre fonction puis, incrémentez cette valeur *au moment où* l'analyse de votre chaîne de caractères avance également et enfin, veuillez retourner votre résultat pour connaître le nombre de fois où vos conditions ont été exécutée :
 
 [source, python]
 ----
@@ -392,7 +392,7 @@ Ces raisons étant que Python est un langage interprété, tandis que le C est c
 ===== Efficacité et temps d'exécution - Optionnel
 [.text-justify]
 Pour alors évaluer l'efficacité et le temps d'exécution de la solution algorithmique, un ensemble de tests est alors réalisé. +
-Pour ces tests, j'ai procédé à prendre une chaîne de caractère déjà précédemment utilisée (ici "Cou cou  J M  B") et de voir, en la dupliquant, si le temps d'exécution et le nombre d'itérations varient. +
+Pour ces tests, j'ai procédé à prendre une chaîne de caractères déjà précédemment utilisée (ici "Cou cou  J M  B") et de voir, en la dupliquant, si le temps d'exécution et le nombre d'itérations varient. +
 
 En voici le tableau adéquat :
 
@@ -431,7 +431,7 @@ En voici le tableau adéquat :
 |===
 
 [.text-justify]
-Lorsque la chaîne de caractère est dupliquée, l'ensemble des tests à réaliser passent également.
+Lorsque la chaîne de caractères est dupliquée, l'ensemble des tests à réaliser passent également.
 [.text-justify]
 Il prendra seulement en considération l'ensemble des caractères présents dans cette même liste. 
 
@@ -472,10 +472,10 @@ Une fois l'importation de cette librairie, il vous faut l'utiliser. Le programme
 *Autres :*
 
 [.text-justify]
-Enfin, il en va également de même pour connaître le nombre d'itérations de votre programme, autrement dit, combien de fois est réalisée votre condition en fonction de la chaîne de caractère renseignée. +
+Enfin, il en va également de même pour connaître le nombre d'itérations de votre programme, autrement dit, combien de fois est réalisée votre condition en fonction de la chaîne de caractères renseignée. +
 
 [.text-justify]
-Pour ce faire, veuillez à déclarer une variable de type entier au début de votre ``main`` puis, incrémentez cette valeur *au moment où* l'analyse de votre chaîne de caractère avance également et enfin, veuillez retourner votre résultat pour connaître le nombre de fois où vos conditions ont été exécutée :
+Pour ce faire, veuillez à déclarer une variable de type entier au début de votre ``main`` puis, incrémentez cette valeur *au moment où* l'analyse de votre chaîne de caractères avance également et enfin, veuillez retourner votre résultat pour connaître le nombre de fois où vos conditions ont été exécutée :
 
 [source, c]
 ----
@@ -495,7 +495,7 @@ Pour ce faire, veuillez à déclarer une variable de type entier au début de vo
 
 ==== Analyse
 [.text-justify]
-Parmi l'ensemble des tests réalisés, le code les passe avec succès sans qu'aucune erreur ne soit à déplorer sur le code en lui-même. Pour autant, sur le résultat attendu, celui-ci ne respecte pas les attentes souhaitées car il semblerait la chaîne de caractère affichée ne soit uniquement que celle précédée d'un espace.
+Parmi l'ensemble des tests réalisés, le code les passe avec succès sans qu'aucune erreur ne soit à déplorer sur le code en lui-même. Pour autant, sur le résultat attendu, celui-ci ne respecte pas les attentes souhaitées car il semblerait la chaîne de caractères affichée ne soit uniquement que celle précédée d'un espace.
 
 ===== Lisibilité du code - Optionnel
 [.text-justify]
@@ -507,7 +507,7 @@ Celle-ci prend la forme suivante : ``[...] ? [...] : [...]``. +
 
 [.text-justify]
 Enfin, l'utilisation d'un tableau à double entrée n'est pas nécessairement très instructif, d'autant plus dans son utilisation ici-même. +
-Concrètement, la chaîne de caractère sera toujours la même lors de l'analyse, bien que celle-ci se réalise étape par étape sur les caractères constituant cette même chaîne de caractère. Il est alors inutile de renseigner constamment comme premier élément, la même chaîne de caractère.
+Concrètement, la chaîne de caractères sera toujours la même lors de l'analyse, bien que celle-ci se réalise étape par étape sur les caractères constituant cette même chaîne de caractères. Il est alors inutile de renseigner constamment comme premier élément, la même chaîne de caractères.
 
 ===== Qualité du code - Optionnel
 [.text-justify]
@@ -554,12 +554,12 @@ En voici le tableau de cette sobriété numérique :
 |===
 
 [.text-justify]
-Le programme étant regroupé dans un main, il est difficile d'évaluer la mémoire d'un processus en cours d'exécution, d'autant plus quand le test de la chaîne de caractère ne peut que se faire depuis le terminal (après compilation du programme C en un fichier compilé .exe, puis exécution de celui-ci en renseignant la chaîne de caractère souhaitée). 
+Le programme étant regroupé dans un main, il est difficile d'évaluer la mémoire d'un processus en cours d'exécution, d'autant plus quand le test de la chaîne de caractèrse ne peut que se faire depuis le terminal (après compilation du programme C en un fichier compilé .exe, puis exécution de celui-ci en renseignant la chaîne de caractères souhaitée). 
 
 ===== Efficacité et temps d'exécution - Optionnel
 [.text-justify]
 Pour alors évaluer l'efficacité et le temps d'exécution de la solution algorithmique, un ensemble de tests est alors réalisé. +
-Pour ces tests, j'ai procédé à prendre une chaîne de caractère déjà précédemment utilisée (ici "Cou cou  J M  B") et de voir, en la dupliquant, si le temps d'exécution et le nombre d'itérations varient. +
+Pour ces tests, j'ai procédé à prendre une chaîne de caractères déjà précédemment utilisée (ici "Cou cou  J M  B") et de voir, en la dupliquant, si le temps d'exécution et le nombre d'itérations varient. +
 
 En voici le tableau adéquat :
 
@@ -598,11 +598,11 @@ En voici le tableau adéquat :
 |===
 
 [.text-justify]
-Ainsi, dès lors que la chaîne de caractère est dupliquée, le temps ainsi que le nombre d'itérations reste le même et pour cause : l'algorithme ne fonctionne pas lorsque l'on met un ou plusieurs espaces dans la chaîne de caractère. +
-Dès lors qu'une chaîne de caractère est située au début, l'algorithme ne semble visiblement pas traiter le cas, passant directement au premier morceau de cette chaîne.
+Ainsi, dès lors que la chaîne de caractères est dupliquée, le temps ainsi que le nombre d'itérations reste le même et pour cause : l'algorithme ne fonctionne pas lorsque l'on met un ou plusieurs espaces dans la chaîne de caractères. +
+Dès lors qu'une chaîne de caractères est située au début, l'algorithme ne semble visiblement pas traiter le cas, passant directement au premier morceau de cette chaîne.
 
 [.text-justify]
-Autrement dit, il prendra seulement en considération le début de la chaîne de caractère non séparée du reste de celle-ci par un espace. De ce fait, traitant alors constamment la même chaîne de caractère, la complexité du programme ``sobriete-166.c`` semble se rapprocher de *O(1)*, bien que celle-ci soit complètement faussée car le résultat attendu ne correspond pas à la demande souhaitée.
+Autrement dit, il prendra seulement en considération le début de la chaîne de caractères non séparée du reste de celle-ci par un espace. De ce fait, traitant alors constamment la même chaîne de caractères, la complexité du programme ``sobriete-166.c`` semble se rapprocher de *O(1)*, bien que celle-ci soit complètement faussée car le résultat attendu ne correspond pas à la demande souhaitée.
 
 == Catégorie "Efficacité"
 
@@ -633,10 +633,10 @@ System.out.println((fin-debut)/1000000);
 *Autres :*
 
 [.text-justify]
-Il est intéressant de connaître le nombre d'itérations de votre programme, autrement dit, combien de fois est réalisée votre condition en fonction de la chaîne de caractère renseignée. +
+Il est intéressant de connaître le nombre d'itérations de votre programme, autrement dit, combien de fois est réalisée votre condition en fonction de la chaîne de caractères renseignée. +
 
 [.text-justify]
-Pour ce faire, veuillez à déclarer une variable de type entier au début de votre fonction puis, incrémentez cette valeur *au moment où* l'analyse de votre chaîne de caractère avance également et enfin, veuillez retourner votre résultat pour connaître le nombre de fois où vos conditions ont été exécutée :
+Pour ce faire, veuillez à déclarer une variable de type entier au début de votre fonction puis, incrémentez cette valeur *au moment où* l'analyse de votre chaîne de caractères avance également et enfin, veuillez retourner votre résultat pour connaître le nombre de fois où vos conditions ont été exécutée :
 
 [source, java]
 ----
@@ -708,10 +708,10 @@ System.out.println((fin-debut)/1000000);
 *Autres :*
 
 [.text-justify]
-Il est intéressant de connaître le nombre d'itérations de votre programme, autrement dit, combien de fois est réalisée votre condition en fonction de la chaîne de caractère renseignée. +
+Il est intéressant de connaître le nombre d'itérations de votre programme, autrement dit, combien de fois est réalisée votre condition en fonction de la chaîne de caractères renseignée. +
 
 [.text-justify]
-Pour ce faire, veuillez à déclarer une variable de type entier au début de votre fonction puis, incrémentez cette valeur *au moment où* l'analyse de votre chaîne de caractère avance également et enfin, veuillez retourner votre résultat pour connaître le nombre de fois où vos conditions ont été exécutée :
+Pour ce faire, veuillez à déclarer une variable de type entier au début de votre fonction puis, incrémentez cette valeur *au moment où* l'analyse de votre chaîne de caractères avance également et enfin, veuillez retourner votre résultat pour connaître le nombre de fois où vos conditions ont été exécutée :
 
 [source, java]
 ----
@@ -850,10 +850,10 @@ System.out.println((fin-debut)/1000000);
 *Autres :*
 
 [.text-justify]
-Il est intéressant de connaître le nombre d'itérations de votre programme, autrement dit, combien de fois est réalisée votre condition en fonction de la chaîne de caractère renseignée. +
+Il est intéressant de connaître le nombre d'itérations de votre programme, autrement dit, combien de fois est réalisée votre condition en fonction de la chaîne de caractères renseignée. +
 
 [.text-justify]
-Pour ce faire, veuillez à déclarer une variable de type entier au début de votre fonction puis, incrémentez cette valeur *au moment où* l'analyse de votre chaîne de caractère avance également et enfin, veuillez retourner votre résultat pour connaître le nombre de fois où vos conditions ont été exécutée :
+Pour ce faire, veuillez à déclarer une variable de type entier au début de votre fonction puis, incrémentez cette valeur *au moment où* l'analyse de votre chaîne de caractères avance également et enfin, veuillez retourner votre résultat pour connaître le nombre de fois où vos conditions ont été exécutée :
 
 [source, java]
 ----
@@ -877,10 +877,10 @@ Parmi l'ensemble des tests réalisés, le code les passe avec succès sans qu'au
 
 ===== Lisibilité du code
 [.text-justify]
-Bien que beaucoup de conditions soient réalisées au sein de la solution algorithmique ``simplicite-11.java``, celui-ci reste pour autant assez compréhensible. Le développeur a décidé de mettre dans un tableau, chaque caractère séparé de la chaîne de caractère analysée. + 
-De ce tableau parcouru, il crée une nouvelle chaîne de caractère qui prendra en considération les modifications et les conditions à respecter.  
+Bien que beaucoup de conditions soient réalisées au sein de la solution algorithmique ``simplicite-11.java``, celui-ci reste pour autant assez compréhensible. Le développeur a décidé de mettre dans un tableau, chaque caractère séparé de la chaîne de caractères analysée. + 
+De ce tableau parcouru, il crée une nouvelle chaîne de caractères qui prendra en considération les modifications et les conditions à respecter.  
 
-Il vérifie ainsi la taille de la chaîne de caractère ainsi que des caractères présents au sein de la chaîne de caractère renseignée dans différentes conditions, pour bien comprendre comment l'analyse se fait, étape par étape. Très peu de remarques sont alors à constater.+
+Il vérifie ainsi la taille de la chaîne de caractères ainsi que des caractères présents au sein de la chaîne de caractères renseignée dans différentes conditions, pour bien comprendre comment l'analyse se fait, étape par étape. Très peu de remarques sont alors à constater.+
 
 Pour autant, comme de nombreux codes, celui-ci ne possède pas de javadocs et n'est donc pas instructif au premier abord. Mais on peut le comprendre assez rapidement, quelle que soit la personne.
 
@@ -906,13 +906,13 @@ Ainsi, bien que le code reste pour autant assez qualitatif, *Codacy* note le fic
 
 image::/rapport/images/simplicite-11.PNG[]
 
-===== Sobriété numérique
-✘
+===== Sobriété numérique - Optionnel
+✘ 
 
-===== Efficacité et temps d'exécution
+===== Efficacité et temps d'exécution - Optionnel
 [.text-justify]
 Le calcul d'une complexité se réalise selon deux critères : L'efficacité (ici, la taille d'une chaîne de caractères) ainsi que le temps d'exécution. +
-Pour ces tests, j'ai procédé à prendre une chaîne de caractère déjà précédemment utilisée (ici "Cou cou  J M  B") et de voir, en la dupliquant, si le temps d'exécution et le nombre d'itérations varient. +
+Pour ces tests, j'ai procédé à prendre une chaîne de caractères déjà précédemment utilisée (ici "Cou cou  J M  B") et de voir, en la dupliquant, si le temps d'exécution et le nombre d'itérations varient. +
 
 |===
 | *Chaînes de caractères analysées* | *Résultat de l'algorithme* | *Résultats attendus* | *Temps d'exécution* | *Nombre d'itérations*
@@ -978,10 +978,10 @@ System.out.println((fin-debut)/1000000);
 *Autres :*
 
 [.text-justify]
-Il est intéressant de connaître le nombre d'itérations de votre programme, autrement dit, combien de fois est réalisée votre condition en fonction de la chaîne de caractère renseignée. +
+Il est intéressant de connaître le nombre d'itérations de votre programme, autrement dit, combien de fois est réalisée votre condition en fonction de la chaîne de caractères renseignée. +
 
 [.text-justify]
-Pour ce faire, veuillez à déclarer une variable de type entier au début de votre fonction puis, incrémentez cette valeur *au moment où* l'analyse de votre chaîne de caractère avance également et enfin, veuillez retourner votre résultat pour connaître le nombre de fois où vos conditions ont été exécutée :
+Pour ce faire, veuillez à déclarer une variable de type entier au début de votre fonction puis, incrémentez cette valeur *au moment où* l'analyse de votre chaîne de caractères avance également et enfin, veuillez retourner votre résultat pour connaître le nombre de fois où vos conditions ont été exécutée :
 
 [source, java]
 ----
@@ -1005,7 +1005,7 @@ Parmi l'ensemble des tests réalisés, le code les passe avec succès sans qu'au
 
 ===== Lisibilité du code
 [.text-justify]
-A la différence du fichier précédemment analysé (``simplicite-11.java``), la solution algorithmique ``simplicite-39.java`` adopte une méthode différente et notamment dans les conditions réalisées. Ici, les changements apportés sur la chaîne de caractère analysée se réalise directement sur celle-ci du moment que la chaîne de caractère ne contient pas d'espaces. Sinon, les changements s'effectuent de même sur une nouvelle chaîne de caractère, dépendante de celle analysée. +
+A la différence du fichier précédemment analysé (``simplicite-11.java``), la solution algorithmique ``simplicite-39.java`` adopte une méthode différente et notamment dans les conditions réalisées. Ici, les changements apportés sur la chaîne de caractères analysée se réalise directement sur celle-ci du moment que la chaîne de caractères ne contient pas d'espaces. Sinon, les changements s'effectuent de même sur une nouvelle chaîne de caractères, dépendante de celle analysée. +
 
 Les conditions effectuées donc, diffèrent également mais sont bien moins compréhensibles, quand on sait qu'un espace a pour valeur ASCII "32". +
 Les conditions sont également empilées, c'est-à-dire que tout dépend d'une condition externe, étant le fait de savoir si le message contient ou non des espaces. De ce fait, on rentre dans des conditions encore plus profondes afin d'en arriver à une condition terminale indiquant si un espace est présent à l'indice i. +
@@ -1027,7 +1027,7 @@ image::/rapport/images/simplicite-39.PNG[]
 ===== Efficacité et temps d'exécution - Optionnel
 [.text-justify]
 Deux critères sont essentiels au calcul d'une complexité : L'efficacité ainsi que le temps d'exécution. +
-Pour ces tests, j'ai procédé à prendre une chaîne de caractère déjà précédemment utilisée (ici "Cou cou  J M  B") et de voir, en la dupliquant, si le temps d'exécution et le nombre d'itérations varient. +
+Pour ces tests, j'ai procédé à prendre une chaîne de caractères déjà précédemment utilisée (ici "Cou cou  J M  B") et de voir, en la dupliquant, si le temps d'exécution et le nombre d'itérations varient. +
 
 |===
 | *Chaînes de caractères analysées* | *Résultat de l'algorithme* | *Résultats attendus* | *Temps d'exécution*
@@ -1088,10 +1088,10 @@ System.out.println((fin-debut)/1000000);
 *Autres :*
 
 [.text-justify]
-Il est intéressant de connaître le nombre d'itérations de votre programme, autrement dit, combien de fois est réalisée votre condition en fonction de la chaîne de caractère renseignée. +
+Il est intéressant de connaître le nombre d'itérations de votre programme, autrement dit, combien de fois est réalisée votre condition en fonction de la chaîne de caractères renseignée. +
 
 [.text-justify]
-Pour ce faire, veuillez à déclarer une variable de type entier au début de votre fonction puis, incrémentez cette valeur *au moment où* l'analyse de votre chaîne de caractère avance également et enfin, veuillez retourner votre résultat pour connaître le nombre de fois où vos conditions ont été exécutée :
+Pour ce faire, veuillez à déclarer une variable de type entier au début de votre fonction puis, incrémentez cette valeur *au moment où* l'analyse de votre chaîne de caractères avance également et enfin, veuillez retourner votre résultat pour connaître le nombre de fois où vos conditions ont été exécutée :
 
 [source, java]
 ----
@@ -1149,7 +1149,7 @@ image::/rapport/images/simplicite-56.PNG[]
 ===== Efficacité et temps d'exécution - Optionnel
 [.text-justify]
 L'efficacité ainsi que le temps d'exécution de la solution algorithmique sont nécessaires à un calcul de complexité. +
-Pour ces tests, j'ai procédé à prendre une chaîne de caractère déjà précédemment utilisée (ici "Cou cou  J M  B") et de voir, en la dupliquant, si le temps d'exécution et le nombre d'itérations varient. +
+Pour ces tests, j'ai procédé à prendre une chaîne de caractères déjà précédemment utilisée (ici "Cou cou  J M  B") et de voir, en la dupliquant, si le temps d'exécution et le nombre d'itérations varient. +
 
 En voici le tableau adéquat :
 
@@ -1217,10 +1217,10 @@ System.out.println((fin-debut)/1000000);
 *Autres :*
 
 [.text-justify]
-Il est intéressant de connaître le nombre d'itérations de votre programme, autrement dit, combien de fois est réalisée votre condition en fonction de la chaîne de caractère renseignée. +
+Il est intéressant de connaître le nombre d'itérations de votre programme, autrement dit, combien de fois est réalisée votre condition en fonction de la chaîne de caractères renseignée. +
 
 [.text-justify]
-Pour ce faire, veuillez à déclarer une variable de type entier au début de votre fonction puis, incrémentez cette valeur *au moment où* l'analyse de votre chaîne de caractère avance également et enfin, veuillez retourner votre résultat pour connaître le nombre de fois où vos conditions ont été exécutée :
+Pour ce faire, veuillez à déclarer une variable de type entier au début de votre fonction puis, incrémentez cette valeur *au moment où* l'analyse de votre chaîne de caractères avance également et enfin, veuillez retourner votre résultat pour connaître le nombre de fois où vos conditions ont été exécutée :
 
 [source, java]
 ----
@@ -1240,12 +1240,12 @@ Pour ce faire, veuillez à déclarer une variable de type entier au début de vo
 
 ==== Analyse
 [.text-justify]
-Parmi l'ensemble des tests réalisés, le code les passe avec succès ou presque. En effet, le résultat attendu est, pour la majorité des chaînes de caractères renseignées, correct mais pour des chaînes commençant ou terminant par un espace, le programme retourne une erreur car la limitation de la taille de la chaîne de caractère ou simplement le premier caractère, chose qui n'a pas été traité.
+Parmi l'ensemble des tests réalisés, le code les passe avec succès ou presque. En effet, le résultat attendu est, pour la majorité des chaînes de caractères renseignées, correct mais pour des chaînes commençant ou terminant par un espace, le programme retourne une erreur car la limitation de la taille de la chaîne de caractères ou simplement le premier caractère, chose qui n'a pas été traité.
 
 ===== Lisibilité du code
 [.text-justify]
 Sur cette solution algorithmique, prénommée par le fichier ``simplicite-71.java``, sa lisibilité de code est très correcte. Peu de lignes de codes ont également été réalisée avec des conditions de vérification très concises et simples à comprendre. +
-Il n'est également pas compact, ce qui reste agréable à regarder. Ici, l'utilisateur a choisi de créer une nouvelle chaîne de caractère dans laquelle l'ensemble des traitements effectués depuis la chaîne renseignée seront réalisés dans cette nouvelle chaîne déclarée dans cette fonction. 
+Il n'est également pas compact, ce qui reste agréable à regarder. Ici, l'utilisateur a choisi de créer une nouvelle chaîne de caractères dans laquelle l'ensemble des traitements effectués depuis la chaîne renseignée seront réalisés dans cette nouvelle chaîne déclarée dans cette fonction. 
 
 Pour autant, l'absence de javadoc est constatée, ce qui aurait pu permettre d'avoir une meilleure compréhension et une meilleure approche sur la fonctionnalité implémentée par le développeur.
 
@@ -1269,7 +1269,7 @@ image::/rapport/images/simplicite-71.PNG[]
 ===== Efficacité et temps d'exécution - Optionnel
 [.text-justify]
 Pour alors évaluer l'efficacité et le temps d'exécution de la solution algorithmique, un ensemble de tests est alors réalisé. +
-Pour ces tests, j'ai procédé à prendre une chaîne de caractère déjà précédemment utilisée (ici "Cou cou  J M  B") et de voir, en la dupliquant, si le temps d'exécution et le nombre d'itérations varient. +
+Pour ces tests, j'ai procédé à prendre une chaîne de caractères déjà précédemment utilisée (ici "Cou cou  J M  B") et de voir, en la dupliquant, si le temps d'exécution et le nombre d'itérations varient. +
 
 En voici le tableau adéquat :
 
@@ -1307,9 +1307,9 @@ En voici le tableau adéquat :
 |130000
 |===
 
-Comme déjà mentionné précédemment, tous les tests à effectuer ne passent pas. Ici, la gestion des conditions posent plusieurs problèmes car en voulant vérifier le caractère précédent ou suivant, celui-ci risque très fortement sortir de la limite de taille de la chaîne de caractère ce qui deviendra problématique.
+Comme déjà mentionné précédemment, tous les tests à effectuer ne passent pas. Ici, la gestion des conditions posent plusieurs problèmes car en voulant vérifier le caractère précédent ou suivant, celui-ci risque très fortement sortir de la limite de taille de la chaîne de caractères ce qui deviendra problématique.
 
-Pour autant, en fonction de la longueur de la chaîne de caractère, son temps d'exécution augmente également bien qu'il semble peu corrélé en fonction de la longueur de la chaîne de caractère. +
+Pour autant, en fonction de la longueur de la chaîne de caractères, son temps d'exécution augmente également bien qu'il semble peu corrélé en fonction de la longueur de la chaîne de caractères. +
 En ce qui concerne l’efficacité, le nombre de tours effectué dépend de la taille du texte analysé. Pour une complexité se basant sur un nombre d'itérations ici, il s'agit d'une complexité algorithmique de O(n).
 
 == Classement
@@ -1326,8 +1326,8 @@ Voici donc le classement final selon les catégories :
 |✘
 |✘
 |✘
-|
-|
+|3ème
+|3
 
 |``simplicite-39.java``
 |D
@@ -1335,8 +1335,8 @@ Voici donc le classement final selon les catégories :
 |✘
 |✘
 |✘
-|
-|
+|1er
+|5
 
 |``simplicite-56.java``
 |A
@@ -1344,8 +1344,8 @@ Voici donc le classement final selon les catégories :
 |✘
 |✘
 |✘
-|
-|
+|1er
+|5
 
 |``simplicite-71.java``
 |B
@@ -1353,8 +1353,8 @@ Voici donc le classement final selon les catégories :
 |✘
 |✘
 |✘
-|
-|
+|4ème
+|1
 
 .4+<.>|Efficacité
 |``efficacite-43.java``
