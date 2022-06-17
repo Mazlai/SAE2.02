@@ -972,7 +972,7 @@ Voici donc le classement final selon les catégories :
 .4+<.>|Simplicité
 |``simplicite-11.java``
 |C
-|D
+|C
 |✘
 |✘
 |✘
@@ -990,7 +990,7 @@ Voici donc le classement final selon les catégories :
 
 |``simplicite-56.java``
 |A
-|C
+|D
 |✘
 |✘
 |✘
