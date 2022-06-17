@@ -363,8 +363,6 @@ Pour ce faire, veuillez à déclarer une variable au début de votre fonction pu
   print("Nombre d'itérations ", nbIterations);
 ----
 
-==== Sous-reproductibilité et références
-
 ==== Analyse
 [.text-justify]
 Parmi l'ensemble des tests passés pour ce fichier, la fonctionnalité du code les passe avec succès sans qu'une erreur ne soit signalé en terme de qualité, c'est-à-dire à la fois sur le résultat attendu mais également sur le code en lui-même.
