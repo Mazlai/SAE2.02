@@ -873,6 +873,7 @@ Pour ce faire, veuillez à déclarer une variable de type entier au début de vo
 
 ==== Analyse
 [.text-justify]
+Parmi l'ensemble des tests réalisés, le code les passe avec succès sans qu'aucune erreur ne soit à déplorer à la fois sur le résultat attendu mais également sur le code en lui-même.
 
 ===== Lisibilité du code
 [.text-justify]
@@ -906,10 +907,49 @@ Ainsi, bien que le code reste pour autant assez qualitatif, *Codacy* note le fic
 image::/rapport/images/simplicite-11.PNG[]
 
 ===== Sobriété numérique
-[.text-justify]
+✘
 
 ===== Efficacité et temps d'exécution
 [.text-justify]
+Le calcul d'une complexité se réalise selon deux critères : L'efficacité (ici, la taille d'une chaîne de caractères) ainsi que le temps d'exécution. +
+Pour ces tests, j'ai procédé à prendre une chaîne de caractère déjà précédemment utilisée (ici "Cou cou  J M  B") et de voir, en la dupliquant, si le temps d'exécution et le nombre d'itérations varient. +
+
+|===
+| *Chaînes de caractères analysées* | *Résultat de l'algorithme* | *Résultats attendus* | *Temps d'exécution* | *Nombre d'itérations*
+
+|``'Cou_cou\__J_M__B'`` 
+|Test passé ✓ 
+|``'Coucou\__JM__B'`` 
+|Environ 1 nanoseconde, soit environ 0.000002ms 
+|15
+
+|``'\_Cou_cou\__J_M__B_'`` 
+|Test passé ✓ 
+|``'Coucou\__JM__B'`` 
+|Environ 1 nanoseconde, soit environ 0.000002ms 
+|17
+
+|``'Cou_cou\__J_M__B'`` (dupliquée 100x) 
+|Test passé ✓ 
+|``'Coucou\__JM__B'`` (dupliquée 100x) 
+|Environ 11 nanosecondes, soit environ 0.0000011ms
+|1500
+
+|``'Cou_cou\__J_M__B'`` (dupliquée 10000x) 
+|Test passé ✓ 
+|``Coucou\__JM__B`` (dupliquée 10000x) 
+|Environ 177 nanosecondes, soit environ 0.000177ms
+|150000
+
+|``'Cou_cou\__J_M__B'`` (dupliquée 100000x) 
+|Test passé ✓ 
+|``'Coucou\__JM__B'`` (dupliquée 100000x) 
+|Environ 721 nanosecondes, soit environ 0.000721ms
+|1500000
+|===
+
+[.text-justify]
+en ce qui concerne l’efficacité, le temps d'exécution dépend de l'évolutivité de la taille de la chaîne de caractères. Ainsi, dès lors que la taille est augmentée (ici par 10x), le temps d'exécution suit d'une manière approximative, cette même opération bien que cela ne soit jamais bien précis. Pour une complexité temporelle ici, il s'agit d'une complexité algorithmique de *O(n)*.
 
 === Simplicité n°39 (langage Java)
 
@@ -1019,7 +1059,7 @@ Pour ces tests, j'ai procédé à prendre une chaîne de caractère déjà préc
 |===
 
 [.text-justify]
-Comme la plupart des algorithmes présentés, en ce qui concerne l’efficacité, le temps d'exécution dépend de l'évolutivité de la taille de la chaîne de caractères. Cet algorithme est très intéressant à analyser car dès lors que la taille de la chaîne de caractères augmente (ici 10x), le temps d'exécution semble être moins important, en réalité étant lui-même multiplié aux alentours de 5x. Ainsi, le temps n'étant pas corrélé de la même manière que la taille de la chaîne de caractères, il semblerait que la courbe réalisée semble davantage suivre la tendance pour une complexité logarithmique *O(log(n))*.
+Le temps d'exécution dépend de l'évolutivité de la taille de la chaîne de caractères. Cet algorithme est très intéressant à analyser car dès lors que la taille de la chaîne de caractères augmente (ici 10x), le temps d'exécution semble être moins important, en réalité étant lui-même multiplié aux alentours de 5x. Ainsi, le temps n'étant pas corrélé de la même manière que la taille de la chaîne de caractères, il semblerait que la courbe réalisée semble davantage suivre la tendance pour une complexité logarithmique *O(log(n))*.
 
 === Simplicité n°56 (langage Java)
 
