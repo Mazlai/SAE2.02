@@ -322,6 +322,21 @@ print("Temps d'exécution du programme : ",
                      ))
 ----
 
+*Réalisation de tests :*
+
+[.text-justify]
+Pour faire que les tests que vous avez posé puissent être réalisés, veuillez ajouter le code suivant tout en haut du fichier ``test.py`` (situé au chemin renseigné ci-dessous) : +
+
+[source, python]
+----
+import sys
+sys.path.append('analyse/Sobriété/Python/sobriete-162')
+from sobriete162 import bonmot2
+----
+
+[.text-justify]
+Il permet de vérifier que le programme traite bien tous les cas donnés. +
+
 *Autres :*
 
 [.text-justify]
@@ -976,24 +991,6 @@ Voici donc le classement final selon les catégories :
 == Exemple de code
 
 === Efficacité n°21 (python)
-
-==== Prérequis
-[.text-justify]
-Ajouter le code suivant tout en haut du fichier ``test.py`` : +
-
-[source, python]
-----
-import sys
-sys.path.append('analyse/solutions/') # import python files from path 'analyse/solutions'
-from efficacite21 import erase
-----
-
-[.text-justify]
-Il permet de vérifier que le programme traite bien tous les cas donnés. +
- +
-
-[.text-justify]
-Le fichier ``analyse.py`` du répertoire ``analyse`` permet d'obtenir les temps d'exécutions du programme en fonction de chaînes générées aléatoirement de tailles données.
 
 ==== Reproductibilité
 [.text-justify]
