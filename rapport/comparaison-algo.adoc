@@ -745,7 +745,7 @@ image::/rapport/images/efficacite-131.PNG[]
 Bien que beaucoup de conditions soient réalisées au sein de la solution algorithmique ``simplicite-11.java``, celui-ci reste pour autant assez compréhensible. Le développeur a décidé de mettre dans un tableau, chaque caractère séparé de la chaîne de caractère analysée. + 
 De ce tableau parcouru, il crée une nouvelle chaîne de caractère qui prendra en considération les modifications et les conditions à respecter.  
 
-Il vérifie ainsi la taille de la chaîne de caractère ainsi que des caractères présents au sein de la chaîne de caractère renseignée dans différentes conditions, pour bien comprendre comment l'analyse se fait, étape par étape. +
+Il vérifie ainsi la taille de la chaîne de caractère ainsi que des caractères présents au sein de la chaîne de caractère renseignée dans différentes conditions, pour bien comprendre comment l'analyse se fait, étape par étape. Très peu de remarques sont alors à constater.+
 
 Pour autant, comme de nombreux codes, celui-ci ne possède pas de javadocs et n'est donc pas instructif au premier abord. Mais on peut le comprendre assez rapidement, quelle que soit la personne.
 
@@ -786,6 +786,15 @@ image::/rapport/images/simplicite-11.PNG[]
 
 ===== Lisibilité du code
 [.text-justify]
+A la différence du fichier précédemment analysé (``simplicite-11.java``), la solution algorithmique ``simplicite-39.java`` adopte une méthode différente et notamment dans les conditions réalisées. Ici, les changements apportés sur la chaîne de caractère analysée se réalise directement sur celle-ci du moment que la chaîne de caractère ne contient pas d'espaces. Sinon, les changements s'effectuent de même sur une nouvelle chaîne de caractère, dépendante de celle analysée. +
+
+Les conditions effectuées donc, diffèrent également mais sont bien moins compréhensibles, quand on sait qu'un espace a pour valeur ASCII "32". +
+Les conditions sont également empilées, c'est-à-dire que tout dépend d'une condition externe, étant le fait de savoir si le message contient ou non des espaces. De ce fait, on rentre dans des conditions encore plus profondes afin d'en arriver à une condition terminale indiquant si un espace est présent à l'indice i. +
+
+Néanmoins, le code peut être simplifié, puisque le développeur utilise à de rares occasions les expressions conditionnelles (``&&`` pour *ET*, ``||`` pour *OU*, etc.), empilant alors des *if* dans des *if*. +
+
+Enfin, une dernière remarque assez commune à tous est l'absence de javadoc, n'étant pas directement compréhensible par un utilisateur lambda.
+
 
 ===== Qualité du code
 [.text-justify]
