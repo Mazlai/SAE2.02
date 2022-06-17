@@ -431,11 +431,7 @@ En voici le tableau adéquat :
 |===
 
 [.text-justify]
-Lorsque la chaîne de caractères est dupliquée, l'ensemble des tests à réaliser passent également.
-[.text-justify]
-Il prendra seulement en considération l'ensemble des caractères présents dans cette même liste. 
-
-✘
+Après analyse des différentes tailles de chaîne de caractère, nous pouvons observer que dès lors que celle-ci augmente d'une certaine manière (par exemple, en multipliant par 10, ou par 100), le temps d'exécution en fait de même approximativement. Ces deux données étant alors corrélées et suivant une même dynamique, nous pouvons constater que l'ordre de grandeur ici présent serait de O(n).
 
 === Sobriété n°166 (langage C)
 
