@@ -612,8 +612,10 @@ Autrement dit, il prendra seulement en considération le début de la chaîne de
 
 *Utilisation de nanoTime :*
 
+[.text-justify]
 L'utilisation de nanoTime est très intéressante. Celle-ci fait partie des méthodes que nous pouvons utiliser depuis l'utilisation générale des affichages à l'écran, aussi connu dans Java sous le nom de *System*.
 
+[.text-justify]
 Pour son utilisation, il est donc nécessaire de savoir à partir de quel moment il est intéressant d'évaluer ce temps et jusqu'à quand. Cette évaluation se fera alors pour l'exécution d'une fonction, tout dépendra des répétitions effectuées à son exécution (notamment pour avoir une évaluation précise sur ses temps d'exécution, nécessaires au calcul d'une complexité).
 
 Sur votre ``Main.java``, veuillez ainsi rajouter les lignes de code suivantes :
@@ -685,8 +687,10 @@ image::/rapport/images/efficacite-43.PNG[]
 
 *Utilisation de nanoTime :*
 
+[.text-justify]
 L'utilisation de nanoTime est très intéressante. Celle-ci fait partie des méthodes que nous pouvons utiliser depuis l'utilisation générale des affichages à l'écran, aussi connu dans Java sous le nom de *System*.
 
+[.text-justify]
 Pour son utilisation, il est donc nécessaire de savoir à partir de quel moment il est intéressant d'évaluer ce temps et jusqu'à quand. Cette évaluation se fera alors pour l'exécution d'une fonction, tout dépendra des répétitions effectuées à son exécution (notamment pour avoir une évaluation précise sur ses temps d'exécution, nécessaires au calcul d'une complexité).
 
 Sur votre ``Main.java``, veuillez ainsi rajouter les lignes de code suivantes :
@@ -825,8 +829,10 @@ image::/rapport/images/efficacite-131.PNG[]
 
 *Utilisation de nanoTime :*
 
+[.text-justify]
 L'utilisation de nanoTime est très intéressante. Celle-ci fait partie des méthodes que nous pouvons utiliser depuis l'utilisation générale des affichages à l'écran, aussi connu dans Java sous le nom de *System*.
 
+[.text-justify]
 Pour son utilisation, il est donc nécessaire de savoir à partir de quel moment il est intéressant d'évaluer ce temps et jusqu'à quand. Cette évaluation se fera alors pour l'exécution d'une fonction, tout dépendra des répétitions effectuées à son exécution (notamment pour avoir une évaluation précise sur ses temps d'exécution, nécessaires au calcul d'une complexité).
 
 Sur votre ``Main.java``, veuillez ainsi rajouter les lignes de code suivantes :
@@ -911,8 +917,10 @@ image::/rapport/images/simplicite-11.PNG[]
 
 *Utilisation de nanoTime :*
 
+[.text-justify]
 L'utilisation de nanoTime est très intéressante. Celle-ci fait partie des méthodes que nous pouvons utiliser depuis l'utilisation générale des affichages à l'écran, aussi connu dans Java sous le nom de *System*.
 
+[.text-justify]
 Pour son utilisation, il est donc nécessaire de savoir à partir de quel moment il est intéressant d'évaluer ce temps et jusqu'à quand. Cette évaluation se fera alors pour l'exécution d'une fonction, tout dépendra des répétitions effectuées à son exécution (notamment pour avoir une évaluation précise sur ses temps d'exécution, nécessaires au calcul d'une complexité).
 
 Sur votre ``Main.java``, veuillez ainsi rajouter les lignes de code suivantes :
@@ -953,6 +961,7 @@ Pour ce faire, veuillez à déclarer une variable de type entier au début de vo
 
 ==== Analyse
 [.text-justify]
+Parmi l'ensemble des tests réalisés, le code les passe avec succès sans qu'aucune erreur ne soit à déplorer à la fois sur le résultat attendu mais également sur le code en lui-même.
 
 ===== Lisibilité du code
 [.text-justify]
@@ -977,6 +986,40 @@ image::/rapport/images/simplicite-39.PNG[]
 
 ===== Efficacité et temps d'exécution - Optionnel
 [.text-justify]
+Deux critères sont essentiels au calcul d'une complexité : L'efficacité ainsi que le temps d'exécution. +
+Pour ces tests, j'ai procédé à prendre une chaîne de caractère déjà précédemment utilisée (ici "Cou cou  J M  B") et de voir, en la dupliquant, si le temps d'exécution et le nombre d'itérations varient. +
+
+|===
+| *Chaînes de caractères analysées* | *Résultat de l'algorithme* | *Résultats attendus* | *Temps d'exécution*
+
+|``'Cou_cou\__J_M__B'`` 
+|Test passé ✓ 
+|``'Coucou\__JM__B'`` 
+|- d'une nanoseconde 
+
+|``'\_Cou_cou\__J_M__B_'`` 
+|Test passé ✓ 
+|``'Coucou\__JM__B'`` 
+|- d'une nanoseconde 
+
+|``'Cou_cou\__J_M__B'`` (dupliquée 100x) 
+|Test passé ✓ 
+|``'Coucou\__JM__B'`` (dupliquée 100x) 
+|Environ 2 nanosecondes, soit environ 0.000002ms
+
+|``'Cou_cou\__J_M__B'`` (dupliquée 10000x) 
+|Test passé ✓ 
+|``Coucou\__JM__B`` (dupliquée 10000x) 
+|Environ 50 nanosecondes, soit environ 0.000050ms
+
+|``'Cou_cou\__J_M__B'`` (dupliquée 100000x) 
+|Test passé ✓ 
+|``'Coucou\__JM__B'`` (dupliquée 100000x) 
+|Environ 155 nanosecondes, soit environ 0.000155ms
+|===
+
+[.text-justify]
+Comme la plupart des algorithmes présentés, en ce qui concerne l’efficacité, le temps d'exécution dépend de l'évolutivité de la taille de la chaîne de caractères. Cet algorithme est très intéressant à analyser car dès lors que la taille de la chaîne de caractères augmente (ici 10x), le temps d'exécution semble être moins important, en réalité étant lui-même multiplié aux alentours de 5x. Ainsi, le temps n'étant pas corrélé de la même manière que la taille de la chaîne de caractères, il semblerait que la courbe réalisée semble davantage suivre la tendance pour une complexité logarithmique *O(log(n))*.
 
 === Simplicité n°56 (langage Java)
 
@@ -984,8 +1027,10 @@ image::/rapport/images/simplicite-39.PNG[]
 
 *Utilisation de nanoTime :*
 
+[.text-justify]
 L'utilisation de nanoTime est très intéressante. Celle-ci fait partie des méthodes que nous pouvons utiliser depuis l'utilisation générale des affichages à l'écran, aussi connu dans Java sous le nom de *System*.
 
+[.text-justify]
 Pour son utilisation, il est donc nécessaire de savoir à partir de quel moment il est intéressant d'évaluer ce temps et jusqu'à quand. Cette évaluation se fera alors pour l'exécution d'une fonction, tout dépendra des répétitions effectuées à son exécution (notamment pour avoir une évaluation précise sur ses temps d'exécution, nécessaires au calcul d'une complexité).
 
 Sur votre ``Main.java``, veuillez ainsi rajouter les lignes de code suivantes :
@@ -1026,6 +1071,7 @@ Pour ce faire, veuillez à déclarer une variable de type entier au début de vo
 
 ==== Analyse
 [.text-justify]
+Parmi l'ensemble des tests réalisés, le code les passe avec succès sans qu'aucune erreur ne soit à déplorer à la fois sur le résultat attendu mais également sur le code en lui-même.
 
 ===== Lisibilité du code
 [.text-justify]
@@ -1101,6 +1147,7 @@ En voici le tableau adéquat :
 |130000
 |===
 
+[.text-justify]
 Comme la plupart des algorithmes présentés, en ce qui concerne l’efficacité, le temps d'exécution dépend de l'évolutivité de la taille de la chaîne de caractères. Ainsi, dès lors que la taille est augmentée (ici par 10x), le temps d'exécution suit d'une manière approximative, cette même opération bien que cela ne soit jamais bien précis. Pour une complexité temporelle ici, il s'agit d'une complexité algorithmique de *O(n)*.
 
 === Simplicité n°71 (langage Java)
@@ -1109,8 +1156,10 @@ Comme la plupart des algorithmes présentés, en ce qui concerne l’efficacité
 
 *Utilisation de nanoTime :*
 
+[.text-justify]
 L'utilisation de nanoTime est très intéressante. Celle-ci fait partie des méthodes que nous pouvons utiliser depuis l'utilisation générale des affichages à l'écran, aussi connu dans Java sous le nom de *System*.
 
+[.text-justify]
 Pour son utilisation, il est donc nécessaire de savoir à partir de quel moment il est intéressant d'évaluer ce temps et jusqu'à quand. Cette évaluation se fera alors pour l'exécution d'une fonction, tout dépendra des répétitions effectuées à son exécution (notamment pour avoir une évaluation précise sur ses temps d'exécution, nécessaires au calcul d'une complexité).
 
 Sur votre ``Main.java``, veuillez ainsi rajouter les lignes de code suivantes :
