@@ -982,7 +982,7 @@ D'après *Codacy*, le fichier ``simplicite-39.java`` est noté "A".
 image::/rapport/images/simplicite-39.PNG[]
 
 ===== Sobriété numérique - Optionnel
-[.text-justify]
+✘
 
 ===== Efficacité et temps d'exécution - Optionnel
 [.text-justify]
