@@ -845,11 +845,60 @@ image::/rapport/images/efficacite-106.PNG[]
 
 ==== Sous-reproductibilité et références
 
-==== Analyse
+*Utilisation de nanoTime :*
+
 [.text-justify]
+L'utilisation de nanoTime est très intéressante. Celle-ci fait partie des méthodes que nous pouvons utiliser depuis l'utilisation générale des affichages à l'écran, aussi connu dans Java sous le nom de *System*.
+
+[.text-justify]
+Pour son utilisation, il est donc nécessaire de savoir à partir de quel moment il est intéressant d'évaluer ce temps et jusqu'à quand. Cette évaluation se fera alors pour l'exécution d'une fonction, tout dépendra des répétitions effectuées à son exécution (notamment pour avoir une évaluation précise sur ses temps d'exécution, nécessaires au calcul d'une complexité).
+
+Sur votre ``Main.java``, veuillez ainsi rajouter les lignes de code suivantes :
+
+[source, java]
+----
+long debut = System.nanoTime();
+
+[...] //Exécution de votre fonction
+
+long fin = System.nanoTime();
+System.out.println((fin-debut)/1000000);
+----
+
+*Autres :*
+
+[.text-justify]
+Il est intéressant de connaître le nombre d'itérations de votre programme, autrement dit, combien de fois est réalisée votre condition en fonction de la chaîne de caractères renseignée. +
+
+[.text-justify]
+Pour ce faire, veuillez à déclarer une variable de type entier au début de votre fonction puis, incrémentez cette valeur *au moment où* l'analyse de votre chaîne de caractères avance également et enfin, veuillez retourner votre résultat pour connaître le nombre de fois où vos conditions ont été exécutée :
+
+[source, java]
+----
+//Déclarations de variables de test
+  int nbIterations = 0;
+  
+  [...]
+  
+//Dans les conditions :
+  nbIterations++;
+  
+  [...]
+  
+//Affichage des tests
+  System.out.println("Nombre d'itérations : " + nbIterations);
+----
+
+==== Analyse
+Dès lors de l'import de la solution algorithmique ``efficacite-131.java``, une erreur de compilation est à constater. En effet, quel que soit le test réalisé depuis la classe ``EraserTest.java``, impossible d'exécuter le programme. +
+Cette erreur de compilation est ici, due à une duplication (sans doute) involontaire de la variable *i*. Bien que l'erreur soit minime, il est malheureux de constater que le programme ne marche pas.
 
 ===== Lisibilité du code - Optionnel
 [.text-justify]
+Le code est très peu lisible. En effet, il est ici, impossible à ce qu'un utilisateur lambda puisse imaginer que le code ASCII du caractère espace soit 32 (sauf pour les adeptes de l'informatique) et n'ayant aucun commentaire réalisé de la part de ce développeur, il est en réalité difficile de discerner le fonctionnement de ce programme. L'absence ainsi de javadoc est également à constater. +
+
+Pour autant, à comparer de l'ensemble des programmes, tout n'est pas à rejeter car le développeur a utilisé ici, une classe très intéressante : StringBuilder. +
+De même, il est difficile d'imaginer ce à quoi pourrait correspondre cette classe mais en réalité, elle représente une chaîne de caractères mutable.
 
 ===== Qualité du code - Optionnel
 [.text-justify]
@@ -876,6 +925,7 @@ image::/rapport/images/efficacite-131.PNG[]
 
 ===== Efficacité et temps d'exécution
 [.text-justify]
+Du fait d'avoir un fichier ne compilant pas, il devient rapidement compliqué d'en évaluer sa complexité temporelle pour en déterminer un certain ordre de grandeur. 
 
 == Catégorie "Simplicité"
 
