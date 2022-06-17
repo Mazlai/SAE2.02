@@ -369,7 +369,7 @@ Parmi l'ensemble des tests passés pour ce fichier, la fonctionnalité du code l
 
 ===== Lisibilité du code - Optionnel
 [.text-justify]
-Une nouvelle fois constaté, le développeur a oublié de réaliser un javadoc car au premier abord, le code ne semble pas évident à comprendre. Ainsi, dans l'aspect du code, je trouve que l'ensemble des informations sont très condensées car son code n'est pas aéré mais également, certaines conditions méritent également d'être rassemblée. +
+Une nouvelle fois constaté, le développeur a oublié de réaliser un javadoc car au premier abord, le code ne semble pas évident à comprendre. Ainsi, dans l'aspect du code, je trouve que l'ensemble des informations sont très condensées car son code n'est pas aéré mais également, certaines conditions méritent également d'être rassemblées. +
 
 Enfin, pour les conditions de vérifications, le code n'est pas exceptionnement compliqué à comprendre, d'où le fait que n'importe qui serait capable de comprendre ce qu'il se passe.
 
@@ -393,8 +393,6 @@ Ces raisons étant que Python est un langage interprété, tandis que le C est c
 [.text-justify]
 Pour alors évaluer l'efficacité et le temps d'exécution de la solution algorithmique, un ensemble de tests est alors réalisé. +
 Pour ces tests, j'ai procédé à prendre une chaîne de caractère déjà précédemment utilisée (ici "Cou cou  J M  B") et de voir, en la dupliquant, si le temps d'exécution et le nombre d'itérations varient. +
-
-Ainsi, à l'origine, l'exécution de la fonction Python ``bonmot2(mot)`` 
 
 En voici le tableau adéquat :
 
@@ -434,9 +432,10 @@ En voici le tableau adéquat :
 
 [.text-justify]
 Lorsque la chaîne de caractère est dupliquée, l'ensemble des tests à réaliser passent également.
-
 [.text-justify]
 Il prendra seulement en considération l'ensemble des caractères présents dans cette même liste. 
+
+✘
 
 === Sobriété n°166 (langage C)
 
