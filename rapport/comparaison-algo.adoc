@@ -495,10 +495,6 @@ Pour ce faire, veuillez à déclarer une variable de type entier au début de vo
   printf("\nNombre d'itérations : %d", nbIterations);
 ----
 
-[.text-justify]
-
-[.text-justify]
-
 ==== Analyse
 [.text-justify]
 Parmi l'ensemble des tests réalisés, le code les passe avec succès sans qu'aucune erreur ne soit à déplorer sur le code en lui-même. Pour autant, sur le résultat attendu, celui-ci ne respecte pas les attentes souhaitées car il semblerait la chaîne de caractère affichée ne soit uniquement que celle précédée d'un espace.
@@ -616,6 +612,48 @@ Autrement dit, il prendra seulement en considération le début de la chaîne de
 
 ==== Sous-reproductibilité et références
 
+*Utilisation de nanoTime :*
+
+L'utilisation de nanoTime est très intéressante. Celle-ci fait partie des méthodes que nous pouvons utiliser depuis l'utilisation générale des affichages à l'écran, aussi connu dans Java sous le nom de *System*.
+
+Pour son utilisation, il est donc nécessaire de savoir à partir de quel moment il est intéressant d'évaluer ce temps et jusqu'à quand. Cette évaluation se fera alors pour l'exécution d'une fonction, tout dépendra des répétitions effectuées à son exécution (notamment pour avoir une évaluation précise sur ses temps d'exécution, nécessaires au calcul d'une complexité).
+
+Sur votre ``Main.java``, veuillez ainsi rajouter les lignes de code suivantes :
+
+[source, java]
+----
+long debut = System.nanoTime();
+
+[...] //Exécution de votre fonction
+
+long fin = System.nanoTime();
+System.out.println((fin-debut)/1000000);
+----
+
+*Autres :*
+
+[.text-justify]
+Il est intéressant de connaître le nombre d'itérations de votre programme, autrement dit, combien de fois est réalisée votre condition en fonction de la chaîne de caractère renseignée. +
+
+[.text-justify]
+Pour ce faire, veuillez à déclarer une variable de type entier au début de votre fonction puis, incrémentez cette valeur *au moment où* l'analyse de votre chaîne de caractère avance également et enfin, veuillez retourner votre résultat pour connaître le nombre de fois où vos conditions ont été exécutée :
+
+[source, java]
+----
+//Déclarations de variables de test
+  int nbIterations = 0;
+  
+  [...]
+  
+//Dans les conditions :
+  nbIterations++;
+  
+  [...]
+  
+//Affichage des tests
+  System.out.println("Nombre d'itérations : " + nbIterations);
+----
+
 ==== Analyse
 [.text-justify]
 
@@ -646,6 +684,48 @@ image::/rapport/images/efficacite-43.PNG[]
 === Efficacité n°90 (langage Java)
 
 ==== Sous-reproductibilité et références
+
+*Utilisation de nanoTime :*
+
+L'utilisation de nanoTime est très intéressante. Celle-ci fait partie des méthodes que nous pouvons utiliser depuis l'utilisation générale des affichages à l'écran, aussi connu dans Java sous le nom de *System*.
+
+Pour son utilisation, il est donc nécessaire de savoir à partir de quel moment il est intéressant d'évaluer ce temps et jusqu'à quand. Cette évaluation se fera alors pour l'exécution d'une fonction, tout dépendra des répétitions effectuées à son exécution (notamment pour avoir une évaluation précise sur ses temps d'exécution, nécessaires au calcul d'une complexité).
+
+Sur votre ``Main.java``, veuillez ainsi rajouter les lignes de code suivantes :
+
+[source, java]
+----
+long debut = System.nanoTime();
+
+[...] //Exécution de votre fonction
+
+long fin = System.nanoTime();
+System.out.println((fin-debut)/1000000);
+----
+
+*Autres :*
+
+[.text-justify]
+Il est intéressant de connaître le nombre d'itérations de votre programme, autrement dit, combien de fois est réalisée votre condition en fonction de la chaîne de caractère renseignée. +
+
+[.text-justify]
+Pour ce faire, veuillez à déclarer une variable de type entier au début de votre fonction puis, incrémentez cette valeur *au moment où* l'analyse de votre chaîne de caractère avance également et enfin, veuillez retourner votre résultat pour connaître le nombre de fois où vos conditions ont été exécutée :
+
+[source, java]
+----
+//Déclarations de variables de test
+  int nbIterations = 0;
+  
+  [...]
+  
+//Dans les conditions :
+  nbIterations++;
+  
+  [...]
+  
+//Affichage des tests
+  System.out.println("Nombre d'itérations : " + nbIterations);
+----
 
 ==== Analyse
 [.text-justify]
@@ -745,6 +825,48 @@ image::/rapport/images/efficacite-131.PNG[]
 
 ==== Sous-reproductibilité et références
 
+*Utilisation de nanoTime :*
+
+L'utilisation de nanoTime est très intéressante. Celle-ci fait partie des méthodes que nous pouvons utiliser depuis l'utilisation générale des affichages à l'écran, aussi connu dans Java sous le nom de *System*.
+
+Pour son utilisation, il est donc nécessaire de savoir à partir de quel moment il est intéressant d'évaluer ce temps et jusqu'à quand. Cette évaluation se fera alors pour l'exécution d'une fonction, tout dépendra des répétitions effectuées à son exécution (notamment pour avoir une évaluation précise sur ses temps d'exécution, nécessaires au calcul d'une complexité).
+
+Sur votre ``Main.java``, veuillez ainsi rajouter les lignes de code suivantes :
+
+[source, java]
+----
+long debut = System.nanoTime();
+
+[...] //Exécution de votre fonction
+
+long fin = System.nanoTime();
+System.out.println((fin-debut)/1000000);
+----
+
+*Autres :*
+
+[.text-justify]
+Il est intéressant de connaître le nombre d'itérations de votre programme, autrement dit, combien de fois est réalisée votre condition en fonction de la chaîne de caractère renseignée. +
+
+[.text-justify]
+Pour ce faire, veuillez à déclarer une variable de type entier au début de votre fonction puis, incrémentez cette valeur *au moment où* l'analyse de votre chaîne de caractère avance également et enfin, veuillez retourner votre résultat pour connaître le nombre de fois où vos conditions ont été exécutée :
+
+[source, java]
+----
+//Déclarations de variables de test
+  int nbIterations = 0;
+  
+  [...]
+  
+//Dans les conditions :
+  nbIterations++;
+  
+  [...]
+  
+//Affichage des tests
+  System.out.println("Nombre d'itérations : " + nbIterations);
+----
+
 ==== Analyse
 [.text-justify]
 
@@ -789,6 +911,48 @@ image::/rapport/images/simplicite-11.PNG[]
 
 ==== Sous-reproductibilité et références
 
+*Utilisation de nanoTime :*
+
+L'utilisation de nanoTime est très intéressante. Celle-ci fait partie des méthodes que nous pouvons utiliser depuis l'utilisation générale des affichages à l'écran, aussi connu dans Java sous le nom de *System*.
+
+Pour son utilisation, il est donc nécessaire de savoir à partir de quel moment il est intéressant d'évaluer ce temps et jusqu'à quand. Cette évaluation se fera alors pour l'exécution d'une fonction, tout dépendra des répétitions effectuées à son exécution (notamment pour avoir une évaluation précise sur ses temps d'exécution, nécessaires au calcul d'une complexité).
+
+Sur votre ``Main.java``, veuillez ainsi rajouter les lignes de code suivantes :
+
+[source, java]
+----
+long debut = System.nanoTime();
+
+[...] //Exécution de votre fonction
+
+long fin = System.nanoTime();
+System.out.println((fin-debut)/1000000);
+----
+
+*Autres :*
+
+[.text-justify]
+Il est intéressant de connaître le nombre d'itérations de votre programme, autrement dit, combien de fois est réalisée votre condition en fonction de la chaîne de caractère renseignée. +
+
+[.text-justify]
+Pour ce faire, veuillez à déclarer une variable de type entier au début de votre fonction puis, incrémentez cette valeur *au moment où* l'analyse de votre chaîne de caractère avance également et enfin, veuillez retourner votre résultat pour connaître le nombre de fois où vos conditions ont été exécutée :
+
+[source, java]
+----
+//Déclarations de variables de test
+  int nbIterations = 0;
+  
+  [...]
+  
+//Dans les conditions :
+  nbIterations++;
+  
+  [...]
+  
+//Affichage des tests
+  System.out.println("Nombre d'itérations : " + nbIterations);
+----
+
 ==== Analyse
 [.text-justify]
 
@@ -802,7 +966,6 @@ Les conditions sont également empilées, c'est-à-dire que tout dépend d'une c
 Néanmoins, le code peut être simplifié, puisque le développeur utilise à de rares occasions les expressions conditionnelles (``&&`` pour *ET*, ``||`` pour *OU*, etc.), empilant alors des *if* dans des *if*. +
 
 Enfin, une dernière remarque assez commune à tous est l'absence de javadoc, n'étant pas directement compréhensible par un utilisateur lambda.
-
 
 ===== Qualité du code
 [.text-justify]
@@ -820,6 +983,48 @@ image::/rapport/images/simplicite-39.PNG[]
 === Simplicité n°56 (langage Java)
 
 ==== Sous-reproductibilité et références
+
+*Utilisation de nanoTime :*
+
+L'utilisation de nanoTime est très intéressante. Celle-ci fait partie des méthodes que nous pouvons utiliser depuis l'utilisation générale des affichages à l'écran, aussi connu dans Java sous le nom de *System*.
+
+Pour son utilisation, il est donc nécessaire de savoir à partir de quel moment il est intéressant d'évaluer ce temps et jusqu'à quand. Cette évaluation se fera alors pour l'exécution d'une fonction, tout dépendra des répétitions effectuées à son exécution (notamment pour avoir une évaluation précise sur ses temps d'exécution, nécessaires au calcul d'une complexité).
+
+Sur votre ``Main.java``, veuillez ainsi rajouter les lignes de code suivantes :
+
+[source, java]
+----
+long debut = System.nanoTime();
+
+[...] //Exécution de votre fonction
+
+long fin = System.nanoTime();
+System.out.println((fin-debut)/1000000);
+----
+
+*Autres :*
+
+[.text-justify]
+Il est intéressant de connaître le nombre d'itérations de votre programme, autrement dit, combien de fois est réalisée votre condition en fonction de la chaîne de caractère renseignée. +
+
+[.text-justify]
+Pour ce faire, veuillez à déclarer une variable de type entier au début de votre fonction puis, incrémentez cette valeur *au moment où* l'analyse de votre chaîne de caractère avance également et enfin, veuillez retourner votre résultat pour connaître le nombre de fois où vos conditions ont été exécutée :
+
+[source, java]
+----
+//Déclarations de variables de test
+  int nbIterations = 0;
+  
+  [...]
+  
+//Dans les conditions :
+  nbIterations++;
+  
+  [...]
+  
+//Affichage des tests
+  System.out.println("Nombre d'itérations : " + nbIterations);
+----
 
 ==== Analyse
 [.text-justify]
@@ -855,7 +1060,7 @@ Néanmoins, d'après *Codacy*, le fichier ``simplicite-56.java`` est noté "B".
 image::/rapport/images/simplicite-56.PNG[]
 
 ===== Sobriété numérique - Optionnel
-[.text-justify]
+✘
 
 ===== Efficacité et temps d'exécution - Optionnel
 [.text-justify]
@@ -874,7 +1079,7 @@ En voici le tableau adéquat :
 |13
 
 |``'\_Cou_cou\__J_M__B_'`` 
-|Test invalide ✘ 
+|Test passé ✓ 
 |``'Coucou\__JM__B'`` 
 |Environ une nanoseconde, soit environ 0.000001ms
 |13
@@ -883,24 +1088,44 @@ En voici le tableau adéquat :
 |Test passé ✓ 
 |``'Coucou\__JM__B'`` (dupliquée 100x) 
 |Environ 5 nanosecondes, soit 0.000005ms
-|13000
+|1300
 
 |``'Cou_cou\__J_M__B'`` (dupliquée 10000x) 
 |Test passé ✓ 
 |``Coucou\__JM__B`` (dupliquée 10000x) 
 |Environ 155 nanosecondes, soit 0.0000155ms
-|130000
+|13000
 
 |``'Cou_cou\__J_M__B'`` (dupliquée 100000x) 
 |Test passé ✓ 
 |``'Coucou\__JM__B'`` (dupliquée 100000x) 
 |Environ 842 nanosecondes, soit 0.000842ms
-|1300000
+|130000
 |===
+
+Comme la plupart des algorithmes présentés, en ce qui concerne l’efficacité, le temps d'exécution dépend de l'évolutivité de la taille de la chaîne de caractères. Ainsi, dès lors que la taille est augmentée (ici par 10x), le temps d'exécution suit d'une manière approximative, cette même opération bien que cela ne soit jamais bien précis. Pour une complexité temporelle ici, il s'agit d'une complexité algorithmique de *O(n)*.
 
 === Simplicité n°71 (langage Java)
 
 ==== Sous-reproductibilité et références
+
+*Utilisation de nanoTime :*
+
+L'utilisation de nanoTime est très intéressante. Celle-ci fait partie des méthodes que nous pouvons utiliser depuis l'utilisation générale des affichages à l'écran, aussi connu dans Java sous le nom de *System*.
+
+Pour son utilisation, il est donc nécessaire de savoir à partir de quel moment il est intéressant d'évaluer ce temps et jusqu'à quand. Cette évaluation se fera alors pour l'exécution d'une fonction, tout dépendra des répétitions effectuées à son exécution (notamment pour avoir une évaluation précise sur ses temps d'exécution, nécessaires au calcul d'une complexité).
+
+Sur votre ``Main.java``, veuillez ainsi rajouter les lignes de code suivantes :
+
+[source, java]
+----
+long debut = System.nanoTime();
+
+[...] //Exécution de votre fonction
+
+long fin = System.nanoTime();
+System.out.println((fin-debut)/1000000);
+----
 
 *Autres :*
 
@@ -910,7 +1135,7 @@ Il est intéressant de connaître le nombre d'itérations de votre programme, au
 [.text-justify]
 Pour ce faire, veuillez à déclarer une variable de type entier au début de votre fonction puis, incrémentez cette valeur *au moment où* l'analyse de votre chaîne de caractère avance également et enfin, veuillez retourner votre résultat pour connaître le nombre de fois où vos conditions ont été exécutée :
 
-[source, c]
+[source, java]
 ----
 //Déclarations de variables de test
   int nbIterations = 0;
@@ -980,19 +1205,19 @@ En voici le tableau adéquat :
 |Test passé ✓ 
 |``'Coucou\__JM__B'`` (dupliquée 100x) 
 |Environ 6 nanosecondes, soit 0.000006ms
-|13000
+|1300
 
 |``'Cou_cou\__J_M__B'`` (dupliquée 10000x) 
 |Test passé ✓ 
 |``Coucou\__JM__B`` (dupliquée 10000x) 
 |Environ 118 nanosecondes, soit 0.0000118ms
-|130000
+|13000
 
 |``'Cou_cou\__J_M__B'`` (dupliquée 100000x) 
 |Test passé ✓ 
 |``'Coucou\__JM__B'`` (dupliquée 100000x) 
 |Environ 685 nanosecondes, soit 0.000685ms
-|1300000
+|130000
 |===
 
 Comme déjà mentionné précédemment, tous les tests à effectuer ne passent pas. Ici, la gestion des conditions posent plusieurs problèmes car en voulant vérifier le caractère précédent ou suivant, celui-ci risque très fortement sortir de la limite de taille de la chaîne de caractère ce qui deviendra problématique.
